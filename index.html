@@ -3,412 +3,720 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>주간내신 — 미사고·미사강변고·하남고 영어 내신, 매주 옵니다</title>
-<meta name="description" content="아이가 안 푼 날, 저희가 먼저 알고 연락드립니다. 학교별 동형 모의고사 + 41쪽 상세해설서 + 일요일 학부모 리포트. 8주 시즌제.">
-<meta property="og:title" content="주간내신 — 우리 학교 시험지로 준비하는 8주">
-<meta property="og:description" content="미사고·미사강변고·하남고 영어. 매주 월요일 자료가 오고, 일요일 저녁 학부모 리포트가 갑니다.">
+<title>주간내신 — 인강 퀄리티의 자료를, 우리 학교 시험지로</title>
+<meta name="description" content="前 대형 인강 변형문제 출제자가 만드는 학교별 동형 모의고사 + 41쪽 상세해설서. 하남·미사 6개교 한정, 8주 시즌제.">
+<meta property="og:title" content="주간내신 — 얼굴도 이름도 공개하지 않습니다. 자료가 증명합니다.">
+<meta property="og:description" content="미사고·미사강변고·하남고·풍산고·남한고·신장고 영어 내신. 학교별 동형 + 41쪽 해설서, 매주 월요일.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://jayu0422-blip.github.io/jugan-naesin/img/expl.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📬</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@600;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#faf7f0; --paper:#ffffff; --navy:#152441; --navy2:#1e3159;
-  --gold:#b8912f; --gold-soft:#d9bc6b; --ink:#22293a; --muted:#6b7385;
-  --line:#e6e0d2; --red:#b43c2a;
+  --cream:#faf8f3; --paper:#fff; --navy:#101d36; --navy2:#182a4e; --navy3:#0b1526;
+  --gold:#b8912f; --gold2:#d9bc6b; --ink:#1f2637; --muted:#66707f; --line:#e7e1d3;
+  --red:#b8402c; --green:#2e7d4f;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);
-  font:16px/1.75 "Noto Sans KR",-apple-system,"Malgun Gothic",sans-serif;
+  font:16.5px/1.85 "Noto Sans KR",-apple-system,"Malgun Gothic",sans-serif;
   word-break:keep-all;overflow-x:hidden}
-.serif{font-family:"Noto Serif KR","Noto Sans KR",serif}
-.wrap{max-width:680px;margin:0 auto;padding:0 22px}
-section{padding:64px 0}
-h2{font-family:"Noto Serif KR",serif;font-size:26px;line-height:1.4;margin:0 0 8px;color:var(--navy)}
-.kicker{font-size:12.5px;letter-spacing:.16em;color:var(--gold);font-weight:700;margin-bottom:10px}
-.lead{color:var(--muted);font-size:15.5px;margin:0 0 28px}
+.wrap{max-width:660px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+h2{font-family:"Noto Serif KR",serif;font-size:27px;line-height:1.45;margin:0 0 14px;color:var(--navy);font-weight:900}
+.kicker{font-size:12.5px;letter-spacing:.18em;color:var(--gold);font-weight:700;margin-bottom:12px}
+.divider{width:44px;height:3px;background:var(--gold);border:0;margin:26px auto}
+.center{text-align:center}
+.prose p{margin:0 0 22px;font-size:17px;line-height:2.0}
+.prose strong{color:var(--navy)}
+.prose .pull{font-family:"Noto Serif KR",serif;font-size:21px;line-height:1.75;color:var(--navy);
+  border-left:3px solid var(--gold);padding-left:18px;margin:34px 0;font-weight:700}
 
-/* hero */
-.hero{background:linear-gradient(168deg,var(--navy) 0%,var(--navy2) 100%);color:#f4f1e8;
-  padding:72px 0 60px;position:relative;overflow:hidden}
-.hero::after{content:"週刊";position:absolute;right:-20px;bottom:-46px;
-  font-family:"Noto Serif KR",serif;font-size:190px;font-weight:900;color:rgba(255,255,255,.04);line-height:1}
-.hero .brand{font-size:13px;letter-spacing:.3em;color:var(--gold-soft);font-weight:700;margin-bottom:22px}
-.hero h1{font-family:"Noto Serif KR",serif;font-weight:900;font-size:31px;line-height:1.45;margin:0 0 18px}
-.hero h1 em{font-style:normal;color:var(--gold-soft)}
-.hero p{color:#c3cad9;font-size:16px;margin:0 0 8px}
-.hero .schools{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 30px}
-.hero .schools span{border:1px solid rgba(217,188,107,.45);color:var(--gold-soft);
-  border-radius:999px;padding:5px 14px;font-size:13.5px}
-.cta-row{display:flex;flex-direction:column;gap:10px}
-.btn{display:block;text-align:center;text-decoration:none;border-radius:12px;
-  padding:17px 20px;font-size:16.5px;font-weight:700;transition:.15s}
+/* ── 히어로 ── */
+.hero{background:
+  radial-gradient(900px 500px at 50% -10%, #24406e33, transparent),
+  linear-gradient(172deg,var(--navy3) 0%,var(--navy) 55%,var(--navy2) 100%);
+  color:#f2efe6;padding:84px 0 70px;position:relative;overflow:hidden;text-align:center}
+.sil{width:120px;height:120px;margin:0 auto 26px;border-radius:50%;position:relative;
+  background:radial-gradient(circle at 50% 32%, #2c4676 0%, #16223c 70%);
+  border:1px solid rgba(217,188,107,.4);box-shadow:0 0 60px rgba(217,188,107,.12)}
+.sil svg{position:absolute;left:50%;bottom:6px;transform:translateX(-50%)}
+.hero .kicker{color:var(--gold2);margin-bottom:16px}
+.hero h1{font-family:"Noto Serif KR",serif;font-weight:900;font-size:31px;line-height:1.5;margin:0 0 20px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero .sub{color:#aeb9cf;font-size:16px;margin:0 auto 26px;max-width:480px}
+.schools{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:0 0 34px}
+.schools span{border:1px solid rgba(217,188,107,.4);color:var(--gold2);border-radius:999px;padding:4px 13px;font-size:13px}
+.cta-row{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:0 auto}
+.btn{display:block;text-align:center;text-decoration:none;border-radius:12px;border:0;cursor:pointer;
+  padding:17px 20px;font-size:16.5px;font-weight:700;font-family:inherit;transition:.15s}
 .btn-gold{background:var(--gold);color:#fff}
 .btn-gold:active{transform:scale(.985)}
-.btn-line{border:1px solid rgba(255,255,255,.35);color:#f4f1e8}
-.hero small{display:block;margin-top:14px;color:#8d97ad;font-size:12.5px}
+.btn-line{border:1px solid rgba(255,255,255,.32);color:#f2efe6;background:transparent}
+.hero small{display:block;margin-top:16px;color:#7f8ba3;font-size:12.5px}
 
-/* empathy */
-.empathy blockquote{font-family:"Noto Serif KR",serif;font-size:20px;line-height:1.7;
-  color:var(--navy);border-left:3px solid var(--gold);padding-left:18px;margin:0 0 22px}
-.empathy p{color:var(--muted)}
+/* ── 서사 ── */
+.story{background:var(--paper);border-bottom:1px solid var(--line)}
+.story h2{text-align:center}
+.story .sig{font-family:"Noto Serif KR",serif;color:var(--muted);font-size:14.5px;text-align:right;margin-top:30px}
 
-/* proof */
-.proof{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.figure{margin:0 0 34px}
-.figure img{width:100%;border-radius:10px;border:1px solid var(--line);
-  box-shadow:0 14px 34px rgba(21,36,65,.12);display:block}
-.figure figcaption{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.6}
-.figure figcaption b{color:var(--navy)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px 0 6px}
+/* ── 페르소나 ── */
+.persona{border:1px solid var(--line);background:var(--paper);border-radius:16px;padding:24px;margin-bottom:14px;position:relative}
+.persona h4{margin:0 0 8px;font-size:17px;color:var(--navy)}
+.persona h4 span{display:inline-block;background:var(--navy);color:#fff;border-radius:6px;font-size:12px;padding:2px 9px;margin-right:8px;vertical-align:2px}
+.persona p{margin:0;font-size:14.8px;color:var(--muted)}
+.persona .ans{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:14.8px;color:var(--ink)}
+.persona .ans b{color:var(--gold)}
+
+/* ── 정직 섹션 ── */
+.honest{background:var(--navy);color:#dfe4ee}
+.honest h2{color:#fff}
+.honest .kicker{color:var(--gold2)}
+.honest p{color:#aeb9cf;font-size:16px}
+.honest .box{border:1px solid rgba(217,188,107,.35);border-radius:14px;padding:20px 22px;margin-top:24px;color:#e9e4d3;font-size:15.5px}
+.honest .box b{color:var(--gold2)}
+
+/* ── 해부 섹션 ── */
+.anatomy{background:var(--paper)}
+.cu{margin:0 0 54px}
+.cu .num{font-family:"Noto Serif KR",serif;color:var(--gold);font-size:15px;font-weight:700;letter-spacing:.1em}
+.cu h3{font-family:"Noto Serif KR",serif;font-size:21px;color:var(--navy);margin:6px 0 10px;line-height:1.5}
+.cu p{font-size:15.3px;color:var(--muted);margin:0 0 16px}
+.cu img{width:100%;border-radius:10px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(16,29,54,.10);display:block}
+.cu .tag{display:inline-block;background:var(--cream);border:1px solid var(--line);border-radius:6px;
+  font-size:12px;color:var(--muted);padding:3px 10px;margin-top:10px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 0}
 .stat{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:16px 8px;text-align:center}
-.stat b{display:block;font-family:"Noto Serif KR",serif;font-size:25px;color:var(--navy)}
+.stat b{display:block;font-family:"Noto Serif KR",serif;font-size:24px;color:var(--navy)}
 .stat span{font-size:12px;color:var(--muted)}
 
-/* timeline */
-.tl{list-style:none;margin:26px 0 0;padding:0;position:relative}
-.tl::before{content:"";position:absolute;left:23px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.tl li{position:relative;padding:0 0 26px 64px}
-.tl li:last-child{padding-bottom:0}
-.tl .day{position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;
-  background:var(--navy);color:#f4f1e8;display:flex;align-items:center;justify-content:center;
-  font-family:"Noto Serif KR",serif;font-weight:700;font-size:16px;border:3px solid var(--cream)}
-.tl li.gold .day{background:var(--gold)}
-.tl h4{margin:2px 0 3px;font-size:16px;color:var(--navy)}
-.tl p{margin:0;font-size:14px;color:var(--muted)}
+/* ── 시스템 섹션 ── */
+.system{background:linear-gradient(172deg,var(--navy) 0%,var(--navy2) 100%);color:#dfe4ee}
+.system h2{color:#fff}
+.system .kicker{color:var(--gold2)}
+.system .lead{color:#aeb9cf;font-size:15.5px;margin:0 0 30px}
+.flow{display:flex;flex-direction:column;gap:0;margin:0 0 40px}
+.fstep{display:flex;gap:16px;align-items:flex-start;position:relative;padding-bottom:24px}
+.fstep::before{content:"";position:absolute;left:21px;top:46px;bottom:0;width:2px;background:rgba(255,255,255,.14)}
+.fstep:last-child::before{display:none}
+.fstep .ic{flex:0 0 44px;height:44px;border-radius:12px;background:rgba(217,188,107,.14);
+  border:1px solid rgba(217,188,107,.4);display:flex;align-items:center;justify-content:center;font-size:20px}
+.fstep h4{margin:8px 0 3px;font-size:16px;color:#fff}
+.fstep p{margin:0;font-size:14px;color:#9fabc2}
+.report{background:#fff;border-radius:18px;color:var(--ink);padding:24px;max-width:430px;margin:0 auto;
+  box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.report .r-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:16px}
+.report .r-head b{font-size:15.5px;color:var(--navy)}
+.report .r-head span{font-size:12px;color:var(--muted)}
+.rrow{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:6px 0}
+.bars{display:flex;gap:6px;align-items:flex-end;height:56px;margin:8px 0 2px}
+.bars i{flex:1;background:#e8ecf4;border-radius:4px 4px 0 0;position:relative}
+.bars i.on{background:var(--navy)}
+.bars i.cur{background:var(--gold)}
+.bars i span{position:absolute;top:-19px;left:0;right:0;text-align:center;font-size:10px;color:var(--muted);font-style:normal}
+.bar-cap{display:flex;gap:6px;font-size:10.5px;color:var(--muted);text-align:center}
+.bar-cap s{flex:1;text-decoration:none}
+.gauge{margin-top:14px;background:var(--cream);border-radius:12px;padding:14px 16px}
+.gauge .g-line{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:6px}
+.gauge .g-track{height:10px;border-radius:999px;background:linear-gradient(90deg,#d8dee9,#d8dee9);position:relative;overflow:hidden}
+.gauge .g-fill{position:absolute;left:0;top:0;bottom:0;width:72%;border-radius:999px;background:linear-gradient(90deg,var(--navy),var(--gold))}
+.gauge .g-grade{font-family:"Noto Serif KR",serif;font-size:21px;color:var(--navy);font-weight:900;margin-top:8px}
+.rc-note{background:var(--cream);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--ink);margin-top:12px}
+.sample-tag{text-align:center;font-size:12px;color:#8b96ab;margin-top:12px}
 
-/* protocol */
-.protocol{background:var(--navy);color:#e8e4d8}
-.protocol h2{color:#f4f1e8}
-.protocol .kicker{color:var(--gold-soft)}
-.protocol .lead{color:#9aa5bb}
-.steps{counter-reset:s;list-style:none;margin:26px 0 0;padding:0}
-.steps li{counter-increment:s;position:relative;padding:0 0 22px 58px}
-.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:40px;height:40px;
-  border:1.5px solid var(--gold-soft);color:var(--gold-soft);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;font-family:"Noto Serif KR",serif;font-size:17px}
-.steps h4{margin:0 0 3px;font-size:16px;color:#fff}
-.steps p{margin:0;font-size:14px;color:#9aa5bb}
-.promise{border:1px solid rgba(217,188,107,.4);border-radius:12px;padding:16px 18px;
-  margin-top:10px;font-size:14.5px;color:#d8dce6}
-.promise b{color:var(--gold-soft)}
+/* 주간 사이클 */
+.week{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:26px}
+.day{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 16px}
+.day b{display:block;color:var(--gold2);font-family:"Noto Serif KR",serif;font-size:15px;margin-bottom:3px}
+.day span{font-size:13px;color:#aeb9cf}
 
-/* report sample */
-.report-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;
-  box-shadow:0 14px 34px rgba(21,36,65,.1);padding:22px;max-width:420px;margin:26px auto 0}
-.report-card .rc-head{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:14px}
-.report-card .rc-head .dot{width:38px;height:38px;border-radius:10px;background:var(--navy);color:#fff;
-  display:flex;align-items:center;justify-content:center;font-family:"Noto Serif KR",serif;font-weight:700}
-.report-card .rc-head b{display:block;font-size:15px;color:var(--navy)}
-.report-card .rc-head span{font-size:12px;color:var(--muted)}
-.rc-row{display:flex;justify-content:space-between;font-size:14px;padding:7px 0;border-bottom:1px dashed var(--line)}
-.rc-row:last-of-type{border-bottom:none}
-.rc-row .ok{color:#2e7d4f;font-weight:700}
-.rc-row .warn{color:var(--red);font-weight:700}
-.rc-note{background:var(--cream);border-radius:10px;padding:12px 14px;font-size:13.5px;color:var(--ink);margin-top:12px}
-.sample-tag{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
-
-/* pricing */
-.tiers{display:flex;flex-direction:column;gap:18px;margin-top:26px}
-.tier{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px 24px;position:relative}
-.tier.hot{border:2px solid var(--gold);box-shadow:0 16px 40px rgba(184,145,47,.16)}
-.tier .badge{position:absolute;top:-13px;left:22px;background:var(--gold);color:#fff;
-  font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 14px}
+/* ── 가격 ── */
+.tiers{display:flex;flex-direction:column;gap:18px;margin-top:30px}
+.tier{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px 24px;position:relative}
+.tier.hot{border:2px solid var(--gold);box-shadow:0 18px 44px rgba(184,145,47,.15)}
+.tier .badge{position:absolute;top:-13px;left:22px;background:var(--gold);color:#fff;font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 14px}
 .tier h3{font-family:"Noto Serif KR",serif;margin:0 0 2px;font-size:20px;color:var(--navy)}
 .tier .sub{font-size:13.5px;color:var(--muted);margin-bottom:14px}
-.tier .price{font-family:"Noto Serif KR",serif;font-size:30px;color:var(--navy);margin:6px 0 2px}
+.tier .price{font-family:"Noto Serif KR",serif;font-size:31px;color:var(--navy);margin:6px 0 2px}
 .tier .price small{font-size:14px;color:var(--muted);font-family:"Noto Sans KR",sans-serif;font-weight:400}
 .tier .early{font-size:13.5px;color:var(--red);font-weight:700;margin-bottom:14px}
-.tier ul{margin:0 0 18px;padding-left:0;list-style:none}
-.tier li{font-size:14.5px;padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--line)}
+.tier ul{margin:0 0 6px;padding:0;list-style:none}
+.tier li{font-size:14.6px;padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--line)}
 .tier li:last-child{border-bottom:none}
 .tier li::before{content:"✓";position:absolute;left:2px;color:var(--gold);font-weight:700}
-.tier .cap{font-size:13px;color:var(--red);font-weight:700;margin-bottom:12px}
-.free-note{background:var(--paper);border:1px dashed var(--gold);border-radius:12px;
-  padding:16px 18px;font-size:14px;margin-top:18px;color:var(--ink)}
+.tier li b{color:var(--navy)}
+.tier .cap{font-size:13px;color:var(--red);font-weight:700;margin:6px 0 10px}
+.anchor{background:var(--paper);border:1px dashed var(--gold);border-radius:12px;padding:16px 18px;font-size:14.5px;margin-top:18px}
+.anchor b{color:var(--navy)}
 
-/* seats */
-.seats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
-.seat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:15px 16px}
-.seat b{display:block;font-size:15px;color:var(--navy)}
-.seat span{font-size:12.5px;color:var(--muted)}
-.seat .left{float:right;font-family:"Noto Serif KR",serif;font-size:17px;color:var(--gold);font-weight:700}
+/* 정원 */
+.seats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:24px}
+.seat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 13px}
+.seat b{display:block;font-size:14px;color:var(--navy)}
+.seat span{font-size:11.5px;color:var(--muted)}
+.seat .left{float:right;font-family:"Noto Serif KR",serif;font-size:15px;color:var(--gold);font-weight:700}
 
-/* pilot */
-.pilot{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.pilot-box{border:2px solid var(--navy);border-radius:16px;padding:26px 24px;margin-top:8px}
-.pilot-box h3{font-family:"Noto Serif KR",serif;margin:0 0 8px;font-size:19px;color:var(--navy)}
-.pilot-box p{font-size:14.5px;color:var(--muted);margin:0 0 18px}
+/* ── 신청 폼 ── */
+.applybox{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px 24px;box-shadow:0 20px 50px rgba(16,29,54,.08)}
+.f-sec{margin-bottom:28px}
+.f-sec h4{font-size:14px;color:var(--gold);letter-spacing:.08em;margin:0 0 12px;font-weight:700}
+label.f-label{display:block;font-size:14px;font-weight:700;color:var(--navy);margin:16px 0 6px}
+label.f-label small{font-weight:400;color:var(--muted)}
+input[type=text],input[type=tel],textarea,select{
+  width:100%;background:var(--cream);border:1.5px solid var(--line);color:var(--ink);
+  border-radius:10px;padding:13px 14px;font-size:16px;font-family:inherit;line-height:1.5}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--gold);outline-offset:-1px;background:#fff}
+textarea{resize:vertical;min-height:74px}
+.chip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chip-grid.g2{grid-template-columns:repeat(2,1fr)}
+.chip-btn{border:1.5px solid var(--line);background:var(--cream);border-radius:10px;padding:12px 6px;
+  font-size:14.5px;font-family:inherit;cursor:pointer;color:var(--ink);font-weight:500}
+.chip-btn.on{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:700}
+.tier-pick{display:flex;flex-direction:column;gap:10px}
+.tier-pick .tp{border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;background:var(--cream)}
+.tier-pick .tp.on{border-color:var(--gold);background:#fffdf5;box-shadow:0 0 0 1px var(--gold)}
+.tp b{font-size:15.5px;color:var(--navy)}
+.tp .tp-price{float:right;font-family:"Noto Serif KR",serif;color:var(--navy);font-weight:700}
+.tp p{margin:4px 0 0;font-size:12.8px;color:var(--muted)}
+.toggle{display:flex;gap:12px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;background:var(--cream);margin-top:8px}
+.toggle.on{border-color:var(--gold);background:#fffdf5;box-shadow:0 0 0 1px var(--gold)}
+.toggle .tk{flex:0 0 22px;height:22px;border-radius:6px;border:2px solid var(--line);margin-top:2px;position:relative;background:#fff}
+.toggle.on .tk{background:var(--gold);border-color:var(--gold)}
+.toggle.on .tk::after{content:"✓";position:absolute;inset:0;color:#fff;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.toggle b{font-size:14.8px;color:var(--navy)}
+.toggle p{margin:3px 0 0;font-size:12.8px;color:var(--muted)}
+.hint{font-size:12.5px;color:var(--muted);margin-top:6px}
+.err{color:var(--red);font-size:13.5px;margin-top:8px;font-weight:700;display:none}
+#doneCard{display:none;text-align:center;padding:30px 10px}
+#doneCard .big{font-size:44px;margin-bottom:10px}
+#doneCard h3{font-family:"Noto Serif KR",serif;color:var(--navy);font-size:22px;margin:0 0 10px}
+#doneCard p{color:var(--muted);font-size:14.5px}
 
-/* faq */
+/* FAQ */
 details{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
-summary{padding:16px 18px;font-weight:700;font-size:15px;color:var(--navy);cursor:pointer;list-style:none;position:relative;padding-right:40px}
+summary{padding:16px 44px 16px 18px;font-weight:700;font-size:15px;color:var(--navy);cursor:pointer;list-style:none;position:relative}
 summary::after{content:"+";position:absolute;right:18px;top:14px;font-size:20px;color:var(--gold)}
 details[open] summary::after{content:"−"}
-details p{margin:0;padding:0 18px 16px;font-size:14.5px;color:var(--muted)}
+details .dp{margin:0;padding:0 18px 16px;font-size:14.5px;color:var(--muted)}
 
-/* final cta */
-.final{background:linear-gradient(168deg,var(--navy) 0%,var(--navy2) 100%);color:#f4f1e8;text-align:center}
-.final h2{color:#fff;font-size:24px}
-.final p{color:#9aa5bb;font-size:15px;margin:0 0 26px}
-.final .cta-row{max-width:420px;margin:0 auto}
-
-footer{padding:34px 0 60px;text-align:center;font-size:12px;color:#9aa0ae;line-height:1.9}
+/* 파이널 */
+.final{background:linear-gradient(172deg,var(--navy3),var(--navy2));color:#f2efe6;text-align:center}
+.final h2{color:#fff}
+.final p{color:#9fabc2;font-size:15px;margin:0 0 26px}
+footer{padding:36px 0 64px;text-align:center;font-size:12px;color:#9aa0ae;line-height:1.9}
 footer b{color:var(--muted)}
-
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(21,36,65,.97);
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(16,29,54,.97);
   backdrop-filter:blur(4px);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
   display:flex;gap:8px;transform:translateY(110%);transition:.25s}
 .sticky-cta.show{transform:translateY(0)}
 .sticky-cta .btn{flex:1;padding:13px 10px;font-size:14.5px}
-.sticky-cta .btn-line{border-color:rgba(255,255,255,.3)}
 @media(min-width:560px){
   .hero h1{font-size:37px}
   .cta-row{flex-direction:row}
   .cta-row .btn{flex:1}
-  .stats{gap:14px}
-  .seats{grid-template-columns:repeat(3,1fr)}
+  .week{grid-template-columns:repeat(3,1fr)}
+  .chip-grid{grid-template-columns:repeat(3,1fr)}
 }
+@media(max-width:400px){ .seats{grid-template-columns:repeat(2,1fr)} }
 </style>
 </head>
 <body>
 
-<!-- ① 히어로 -->
+<!-- ═══ 히어로 ═══ -->
 <header class="hero">
   <div class="wrap">
-    <div class="brand">주간내신 週刊內申</div>
-    <h1>아이가 안 푼 날,<br><em>저희가 먼저 알고</em><br>연락드립니다.</h1>
-    <p>학교별 동형 모의고사가 매주 월요일 도착하고,</p>
-    <p>일요일 저녁, 학부모님께 주간 리포트가 갑니다.</p>
+    <div class="sil" aria-hidden="true">
+      <svg width="86" height="80" viewBox="0 0 86 80"><g fill="#0a1220">
+        <circle cx="43" cy="26" r="17"/><path d="M8 80c0-21 16-33 35-33s35 12 35 33z"/></g></svg>
+    </div>
+    <div class="kicker">前 메가스터디 온라인 강사 · 변형문제 출제자</div>
+    <h1>얼굴도, 이름도<br>공개하지 않습니다.<br><em>자료가 저를 증명합니다.</em></h1>
+    <p class="sub">인강 시장에서 검증받은 교재 퀄리티를,<br>딱 여섯 학교의 내신 시험지에 맞춰 만듭니다.</p>
     <div class="schools">
-      <span>미사고</span><span>미사강변고</span><span>하남고</span><span>고1 · 고2 영어</span>
+      <span>미사고</span><span>미사강변고</span><span>하남고</span><span>풍산고</span><span>남한고</span><span>신장고</span>
     </div>
     <div class="cta-row">
-      <a class="btn btn-gold" id="cta1" href="#pricing">우리 학교 남은 자리 확인하기</a>
-      <a class="btn btn-line" href="sms:010-8337-8158?body=%5B%EC%A3%BC%EA%B0%84%EB%82%B4%EC%8B%A0%20%EB%AC%B4%EB%A3%8C%EB%A6%AC%ED%8F%AC%ED%8A%B8%5D%20%ED%95%99%EA%B5%90%2F%ED%95%99%EB%85%84%EC%9D%84%20%EB%B3%B4%EB%82%B4%EC%A3%BC%EC%84%B8%EC%9A%94">우리 학교 기출 분석 리포트 무료로 받기</a>
+      <a class="btn btn-gold" href="#apply">우리 학교 남은 자리 확인</a>
+      <a class="btn btn-line" href="#anatomy">자료부터 뜯어보기</a>
     </div>
-    <small>2학기 중간고사 시즌 · 8/31(월) 개강 · 8주 과정 · 다니는 학원 그대로 병행하는 설계입니다</small>
+    <small>고1·고2 영어 · 2학기 중간고사 시즌 · 8/31(월) 개강 · 8주</small>
   </div>
 </header>
 
-<!-- ② 공감 -->
-<section class="empathy">
-  <div class="wrap">
-    <div class="kicker">이런 적 있으시죠</div>
-    <blockquote>시험 3주 전에야<br>"우리 학교 자료 있는 데 없나요"<br>검색해 보신 적, 있으시죠.</blockquote>
-    <p>학원은 다니는데 <b>우리 학교 시험지 유형</b>으로 실전 연습을 하는지는 알 수 없고,
-    아이가 이번 주에 뭘 풀었는지, 풀긴 했는지도 확인이 어렵습니다.
-    주간내신은 그 두 가지만 합니다 — <b>우리 학교 시험지로 매주 연습시키고, 그 결과를 매주 보고드리는 것.</b></p>
+<!-- ═══ 1인칭 서사 ═══ -->
+<section class="story">
+  <div class="wrap prose">
+    <div class="kicker center">이 사람은 누구인가</div>
+    <h2>수만 명이 푸는 인강 교재를 만들던 사람이,<br>왜 동네 여섯 학교에 숨어들었나</h2>
+    <hr class="divider">
+    <p>저는 오랫동안 인터넷 강의 시장에서 교재와 변형문제를 만들었습니다. 그 시장의 기준은 가혹합니다. 수만 명이 동시에 푸는 교재는 <strong>페이지 하나, 선지 하나에도 검수가 몇 번씩</strong> 들어갑니다. 해설이 불친절하면 그날로 게시판이 뒤집힙니다.</p>
+    <p>그러다 제 눈에 내신 시장이 들어왔습니다. 아이들이 시험 전에 받아 드는 자료를 봤습니다. 낱장 프린트. 정답만 적힌 해설. 어디서 복사됐는지 모를 기출 모음.</p>
+    <p class="pull">인강 시장이라면 하루도 못 버틸 퀄리티가,<br>내신 시장에서는 "원래 그런 것"이 되어 있었습니다.</p>
+    <p>이유는 간단합니다. <strong>학교마다 시험이 다르기 때문입니다.</strong> 대형 출판사는 전국 공통 교재만 만들 수 있습니다. 미사강변고의 시험지, 하남고의 서술형 배점에 맞춘 교재는 시장이 너무 작아서 아무도 만들지 않습니다. 그래서 그 빈자리를 낱장 프린트가 채우고 있었던 겁니다.</p>
+    <p>그래서 제가 만들기로 했습니다. 전국이 아니라, <strong>여섯 학교만.</strong> 그 학교 시험지의 문항 번호와 배점까지 그대로 따라 만들고, 문항 하나에 해설서 수십 쪽을 붙이기로요. 인강 시장에서 하던 그대로.</p>
+    <p>이름을 밝히지 않는 이유도 같습니다. 이 시장에서 강사 이름은 중요하지 않습니다. <strong>아이 손에 들리는 자료가 전부입니다.</strong> 아래에서 그 자료를 한 장 한 장 뜯어 보여드리겠습니다. 판단은 그다음에 하셔도 됩니다.</p>
+    <div class="sig">— 주간내신 만드는 사람</div>
   </div>
 </section>
 
-<!-- ③ 실물 증거 -->
-<section class="proof">
+<!-- ═══ 통념 파괴 + 페르소나 ═══ -->
+<section>
   <div class="wrap">
-    <div class="kicker">말이 아니라 실물로 보여드립니다</div>
-    <h2>이 학교 시험지를,<br>번호·순서·배점까지 그대로.</h2>
-    <p class="lead">아래 이미지는 실제 제작물 원본입니다. 예시가 아닙니다.</p>
+    <div class="kicker">혹시 이 중 하나입니까</div>
+    <h2>성적이 안 오르는 건<br>아이 탓이 아닐 수 있습니다.</h2>
+    <p style="color:var(--muted);font-size:15.5px;margin:0 0 28px">아이가 푸는 자료가 <b>우리 학교 시험</b>과 다르게 생겼다면, 노력의 방향 자체가 어긋난 겁니다. 그런데 가정마다 사정은 다릅니다.</p>
 
-    <figure class="figure">
-      <img src="img/exam.jpg" alt="하남고 유형 내신 동형 모의고사 실물 1페이지" loading="lazy">
-      <figcaption><b>하남고 동형 모의고사 제1회 실물.</b> 하남고 시험지의 문항 번호·순서·유형을 그대로 따랐습니다.
-      선택형 27 + 서술형 5, 배점 합계 100점 — 배점 체계까지 동일합니다.</figcaption>
-    </figure>
-
-    <figure class="figure">
-      <img src="img/expl.jpg" alt="전문항 상세해설서 본문 — 지문 흐름, 직독직해, 어법 박스" loading="lazy">
-      <figcaption><b>상세해설서 본문 실물.</b> 문항 하나에 지문 흐름 → 문장별 직독직해 → 어법 포인트 → 오답 이유까지.
-      해설지 한 장이 아니라, <b>모의고사 1회분에 해설서 41쪽</b>이 붙습니다.</figcaption>
-    </figure>
-
-    <div class="stats">
-      <div class="stat"><b>3개교</b><span>기출 전수분석<br>미사고·미사강변고·하남고</span></div>
-      <div class="stat"><b>41쪽</b><span>모의고사 1회분당<br>상세해설서 분량</span></div>
-      <div class="stat"><b>100점</b><span>실제 시험과 동일한<br>문항수·배점 체계</span></div>
+    <div class="persona">
+      <h4><span>CASE 1</span>학원에 다니는데, 자료가 아쉽다</h4>
+      <p>선생님이 챙겨주시는 건 만족스러운데, 나눠주는 자료는 낱장 프린트다. 더 큰 학원의 교재를 자료만 따로 받고 싶다는 생각을 해본 적이 있다.</p>
+      <div class="ans"><b>→</b> 다니는 학원은 그대로 두세요. 주간내신은 수업이 아니라 <b>자료를 얹는 구독</b>입니다. 학원 진도와 부딪히지 않습니다.</div>
+    </div>
+    <div class="persona">
+      <h4><span>CASE 2</span>학원비가 부담스럽다</h4>
+      <p>이 동네 고등 영어 학원은 월 30만원대. 형제가 둘이면 감당이 안 된다. 그래도 아이에게 검증된 자료는 쥐여주고 싶다.</p>
+      <div class="ans"><b>→</b> 학원비의 1/4 값으로, 이 지역에서 가장 밀도 높은 자료를 <b>매주 월요일</b> 받게 하세요. 자기주도가 되는 아이라면 이것으로 충분하도록 설계했습니다.</div>
+    </div>
+    <div class="persona">
+      <h4><span>CASE 3</span>학원 갈 시간이 아깝다</h4>
+      <p>상위권이거나, 조용히 혼자 공부하는 게 맞는 아이다. 아는 문법 설명을 학원에서 또 듣고 앉아 있는 시간이 아깝다.</p>
+      <div class="ans"><b>→</b> 수업 없이 <b>실전 문항과 해설서만 최고 밀도로.</b> 이동 시간 0분, 아이의 속도로 갑니다. 막히는 것만 질문함에 넣으면 됩니다.</div>
     </div>
   </div>
 </section>
 
-<!-- ④ 주간 사이클 -->
-<section>
+<!-- ═══ 정직한 커트라인 ═══ -->
+<section class="honest">
   <div class="wrap">
-    <div class="kicker">일주일이 이렇게 돌아갑니다</div>
-    <h2>월요일에 오고,<br>일요일에 보고됩니다.</h2>
-    <p class="lead">8주 내내 같은 리듬입니다. 리듬이 관리를 만듭니다.</p>
-    <ul class="tl">
-      <li><span class="day">월</span><h4>주간 세트 도착 (오전 9시)</h4><p>미니 모의고사 + 41쪽 상세해설서 + 이번 주 학습 가이드</p></li>
-      <li><span class="day">수</span><h4>풀이 제출 체크인 (밤 8시 마감)</h4><p>풀이 사진 업로드. 안 내면 목요일 아침에 자동 알림이 갑니다</p></li>
-      <li><span class="day">목</span><h4>질문함 마감 (밤 10시)</h4><p>주 3문항까지 무엇이든. 사진으로 찍어 보내면 됩니다</p></li>
-      <li><span class="day">금</span><h4>학교별 라이브 Q&amp;A (밤 9시 · 30분)</h4><p>질문 일괄 답변 + 학교별 그룹 라이브. 녹화본 제공</p></li>
-      <li class="gold"><span class="day">일</span><h4>학부모 주간 리포트 (저녁 6시)</h4><p>제출 여부 · 점수 · 오답 유형 · 다음 주 계획 — 알림톡 한 통</p></li>
-      <li><span class="day">D-3</span><h4>시험 3주 전 — 실물 동형 패키지 배송</h4><p>동형 모의고사 2회분 + 해설서 + OMR, 종이로 집까지</p></li>
-    </ul>
+    <div class="kicker">정직하게 말씀드립니다</div>
+    <h2>이 서비스로 안 되는<br>아이도 있습니다.</h2>
+    <p>자료를 받아도 펼치지 않는 아이, 스스로 책상에 앉는 힘이 아직 없는 아이는 <b>선생님이 옆에 있는 오프라인 관리형 학원</b>이 맞습니다. 그게 정답인 아이에게 구독을 파는 건 학부모님 돈으로 저희 매출을 만드는 일입니다.</p>
+    <div class="box">
+      <b>대신, 그 중간의 아이들을 위해 시스템을 만들었습니다.</b><br>
+      과제를 제출하지 않으면 <b>학생과 학부모 모두에게 알림</b>이 갑니다. 풀이를 사진으로 제출하면 시스템이 분석해 <b>일요일 저녁 리포트</b>로 보고합니다. "시켜야 하는데 매번 싸우게 되는" 그 관리를, 시스템이 대신 합니다.
+    </div>
   </div>
 </section>
 
-<!-- ⑤ 미이행 프로토콜 -->
-<section class="protocol">
+<!-- ═══ 자료 해부 ═══ -->
+<section class="anatomy" id="anatomy">
   <div class="wrap">
-    <div class="kicker">저희의 진짜 차별점</div>
-    <h2>아이가 안 했을 때,<br>저희가 움직이는 순서.</h2>
-    <p class="lead">숨기지 않고 전부 공개합니다. 이 순서 그대로 운영합니다.</p>
-    <ol class="steps">
-      <li><h4>1회 미제출 — 다음 날 아침, 학생에게 알림</h4><p>수요일 마감이 지나면 목요일 오전 자동으로 다시 안내합니다.</p></li>
-      <li><h4>매주 일요일 — 리포트에 무조건 표기</h4><p>제출/미제출과 완성도(미흡·양호·우수)가 학부모 리포트에 항상 표시됩니다. 좋은 주만 보고드리지 않습니다.</p></li>
-      <li><h4>2주 연속 미제출 — 원장이 직접 통화</h4><p>질책이 아니라 조정입니다. "이번 주는 분량을 절반으로 줄여볼게요."</p></li>
-      <li><h4>3주 연속 — 일시정지를 먼저 권합니다</h4><p>억지로 끌고 가지 않습니다. 잔여 기간 환불 규정을 먼저 안내드립니다.</p></li>
-      <li><h4>8주 완주 — 보상</h4><p>전 주차 제출 시 다음 시즌 2만원 크레딧 + 동형 모의고사 1회분 추가.</p></li>
-    </ol>
-    <div class="promise"><b>환불을 먼저 권하는 이유</b> — 안 하는 아이를 붙잡아 두는 건 학부모님 돈으로 저희 매출을 만드는 일이기 때문입니다. 그 신뢰가 이 서비스의 전부입니다.</div>
-  </div>
-</section>
+    <div class="kicker">말이 아니라 실물로</div>
+    <h2>자료를 한 장 한 장<br>뜯어 보십시오.</h2>
+    <p style="color:var(--muted);font-size:15.5px;margin:0 0 44px">아래는 전부 실제 제작물 원본입니다. 서점 교재와 인강 부교재에서만 보던 구성 — 그대로 있는지 직접 확인하세요.</p>
 
-<!-- ⑥ 학부모 리포트 샘플 -->
-<section>
-  <div class="wrap">
-    <div class="kicker">일요일 저녁 6시, 이렇게 옵니다</div>
-    <h2>학부모 주간 리포트</h2>
-    <div class="report-card">
-      <div class="rc-head">
-        <div class="dot">週</div>
-        <div><b>주간내신 · 3주차 리포트</b><span>미사강변고 1학년 ○○○ 학생</span></div>
+    <div class="cu">
+      <div class="num">01</div>
+      <h3>우리 학교 시험지를, 번호·배점까지 그대로</h3>
+      <p>하남고 유형 동형 모의고사 실물입니다. 선택형 27 + 서술형 5, 합계 100점 — 문항 순서와 배점 체계가 실제 시험지와 동일합니다. 실전과 같은 지형에서 연습해야 시험장에서 낯설지 않습니다.</p>
+      <img src="img/exam.jpg" alt="하남고 유형 동형 모의고사 실물 1페이지" loading="lazy">
+      <span class="tag">하남고 동형 제1회 · 실물</span>
+    </div>
+
+    <div class="cu">
+      <div class="num">02</div>
+      <h3>지문 하나가 다섯 컷의 이야기가 됩니다</h3>
+      <p>모의고사·외부지문 해설엔 지문 전체를 도입→전개→반전으로 잘라낸 <b>스토리 컷</b>이 붙습니다. 단순 암기가 아니라 글의 흐름을 이해하면, 처음 보는 변형 문제에서 힘이 생깁니다.</p>
+      <img src="img/cu_flow.jpg" alt="지문 흐름 5단계 스토리 해설" loading="lazy">
+      <span class="tag">지문 흐름 · 한눈에 읽기 (실물 확대)</span>
+    </div>
+
+    <div class="cu">
+      <div class="num">03</div>
+      <h3>모든 문장을 끊어 읽고, 쉬운 말로 한 번 더</h3>
+      <p>전 문장 직독직해 — 문장을 의미 단위로 끊고, 어순 그대로 해석을 답니다. 그리고 그 아래 <b>「쉬운 해석」</b> 줄이 하나 더 있습니다. 영어가 어려운 아이 기준으로, 학원 선생님보다 친절하게 다시 풀어 쓴 줄입니다.</p>
+      <img src="img/cu_jikdok.jpg" alt="문장별 직독직해와 쉬운 해석" loading="lazy">
+      <span class="tag">직독직해 + 쉬운 해석 (실물 확대)</span>
+    </div>
+
+    <div class="cu">
+      <div class="num">04</div>
+      <h3>어법은 "왜"까지. 시험에 나오는 그 포인트만</h3>
+      <p>문장 속 어법 포인트마다 박스가 붙습니다. 규칙 암기가 아니라 <b>이 문장에서 왜 이렇게 쓰였는지</b>, 예문 두 개와 Tip으로 끝냅니다.</p>
+      <img src="img/cu_grammar.jpg" alt="어법 포인트 박스" loading="lazy">
+      <span class="tag">어법 박스 (실물 확대)</span>
+    </div>
+
+    <div class="cu">
+      <div class="num">05</div>
+      <h3>정답만이 아니라, 오답 네 개가 왜 틀렸는지 전부</h3>
+      <p>내신 등급을 가르는 건 헷갈리는 오답 선지입니다. 선지 ①~⑤를 전부 해부해서 <b>왜 정답이고, 왜 함정인지</b> 근거 문장 번호까지 적어 드립니다.</p>
+      <img src="img/cu_choices.jpg" alt="선지 완전 분석" loading="lazy">
+      <span class="tag">정답·선지 완전 분석 (실물 확대)</span>
+    </div>
+
+    <div class="cu">
+      <div class="num">06</div>
+      <h3>단어장이 아니라, 어감까지 잡는 어휘 정리</h3>
+      <p>다의어는 뜻 나열이 아니라 <b>핵심 어감</b>부터 잡고 갈래를 폅니다. 유의어는 시험이 좋아하는 <b>패러프레이징 짝</b>으로 묶습니다. 본문에 나온 필수 어휘는 품사별로 다시 정리됩니다.</p>
+      <img src="img/cu_polysemy.jpg" alt="진짜 다의어 — 어감과 핵심 의미" loading="lazy" style="margin-bottom:10px">
+      <img src="img/cu_synonym.jpg" alt="유의어 패러프레이징 정리" loading="lazy">
+      <span class="tag">다의어 · 유의어 패러프레이징 (실물 확대)</span>
+    </div>
+
+    <div class="cu" style="margin-bottom:0">
+      <div class="num">07</div>
+      <h3>이게 전부 모의고사 "1회분"에 붙습니다</h3>
+      <img src="img/expl.jpg" alt="상세해설서 본문 한 페이지 전체" loading="lazy">
+      <div class="stats">
+        <div class="stat"><b>41쪽</b><span>모의고사 1회분당<br>해설서 분량</span></div>
+        <div class="stat"><b>6개교</b><span>학교별 기출<br>전수분석 기반</span></div>
+        <div class="stat"><b>100%</b><span>전 문항<br>직독직해·선지분석</span></div>
       </div>
-      <div class="rc-row"><span>이번 주 제출</span><span class="ok">제출 완료 (수 19:42)</span></div>
-      <div class="rc-row"><span>미니 모의고사</span><span><b>84점</b> / 100 (지난주 76점)</span></div>
-      <div class="rc-row"><span>오답 유형</span><span>어법 2 · 빈칸 1 · 서술형 1</span></div>
-      <div class="rc-row"><span>질문함 사용</span><span>2문항 / 3문항</span></div>
-      <div class="rc-note"><b>다음 주 계획</b> — 어법 오답이 2주째 관계사에 몰려 있습니다. 다음 주 세트에 관계사 집중 지문 2개를 배치했습니다.</div>
     </div>
-    <p class="sample-tag">※ 리포트 양식 예시입니다. 실제 리포트는 자녀의 데이터로 작성됩니다.</p>
   </div>
 </section>
 
-<!-- ⑦ 티어·가격 -->
+<!-- ═══ 자동 관리 시스템 ═══ -->
+<section class="system">
+  <div class="wrap">
+    <div class="kicker">사람이 아니라 시스템이 챙깁니다</div>
+    <h2>부모님이 시키지 않아도<br>돌아가게 만들었습니다.</h2>
+    <p class="lead">잔소리는 관계를 깎아 먹습니다. 확인과 독촉은 시스템에 맡기고, 부모님은 일요일 저녁 리포트만 보세요.</p>
+
+    <div class="flow">
+      <div class="fstep"><div class="ic">📸</div><div><h4>아이는 푼 것을 찍어 올리기만</h4><p>수요일 밤 8시까지 풀이 사진 제출. 그게 아이가 할 일의 전부입니다.</p></div></div>
+      <div class="fstep"><div class="ic">🔔</div><div><h4>안 내면, 학생·학부모 동시 알림</h4><p>마감이 지나면 다음 날 아침 자동으로 알림이 갑니다. 잔소리 없이 경각심만.</p></div></div>
+      <div class="fstep"><div class="ic">⚙️</div><div><h4>제출물은 시스템이 분석</h4><p>점수·오답 유형·취약 파트를 자동 집계합니다. 제가 손으로 하는 게 아니라 시스템이 합니다 — 그래서 빠지는 주가 없습니다.</p></div></div>
+      <div class="fstep"><div class="ic">📊</div><div><h4>일요일 저녁, 리포트 도착</h4><p>학생과 학부모 모두에게. 이번 주 한 것, 못 한 것, 다음 주 계획까지.</p></div></div>
+    </div>
+
+    <div class="report" aria-label="주간 리포트 예시">
+      <div class="r-head"><b>주간 리포트 · 4주차</b><span>미사강변고 1학년 ○○○</span></div>
+      <div class="rrow"><span>자료 수령 / 제출</span><b>4주 연속 제출 ✓</b></div>
+      <div class="bars" aria-hidden="true">
+        <i class="on" style="height:58%"><span>72</span></i>
+        <i class="on" style="height:64%"><span>76</span></i>
+        <i class="on" style="height:70%"><span>81</span></i>
+        <i class="cur" style="height:78%"><span>84</span></i>
+        <i style="height:12%"></i><i style="height:12%"></i><i style="height:12%"></i><i style="height:12%"></i>
+      </div>
+      <div class="bar-cap"><s>1주</s><s>2주</s><s>3주</s><s>4주</s><s>5주</s><s>6주</s><s>7주</s><s>8주</s></div>
+      <div class="gauge">
+        <div class="g-line"><span>예상 등급 (모의 점수 기준 추정)</span><span>상위 28%</span></div>
+        <div class="g-track"><div class="g-fill"></div></div>
+        <div class="g-grade">2등급 후반 → 2등급 초반 진입 중</div>
+      </div>
+      <div class="rc-note"><b>다음 주 계획</b> — 오답이 2주째 어법(관계사)에 몰려 있습니다. 5주차 세트에 관계사 집중 지문 2개를 배치했습니다.</div>
+    </div>
+    <p class="sample-tag">※ 리포트 양식 예시. 실제 리포트는 자녀의 제출 데이터로 작성됩니다.</p>
+
+    <div class="week">
+      <div class="day"><b>월요일</b><span>주간 세트 도착 — 모의고사 + 41쪽 해설서</span></div>
+      <div class="day"><b>수요일</b><span>풀이 사진 제출 마감 (밤 8시)</span></div>
+      <div class="day"><b>토요일</b><span>질문 해설서 발송 — 한 주 질문 일괄 답변</span></div>
+      <div class="day"><b>일요일</b><span>학생·학부모 주간 리포트 (저녁 6시)</span></div>
+      <div class="day"><b>시험 3주 전</b><span>실물 동형 패키지 배송 — 동형 2회분 + 해설서 + OMR</span></div>
+      <div class="day"><b>8주 완주</b><span>다음 시즌 크레딧 + 동형 1회분 보너스</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 가격 ═══ -->
 <section id="pricing">
   <div class="wrap">
-    <div class="kicker">2학기 중간 시즌 · 8/31(월) ~ 10/25(일)</div>
-    <h2>8주. 가격은 두 가지뿐입니다.</h2>
-    <p class="lead">월 구독이 아닙니다. 시험을 향해 가는 8주 선불 시즌제라, 해지 걱정이 없습니다.</p>
+    <div class="kicker">2학기 중간고사 시즌 · 8/31(월) 개강 · 8주</div>
+    <h2>가격은 두 가지.<br>둘 다 10만원 아래입니다.</h2>
+    <p style="color:var(--muted);font-size:15px;margin:0">월 구독이 아니라 <b>시험을 향해 가는 8주 선불 시즌제</b>입니다. 중간고사가 끝나면 시즌도 끝— 해지라는 개념 자체가 없습니다.</p>
+
     <div class="tiers">
       <div class="tier">
         <h3>자료 시즌패스</h3>
-        <div class="sub">매주 실전, 스스로 하는 아이에게</div>
-        <div class="price">69,000<small>원 / 8주</small></div>
+        <div class="sub">스스로 굴러가는 아이에게, 최고 밀도의 연료만</div>
+        <div class="price">69,000<small>원 / 8주 전체</small></div>
         <div class="early">조기등록(~8/23) 59,000원</div>
         <ul>
-          <li>주간 미니 모의고사 + 41쪽 상세해설서 (매주 월 PDF)</li>
-          <li>시험 3주 전 실물 동형 패키지 배송 1회 (동형 2회분+해설서+OMR)</li>
-          <li>주간 학습 가이드</li>
+          <li>매주 월요일 — 미니 모의고사 + <b>41쪽 상세해설서</b> (PDF)</li>
+          <li>시험 3주 전 — <b>실물 동형 패키지 배송</b> (동형 2회분+해설서+OMR)</li>
+          <li>우리 학교 시험 범위 맞춤 (신청서의 범위·외부지문 기준)</li>
+          <li><b>[무료 선택]</b> 제출 체크인 알림 + 일요일 주간 리포트</li>
         </ul>
       </div>
       <div class="tier hot">
-        <span class="badge">관리 포함 · 정원 24명</span>
-        <h3>관리 시즌패스</h3>
-        <div class="sub">확인까지 맡기고 싶은 가정에</div>
-        <div class="price">199,000<small>원 / 8주 총액 (월 환산 약 9.9만원)</small></div>
-        <div class="cap">학교·학년당 4명 한정 (전체 24명) — 정원제라 관리가 가능합니다</div>
+        <span class="badge">관리 포함 · 학교·학년당 2명</span>
+        <h3>관리+ 시즌패스</h3>
+        <div class="sub">확인·질문·설계까지 맡기고 싶은 가정에</div>
+        <div class="price">99,000<small>원 / 8주 전체</small></div>
+        <div class="early">조기등록(~8/23) 89,000원</div>
+        <div class="cap">정원 24명 — 학교·학년당 2명. 품질을 지키는 상한입니다.</div>
         <ul>
           <li>자료 시즌패스 전체 포함</li>
-          <li>개인별 주간 플랜 (전주 오답 기반으로 매주 재설계)</li>
-          <li>수요일 제출 체크인 + 미제출 자동 알림</li>
-          <li>질문함 주 3문항 + 금요일 학교별 라이브 Q&amp;A 30분</li>
-          <li><b>일요일 학부모 주간 리포트 알림톡</b></li>
-          <li>미이행 프로토콜 5단계 적용</li>
+          <li><b>질문 무제한</b> — 사진으로 보내면, 매주 토요일 「질문 해설서」로 일괄 답변</li>
+          <li><b>비대면 1:1 코칭 30분 × 1회</b> — 시즌 초, 아이의 현재 상태 진단과 8주 학습 설계</li>
+          <li>개인별 주간 플랜 — 전주 오답 기반으로 매주 재조정</li>
         </ul>
-        <a class="btn btn-gold" href="sms:010-8337-8158?body=%5B%EC%A3%BC%EA%B0%84%EB%82%B4%EC%8B%A0%20%EC%8B%A0%EC%B2%AD%5D%20%ED%95%99%EA%B5%90%2F%ED%95%99%EB%85%84%2F%ED%95%99%EC%83%9D%EC%9D%B4%EB%A6%84%2F%ED%8B%B0%EC%96%B4%28%EC%9E%90%EB%A3%8C%2F%EA%B4%80%EB%A6%AC%29%EB%A5%BC%20%EB%B3%B4%EB%82%B4%EC%A3%BC%EC%84%B8%EC%9A%94">이번 시즌 신청하기 — 문자 한 통이면 됩니다</a>
+        <a class="btn btn-gold" href="#apply" style="margin-top:14px">이번 시즌 신청하기</a>
       </div>
     </div>
-    <div class="free-note"><b>다올105 재원생은 관리 시즌패스가 수강료에 기본 포함(무료)</b>입니다. 재원생 가정은 따로 결제하지 않으셔도 됩니다.</div>
-  </div>
-</section>
+    <div class="anchor">
+      <b>가격의 기준</b> — 이 지역 고등 영어 학원비는 월 30만원대, 8주면 60만원입니다. 주간내신은 그 <b>1/6~1/8 값</b>으로, 자료와 관리 시스템만 떼어 드립니다. 수업이 필요한 아이는 학원이 맞고, 자료와 확인이 필요한 아이는 이걸로 충분합니다.
+    </div>
 
-<!-- ⑧ 정원 현황 -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="kicker">관리 시즌패스 정원 현황</div>
-    <h2>학교·학년당 4자리.</h2>
-    <p class="lead">관리 품질을 지키기 위한 상한입니다. 마감 시 다음 시즌 대기열로 안내됩니다.</p>
-    <div class="seats">
-      <div class="seat"><span class="left">4석</span><b>미사고 1</b><span>영어</span></div>
-      <div class="seat"><span class="left">4석</span><b>미사고 2</b><span>영어</span></div>
-      <div class="seat"><span class="left">4석</span><b>미사강변고 1</b><span>영어</span></div>
-      <div class="seat"><span class="left">4석</span><b>미사강변고 2</b><span>영어</span></div>
-      <div class="seat"><span class="left">4석</span><b>하남고 1</b><span>영어</span></div>
-      <div class="seat"><span class="left">4석</span><b>하남고 2</b><span>영어</span></div>
+    <div class="seats" aria-label="관리+ 정원 현황">
+      <div class="seat"><span class="left">2석</span><b>미사고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>미사고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>미사강변고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>미사강변고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>하남고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>하남고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>풍산고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>풍산고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>남한고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>남한고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>신장고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left">2석</span><b>신장고 2</b><span>영어</span></div>
     </div>
   </div>
 </section>
 
-<!-- ⑨ 파일럿 체험단 -->
-<section class="pilot">
+<!-- ═══ 신청 폼 ═══ -->
+<section id="apply" style="padding-top:40px">
   <div class="wrap">
-    <div class="kicker">첫 시즌이라, 후기 대신 이렇게 합니다</div>
-    <div class="pilot-box">
-      <h3>파일럿 체험단 6명 — 1주차 세트 무료</h3>
-      <p>과장된 후기를 만드는 대신, 학교·학년별 1명씩 첫 주 세트(모의고사+해설서+리포트 1회)를 무료로 드리고
-      솔직한 후기를 받겠습니다. 후기는 실명 동의 하에만 게시합니다.</p>
-      <a class="btn btn-line" style="border-color:var(--navy);color:var(--navy)" href="sms:010-8337-8158?body=%5B%EC%A3%BC%EA%B0%84%EB%82%B4%EC%8B%A0%20%EC%B2%B4%ED%97%98%EB%8B%A8%5D%20%ED%95%99%EA%B5%90%2F%ED%95%99%EB%85%84%EC%9D%84%20%EB%B3%B4%EB%82%B4%EC%A3%BC%EC%84%B8%EC%9A%94">체험단 신청하기</a>
+    <div class="kicker">신청 — 2분이면 됩니다</div>
+    <h2>우리 학교 시험 범위 그대로<br>만들어 드립니다.</h2>
+    <p style="color:var(--muted);font-size:14.5px;margin:0 0 26px">범위를 정확히 적어주실수록 자료가 정확해집니다. 지금 모르시는 칸은 비워두셔도 됩니다 — 신청 후 함께 확인합니다.</p>
+
+    <div class="applybox">
+      <form id="form" novalidate>
+        <div class="f-sec">
+          <h4>① 학생 정보</h4>
+          <label class="f-label">학교</label>
+          <div class="chip-grid" id="schoolPick">
+            <button type="button" class="chip-btn" data-v="미사고">미사고</button>
+            <button type="button" class="chip-btn" data-v="미사강변고">미사강변고</button>
+            <button type="button" class="chip-btn" data-v="하남고">하남고</button>
+            <button type="button" class="chip-btn" data-v="풍산고">풍산고</button>
+            <button type="button" class="chip-btn" data-v="남한고">남한고</button>
+            <button type="button" class="chip-btn" data-v="신장고">신장고</button>
+          </div>
+          <label class="f-label">학년</label>
+          <div class="chip-grid g2" id="gradePick">
+            <button type="button" class="chip-btn" data-v="고1">고1</button>
+            <button type="button" class="chip-btn" data-v="고2">고2</button>
+          </div>
+          <label class="f-label">학생 이름</label>
+          <input type="text" id="sname" placeholder="예: 김주간" autocomplete="off">
+        </div>
+
+        <div class="f-sec">
+          <h4>② 시험 범위 <small style="font-weight:400">(아는 만큼만)</small></h4>
+          <label class="f-label">교과서 · 출판사 <small>— 예: 능률(김성곤), YBM(박준언). 같은 출판사도 여러 종이 있으니 저자명까지 적어주시면 정확합니다</small></label>
+          <input type="text" id="textbook" list="pubList" placeholder="예: 공통영어1 · 능률(김성곤)" autocomplete="off">
+          <datalist id="pubList">
+            <option value="공통영어1 · 능률(김성곤)"><option value="공통영어1 · 능률(양현권)">
+            <option value="공통영어1 · YBM(박준언)"><option value="공통영어1 · YBM(한상호)">
+            <option value="공통영어1 · 동아"><option value="공통영어1 · 천재"><option value="공통영어1 · 비상"><option value="공통영어1 · 지학사">
+            <option value="영어Ⅰ · 능률"><option value="영어Ⅰ · YBM"><option value="영어Ⅰ · 동아"><option value="영어Ⅰ · 천재"><option value="영어Ⅰ · 비상">
+          </datalist>
+          <label class="f-label">진도 범위 <small>— 몇 과부터 몇 과까지</small></label>
+          <input type="text" id="scope" placeholder="예: 3과 ~ 5과" autocomplete="off">
+          <label class="f-label">과별 상세 <small>— 다 안 나가는 단원이 있으면 적어주세요</small></label>
+          <textarea id="scopeDetail" placeholder="예: 5과는 본문 앞 2문단까지만 / 4과 듣기 대본 제외"></textarea>
+          <label class="f-label">외부 지문 <small>— 교과서 밖에서 내는 것</small></label>
+          <textarea id="external" placeholder="예: 6월 학평 18~28번 / EBS 올림포스 3·4강 / 수능특강 라이트 …"></textarea>
+        </div>
+
+        <div class="f-sec">
+          <h4>③ 패스 선택</h4>
+          <div class="tier-pick" id="tierPick">
+            <div class="tp" data-v="자료"><b>자료 시즌패스</b><span class="tp-price">69,000원 <small style="color:var(--red)">(조기 59,000)</small></span><p>주간 세트 + 실물 동형 패키지</p></div>
+            <div class="tp" data-v="관리+"><b>관리+ 시즌패스</b><span class="tp-price">99,000원 <small style="color:var(--red)">(조기 89,000)</small></span><p>자료 전체 + 질문 무제한 + 1:1 코칭 30분 · 학교·학년당 2명</p></div>
+          </div>
+          <div class="toggle" id="reportToggle">
+            <span class="tk"></span>
+            <div><b>체크인 알림 + 주간 리포트 받기 (무료)</b>
+            <p>수요일 제출 확인, 미제출 알림, 일요일 학생·학부모 리포트. 자료만 받고 싶으시면 끄셔도 됩니다 — 가격은 같습니다.</p></div>
+          </div>
+        </div>
+
+        <div class="f-sec">
+          <h4>④ 연락처</h4>
+          <label class="f-label">학생 휴대폰</label>
+          <input type="tel" id="sphone" placeholder="010-0000-0000" autocomplete="off">
+          <label class="f-label">학부모 휴대폰 <small id="pphoneNote">— 리포트·알림 수신용</small></label>
+          <input type="tel" id="pphone" placeholder="010-0000-0000" autocomplete="off">
+          <label class="f-label">남기실 말씀 <small>(선택)</small></label>
+          <textarea id="note" placeholder="궁금한 점, 아이 상황 등 자유롭게"></textarea>
+        </div>
+
+        <div class="err" id="ferr"></div>
+        <button type="submit" class="btn btn-gold" id="submitBtn" style="width:100%">신청 접수하기</button>
+        <p class="hint" style="text-align:center;margin-top:12px">접수 후 24시간 내 안내 문자를 드리고, 결제 청구서(카드·계좌이체)가 발송됩니다.<br>자리가 없는 경우 대기열 순서를 알려드립니다.</p>
+      </form>
+
+      <div id="doneCard">
+        <div class="big">📬</div>
+        <h3>신청이 접수됐습니다</h3>
+        <p>24시간 내 <b id="doneTo"></b> 번호로 안내 문자를 드립니다.<br>시험 범위는 접수 내용을 기준으로 함께 확정합니다.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ⑩ FAQ -->
-<section>
+<!-- ═══ FAQ ═══ -->
+<section style="padding-top:30px">
   <div class="wrap">
     <div class="kicker">자주 묻는 질문</div>
     <h2>궁금하신 것들</h2>
     <div style="margin-top:22px">
-      <details><summary>다니는 학원을 그만둬야 하나요?</summary><p>아니요. 주간내신은 학원 대체재가 아니라 <b>병행 설계</b>입니다. 다니는 학원의 진도는 그대로 두고, "우리 학교 시험지 실전 연습 + 주간 확인"만 얹는 구조입니다.</p></details>
-      <details><summary>월 구독인가요? 해지는 어떻게 하나요?</summary><p>월 구독이 아니라 <b>8주 시즌 선불제</b>입니다. 시즌이 끝나면 자동으로 종료되고, 다음 시즌은 다시 선택하시면 됩니다. 중도 환불은 학원법 기준(1/3 경과 전 2/3 환불, 1/2 경과 전 1/2 환불)을 따르며, 이미 내려받은 자료 분은 차감됩니다.</p></details>
-      <details><summary>영어만 하나요? 다른 학교는요?</summary><p>첫 시즌은 품질을 지키기 위해 <b>영어, 3개교(미사고·미사강변고·하남고) 고1·고2만</b> 합니다. 국어·수학과 다른 학교는 시즌2부터 순차 확장 예정입니다.</p></details>
-      <details><summary>아이가 안 하면 어떻게 되나요?</summary><p>위의 5단계 프로토콜 그대로 움직입니다 — 다음 날 알림 → 리포트 표기 → 2주 연속이면 원장 직접 통화 → 3주 연속이면 일시정지·환불을 먼저 권합니다.</p></details>
-      <details><summary>자료만 사고 관리는 나중에 추가할 수 있나요?</summary><p>가능합니다. 시즌 중 관리 시즌패스에 자리가 남아 있으면 차액으로 업그레이드하실 수 있습니다.</p></details>
-      <details><summary>결제는 어떻게 하나요?</summary><p>신청 문자를 주시면 알림톡으로 청구서(결제선생)가 발송됩니다. 카드·계좌이체 모두 가능합니다.</p></details>
-      <details><summary>자료를 다른 사람과 공유해도 되나요?</summary><p>모든 PDF에는 구매자 성함 워터마크가 들어가며, 1가정 1계정입니다. 학원·강사의 구매 및 재배포는 약관상 금지되어 있고 적발 시 해지됩니다.</p></details>
+      <details><summary>학원을 다니면서 해야 하나요, 이것만 해도 되나요?</summary><p class="dp">아이마다 다릅니다. 수업 설명이 필요한 아이는 다니는 학원에 <b>자료만 얹는 병행</b>이 맞고, 자기주도가 되는 아이는 <b>이것만으로 충분하도록</b> 설계했습니다 — 전 문항 해설서가 사실상 수업의 역할을 합니다. 판단이 어려우시면 신청 시 남기실 말씀에 적어주세요. 솔직하게 말씀드립니다.</p></details>
+      <details><summary>이번 시즌으로 기말고사까지 되나요?</summary><p class="dp">아니요. 이번 시즌은 <b>2학기 중간고사 전용</b>이며 중간고사와 함께 종료됩니다. 기말고사는 범위가 다르므로 별도 시즌으로 다시 열립니다. 완주 학생에게는 다음 시즌 크레딧이 제공됩니다.</p></details>
+      <details><summary>월 구독인가요? 해지는요?</summary><p class="dp">월 구독이 아니라 <b>8주 선불 시즌제</b>입니다. 자동 결제·자동 연장이 없고, 시즌이 끝나면 그냥 끝납니다. 중도 환불은 학원법 기준(1/3 경과 전 2/3, 1/2 경과 전 1/2)을 따르며 이미 받은 자료 분은 차감됩니다.</p></details>
+      <details><summary>우리 학교 시험 범위와 다르면 어떡하죠?</summary><p class="dp">신청서에 적어주신 교과서·진도·외부지문 기준으로 제작하고, 시즌 중 범위가 바뀌면 <b>변경분을 반영해 다시 보내드립니다.</b> 학교가 진도를 줄이는 경우가 흔해서, 과별 상세 칸을 만들어 둔 이유입니다.</p></details>
+      <details><summary>영어만 하나요?</summary><p class="dp">네. 첫 시즌은 품질을 지키기 위해 <b>영어, 6개교, 고1·고2만</b> 합니다. 잘하는 것 하나를 완벽하게 하는 게 이 서비스의 방식입니다.</p></details>
+      <details><summary>질문은 어떻게 하나요?</summary><p class="dp">관리+ 패스는 <b>무제한</b>입니다. 막히는 문제를 사진 찍어 보내면, 매주 토요일 그 주의 질문을 모두 모은 「질문 해설서」로 답합니다. 급한 질문은 코칭 시간에 다뤄드립니다.</p></details>
+      <details><summary>자료를 친구와 공유해도 되나요?</summary><p class="dp">모든 PDF에는 구매자 성함 워터마크가 들어가며 1가정 1계정입니다. 학원·강사의 구매와 재배포는 금지되어 있고 적발 시 해지됩니다.</p></details>
     </div>
   </div>
 </section>
 
-<!-- ⑪ 최종 CTA -->
+<!-- ═══ 파이널 ═══ -->
 <section class="final">
   <div class="wrap">
-    <h2 class="serif">이번 중간고사는,<br>우리 학교 시험지로 준비시키세요.</h2>
-    <p>8/31(월) 개강 · 조기등록 8/23(일)까지 · 학교·학년당 4자리</p>
+    <h2>이번 중간고사,<br>우리 학교 시험지로 준비시키세요.</h2>
+    <p>8/31(월) 개강 · 조기등록 8/23(일)까지 · 관리+ 학교·학년당 2명</p>
     <div class="cta-row">
-      <a class="btn btn-gold" href="sms:010-8337-8158?body=%5B%EC%A3%BC%EA%B0%84%EB%82%B4%EC%8B%A0%20%EC%8B%A0%EC%B2%AD%5D%20%ED%95%99%EA%B5%90%2F%ED%95%99%EB%85%84%2F%ED%95%99%EC%83%9D%EC%9D%B4%EB%A6%84%2F%ED%8B%B0%EC%96%B4%EB%A5%BC%20%EB%B3%B4%EB%82%B4%EC%A3%BC%EC%84%B8%EC%9A%94">이번 시즌 시작하기</a>
-      <a class="btn btn-line" href="tel:010-8337-8158">전화로 물어보기</a>
+      <a class="btn btn-gold" href="#apply">신청서 작성하기</a>
+      <a class="btn btn-line" href="sms:010-8337-8158?body=%5B%EC%A3%BC%EA%B0%84%EB%82%B4%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4">문자로 물어보기</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <b>주간내신</b> · 운영 다올105학원 (경기 하남 미사) · 문의 010-8337-8158<br>
+    <b>주간내신</b> · 문의 010-8337-8158<br>
     본 페이지의 모든 자료 이미지는 실제 제작물이며 무단 복제·전재를 금합니다.
   </div>
 </footer>
 
 <div class="sticky-cta" id="sticky">
-  <a class="btn btn-gold" href="#pricing">남은 자리 확인</a>
-  <a class="btn btn-line" href="sms:010-8337-8158?body=%5B%EC%A3%BC%EA%B0%84%EB%82%B4%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4">문자 문의</a>
+  <a class="btn btn-gold" href="#apply">남은 자리 확인</a>
+  <a class="btn btn-line" href="#anatomy">자료 뜯어보기</a>
 </div>
 
 <script>
 (function(){
-  var s = document.getElementById('sticky');
-  var hero = document.querySelector('.hero');
-  var pricing = document.getElementById('pricing');
-  function onScroll(){
-    var past = window.scrollY > hero.offsetHeight;
-    var r = pricing.getBoundingClientRect();
-    var onPricing = r.top < window.innerHeight && r.bottom > 0;
-    s.classList.toggle('show', past && !onPricing);
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
+"use strict";
+/* ── 상태 ── */
+var S = { school:"", grade:"", tier:"", report:true };
+var SUPA = "https://sqogiblaagmmkpwwodgf.supabase.co";
+var ANON = "sb_publishable_JJMJVY4pC9zL25xHDf91Kg_meLV8iwT";
+var $ = function(id){ return document.getElementById(id); };
+
+/* ── 칩 선택 ── */
+function bindChips(boxId, key){
+  var box = $(boxId);
+  Array.prototype.forEach.call(box.querySelectorAll(".chip-btn"), function(b){
+    b.addEventListener("click", function(){
+      Array.prototype.forEach.call(box.querySelectorAll(".chip-btn"), function(x){ x.classList.remove("on"); });
+      b.classList.add("on");
+      S[key] = b.dataset.v;
+    });
+  });
+}
+bindChips("schoolPick","school");
+bindChips("gradePick","grade");
+
+Array.prototype.forEach.call(document.querySelectorAll("#tierPick .tp"), function(t){
+  t.addEventListener("click", function(){
+    Array.prototype.forEach.call(document.querySelectorAll("#tierPick .tp"), function(x){ x.classList.remove("on"); });
+    t.classList.add("on");
+    S.tier = t.dataset.v;
+  });
+});
+
+var rt = $("reportToggle");
+rt.classList.add("on");
+rt.addEventListener("click", function(){
+  S.report = !S.report;
+  rt.classList.toggle("on", S.report);
+  $("pphoneNote").textContent = S.report ? "— 리포트·알림 수신용" : "(선택 — 결제 안내용)";
+});
+
+/* ── 전화번호 포맷 ── */
+function fmtPhone(el){
+  el.addEventListener("input", function(){
+    var d = el.value.replace(/\D/g,"").slice(0,11);
+    if (d.length > 7) el.value = d.replace(/(\d{3})(\d{3,4})(\d{0,4})/, "$1-$2-$3").replace(/-$/,"");
+    else if (d.length > 3) el.value = d.replace(/(\d{3})(\d+)/, "$1-$2");
+    else el.value = d;
+  });
+}
+fmtPhone($("sphone")); fmtPhone($("pphone"));
+
+/* ── 제출 ── */
+function err(msg, focusEl){
+  var e = $("ferr"); e.textContent = msg; e.style.display = "block";
+  if (focusEl) { focusEl.focus(); }
+  e.scrollIntoView({behavior:"smooth", block:"center"});
+}
+function validPhone(v){ return /^01[016789]-?\d{3,4}-?\d{4}$/.test(v.replace(/-/g,"").replace(/(\d{3})(\d{3,4})(\d{4})/,"$1-$2-$3")) || /^01[016789]\d{7,8}$/.test(v.replace(/\D/g,"")); }
+
+$("form").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  $("ferr").style.display = "none";
+  if (!S.school) return err("학교를 선택해 주세요.");
+  if (!S.grade) return err("학년을 선택해 주세요.");
+  if (!$("sname").value.trim()) return err("학생 이름을 입력해 주세요.", $("sname"));
+  if (!S.tier) return err("자료 또는 관리+ 패스를 선택해 주세요.");
+  if (!validPhone($("sphone").value)) return err("학생 휴대폰 번호를 확인해 주세요.", $("sphone"));
+  if (S.report && !validPhone($("pphone").value)) return err("리포트 수신을 위해 학부모 휴대폰 번호가 필요합니다.", $("pphone"));
+
+  var payload = {
+    school: S.school, grade: S.grade, student_name: $("sname").value.trim(),
+    tier: S.tier, report_opt: S.report,
+    textbook: $("textbook").value.trim(), scope: $("scope").value.trim(),
+    scope_detail: $("scopeDetail").value.trim(), external_texts: $("external").value.trim(),
+    student_phone: $("sphone").value.trim(), parent_phone: $("pphone").value.trim(),
+    note: $("note").value.trim(), source: "landing"
+  };
+
+  var btn = $("submitBtn");
+  btn.disabled = true; btn.textContent = "접수 중…";
+
+  fetch(SUPA + "/rest/v1/jugan_apps", {
+    method: "POST",
+    headers: { "content-type": "application/json", "apikey": ANON, "authorization": "Bearer " + ANON, "prefer": "return=minimal" },
+    body: JSON.stringify(payload)
+  }).then(function(res){
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    done(payload);
+  }).catch(function(){
+    /* 백엔드 미가동 시 폴백: 접수 내용을 문자로 전송 */
+    var body = "[주간내신 신청]\n학교: " + payload.school + " " + payload.grade
+      + "\n학생: " + payload.student_name + "\n패스: " + payload.tier + (payload.report_opt ? " (리포트O)" : " (리포트X)")
+      + "\n교과서: " + (payload.textbook || "-") + "\n범위: " + (payload.scope || "-")
+      + (payload.scope_detail ? "\n상세: " + payload.scope_detail : "")
+      + (payload.external_texts ? "\n외부지문: " + payload.external_texts : "")
+      + "\n학생폰: " + payload.student_phone + "\n학부모폰: " + (payload.parent_phone || "-")
+      + (payload.note ? "\n메모: " + payload.note : "");
+    location.href = "sms:010-8337-8158?body=" + encodeURIComponent(body);
+    done(payload);
+  });
+});
+
+function done(p){
+  $("form").style.display = "none";
+  var card = $("doneCard");
+  $("doneTo").textContent = p.report_opt && p.parent_phone ? (p.parent_phone + " (학부모)") : p.student_phone;
+  card.style.display = "block";
+  card.scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+/* ── 스티키 CTA ── */
+var s = document.getElementById("sticky");
+var hero = document.querySelector(".hero");
+var apply = document.getElementById("apply");
+function onScroll(){
+  var past = window.scrollY > hero.offsetHeight;
+  var r = apply.getBoundingClientRect();
+  var onApply = r.top < window.innerHeight && r.bottom > 0;
+  s.classList.toggle("show", past && !onApply);
+}
+window.addEventListener("scroll", onScroll, {passive:true});
+onScroll();
 })();
 </script>
 </body>
