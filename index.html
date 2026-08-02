@@ -639,6 +639,11 @@ footer b{color:var(--gray)}
           <input type="tel" id="pphone" placeholder="010-0000-0000" autocomplete="off">
           <label class="f-label">남기실 말씀 <small>(선택)</small></label>
           <textarea id="note" placeholder="궁금한 점, 아이 상황 등 자유롭게"></textarea>
+          <div class="toggle" id="consentToggle">
+            <span class="tk"></span>
+            <div><b>개인정보 수집·이용 동의 (필수)</b>
+            <p>이름·연락처·학습 정보를 자료 발송과 학습 관리 목적으로만 수집합니다. <a href="privacy.html" target="_blank" rel="noopener" style="color:#7fae12;font-weight:700">처리방침 보기</a></p></div>
+          </div>
         </div>
 
         <div class="err" id="ferr"></div>
@@ -701,7 +706,7 @@ footer b{color:var(--gray)}
 <script>
 (function(){
 "use strict";
-var S = { school:"", grade:"", hours:"", tier:"", report:true };
+var S = { school:"", grade:"", hours:"", tier:"", report:true, consent:false };
 var SUPA = "https://sqogiblaagmmkpwwodgf.supabase.co";
 var ANON = "sb_publishable_JJMJVY4pC9zL25xHDf91Kg_meLV8iwT";
 var $ = function(id){ return document.getElementById(id); };
@@ -726,6 +731,12 @@ Array.prototype.forEach.call(document.querySelectorAll("#tierPick .tp"), functio
     t.classList.add("on");
     S.tier = t.dataset.v;
   });
+});
+
+var ct = $("consentToggle");
+ct.addEventListener("click", function(){
+  S.consent = !S.consent;
+  ct.classList.toggle("on", S.consent);
 });
 
 var rt = $("reportToggle");
@@ -761,6 +772,7 @@ $("form").addEventListener("submit", function(ev){
   if (!S.tier) return err("자료 또는 관리+ 패스를 선택해 주세요.");
   if (!validPhone($("sphone").value)) return err("학생 휴대폰 번호를 확인해 주세요.", $("sphone"));
   if (S.report && !validPhone($("pphone").value)) return err("리포트 수신을 위해 학부모 휴대폰 번호가 필요합니다.", $("pphone"));
+  if (!S.consent) return err("개인정보 수집·이용에 동의해 주세요.");
 
   var payload = {
     school: S.school, grade: S.grade, student_name: $("sname").value.trim(),
@@ -768,7 +780,7 @@ $("form").addEventListener("submit", function(ev){
     textbook: $("textbook").value.trim(), scope: $("scope").value.trim(),
     scope_detail: $("scopeDetail").value.trim(), external_texts: $("external").value.trim(),
     student_phone: $("sphone").value.trim(), parent_phone: $("pphone").value.trim(),
-    note: $("note").value.trim(), source: "landing_v3"
+    note: $("note").value.trim(), consent: S.consent, source: "landing_v3"
   };
 
   var btn = $("submitBtn");
