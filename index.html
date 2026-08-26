@@ -732,14 +732,14 @@ footer b{color:var(--gray)}
     <p>8/31(월) 개강 · 조기등록 8/23(일)까지 · 4~6주 완성 · 관리+ 학교·학년당 2명 · 중간 합류 가능</p>
     <div class="cta-row">
       <a class="btn btn-neon" href="#apply">신청서 작성하기</a>
-      <a class="btn btn-ghost" href="sms:010-8337-8158?body=%5B%EC%A3%BC%EA%B0%84%EB%82%B4%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4">문자로 물어보기</a>
+      <a class="btn btn-ghost" href="sms:010-7789-5094?body=%5B%EC%A3%BC%EA%B0%84%EB%82%B4%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4">문자로 물어보기</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <b>주간내신</b> · 문의 010-8337-8158<br>
+    <b>주간내신</b> · 문의 010-7789-5094<br>
     상호·대표자·사업자등록번호·통신판매업신고번호: 등록 절차 진행 중 (결제 전 안내 문자에 기재됩니다)<br>
     환불 규정: 학원의 설립·운영 및 과외교습에 관한 법률 시행령 준용 · 지급된 자료분 차감<br>
     본 페이지의 모든 자료 이미지는 실제 제작물이며 무단 복제·전재를 금합니다.
@@ -849,7 +849,7 @@ $("form").addEventListener("submit", function(ev){
       + (payload.external_texts ? "\n외부지문: " + payload.external_texts : "")
       + "\n학생폰: " + payload.student_phone + "\n학부모폰: " + (payload.parent_phone || "-")
       + (payload.note ? "\n메모: " + payload.note : "");
-    location.href = "sms:010-8337-8158?body=" + encodeURIComponent(body);
+    location.href = "sms:010-7789-5094?body=" + encodeURIComponent(body);
     done(payload);
   });
 });
