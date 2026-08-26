@@ -515,6 +515,8 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
 .tk-note.soon b{color:#12203A}
 @media(max-width:800px){.tracks.single{grid-template-columns:1fr}}
 
+.tp-off{opacity:.55;cursor:not-allowed;background:#f7f7f5;border-style:dashed}
+.tp-off:hover{border-color:var(--line)}
 </style>
 </head>
 <body>
@@ -1026,9 +1028,8 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
         <div class="f-sec">
           <h4>③ 패스 선택</h4>
           <div class="tier-pick" id="tierPick">
-            <div class="tp" data-v="자료"><b>자료 시즌패스</b><span class="tp-price">69,000원 <small style="color:var(--red)">(조기 59,000)</small></span><p>분석서 전량 + 워크북 + 동형 최대 20세트 + 월간 계획</p></div>
-            <div class="tp" data-v="관리+"><b>관리+ 시즌패스</b><span class="tp-price">99,000원 <small style="color:var(--red)">(조기 89,000)</small></span><p>자료 전체 + 취약 유형 스캔·보충 + 개인별 주간 플랜 · 학교·학년당 2명</p></div>
-          </div>
+            <div class="tp" data-v="자료"><b>자료 시즌패스</b><span class="tp-price">69,000원</span><p>분석서 전량 + 워크북 + 동형 최대 20세트 + 월간 계획</p></div>
+            <div class="tp tp-off"><b>관리+ 시즌패스</b><span class="tp-price" style="color:#8b94a3">기말 시즌 오픈</span><p>이번 2학기 중간 시즌에는 열지 않습니다. 자료 시즌패스 수강생에게 먼저 안내드립니다.</p></div></div>
           <div class="toggle on" id="reportToggle">
             <span class="tk"></span>
             <div><b>체크인 알림 + 주간 리포트 받기 (무료)</b>
