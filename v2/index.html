@@ -445,6 +445,53 @@ footer b{color:#c6c9d2}
   .exq-c.row{flex-direction:column}
 }
 
+
+/* 지문 원문 블록 */
+.passage{background:#12203A;color:#F0EEE9;border-radius:18px;padding:26px 28px;margin:6px 0 20px}
+.ps-badge{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.08em;
+  padding:5px 12px;border-radius:999px;background:rgba(227,199,102,.18);color:#E3C766}
+.ps-h b{display:block;font-size:21px;font-weight:900;margin:12px 0 14px;letter-spacing:-.02em;color:#fff}
+.ps-en{margin:0;font-size:14.5px;line-height:1.85;color:#C9D2E0;letter-spacing:.01em}
+.ps-en u{text-decoration:none;font-weight:800;color:#E3C766;border-bottom:2px solid rgba(227,199,102,.45)}
+.ps-f{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);
+  font-size:13.5px;line-height:1.7;color:#9FAEC4}
+.ps-f b{color:#fff}
+
+/* 4컷 — 대사 중심 */
+.toon{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 18px}
+.toon .tn{margin:0;background:#fff;border:1px solid var(--paper-line);border-radius:18px;
+  overflow:hidden;box-shadow:0 12px 30px rgba(25,31,40,.10);display:flex;flex-direction:column}
+.tn-art{position:relative;line-height:0;background:#eef1f4}
+.tn-art img{display:block;width:100%;height:auto}
+.tn-no{position:absolute;top:12px;left:12px;background:#12203A;color:#E3C766;font-size:12px;
+  font-weight:800;letter-spacing:.05em;padding:5px 12px;border-radius:999px;
+  box-shadow:0 3px 10px rgba(0,0,0,.3)}
+.tn-say{padding:16px 17px 4px}
+.tn-label{font-size:11.5px;font-weight:800;letter-spacing:.07em;color:#b08a16;
+  text-transform:uppercase;margin-bottom:12px}
+.tb{position:relative;font-size:14px;line-height:1.6;color:#16181d;background:#fff;
+  border:2px solid #16181d;border-radius:14px;padding:11px 14px;margin-bottom:14px;max-width:92%}
+.tb b{font-weight:800;color:#b4472e}
+.tb::after{content:"";position:absolute;bottom:-9px;width:0;height:0;
+  border-left:8px solid transparent;border-right:8px solid transparent;border-top:9px solid #16181d}
+.tb::before{content:"";position:absolute;bottom:-6px;z-index:1;width:0;height:0;
+  border-left:6px solid transparent;border-right:6px solid transparent;border-top:7px solid #fff}
+.tb-l,.tb-l2,.tb-c,.tb-c2,.tb-t,.tb-t2{margin-right:auto}
+.tb-l::after,.tb-l2::after,.tb-c::after,.tb-c2::after,.tb-t::after,.tb-t2::after{left:24px}
+.tb-l::before,.tb-l2::before,.tb-c::before,.tb-c2::before,.tb-t::before,.tb-t2::before{left:26px}
+.tb-r,.tb-b{margin-left:auto;background:#f4f6f9}
+.tb-r::after,.tb-b::after{right:24px}
+.tb-r::before,.tb-b::before{right:26px;border-top-color:#f4f6f9}
+.tn-narr{margin:6px 17px 18px;font-size:13px;line-height:1.7;color:var(--muted);
+  background:#f7f6f3;border-left:3px solid #b08a16;border-radius:0 10px 10px 0;padding:11px 14px}
+.tn-narr b{color:#12203A}
+.toon-end{background:#eef4fb;border:1px solid #d5e3f2;border-radius:14px;padding:16px 20px;
+  font-size:14.5px;line-height:1.65;color:#2f4463;margin-bottom:12px}
+.toon-end b{color:#12203A}
+b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);padding:0 2px}
+.exq-sol i{font-style:italic;color:#12203A}
+@media(max-width:800px){.toon{grid-template-columns:1fr;gap:14px}}
+
 </style>
 </head>
 <body>
@@ -554,70 +601,56 @@ footer b{color:#c6c9d2}
     <div class="cu rv">
       <div class="num">02</div>
       <h3>지문 하나가, 웹툰이 됩니다</h3>
-      <p>지문이 어려울수록, 글보다 그림이 먼저 갑니다. 정극 만화 작화로 그린 4컷에 <b>문장별 직독직해·어휘·출제 포인트</b>를 컷마다 붙였습니다. 그림으로 한 번, 문장으로 다시 한 번 — 실제 수록 지문 「The Internet Changed Everything」 샘플이고, <b>움직이는 애니메이션 버전</b>으로도 제공됩니다.</p>
+      <p>고2 모의고사에 나오는 <b>추상 지문</b>은 해석을 다 해도 무슨 말인지 모르는 경우가 많습니다. 그래서 저희는 <b>비유 한 편으로 개념을 먼저 심고</b> 지문으로 돌아갑니다. 아래는 실제 수록물입니다.</p>
+      <div class="passage"><div class="ps-h"><span class="ps-badge">고2 모의고사 수준 · 실제 난도</span><b>이 지문, 그냥 읽고 이해되시나요?</b></div><p class="ps-en">During the Second World War, statisticians examined bombers returning from missions and mapped the distribution of bullet holes across their fuselages. The natural inference was to reinforce the areas that showed the heaviest damage. One statistician objected. The data, he pointed out, had been drawn exclusively from aircraft that had <u>survived</u>; the regions riddled with holes were precisely those a plane could afford to lose. Armor belonged where the returning planes bore no marks at all. The error was not one of calculation but of <u>sampling</u>: the evidence had been silently filtered by the very outcome under investigation. Whenever we study only what endures, the losers are not merely underrepresented — they are <u>structurally absent</u>, and their absence masquerades as evidence.</p><div class="ps-f">추상 개념 + 고난도 어휘 + 긴 삽입구. <b>노베이스는 첫 문장에서 멈춥니다.</b><br>그래서 저희는 지문을 <b>그림 한 편</b>으로 먼저 심어 둡니다.</div></div>
       <div class="toon">
-        <figure class="mp">
-          <div class="mp-art">
-            <img src="../img/cut1.webp" alt="1컷 숨기던 시절" loading="lazy" decoding="async">
-            <div class="mp-bub">결함도, 과장광고도…<br>상자에 꽁꽁 숨겨두자.</div>
-            <span class="mp-no">1컷</span>
+        <figure class="tn">
+          <div class="tn-art">
+            <img src="../img/cut1.webp" alt="1컷 문제 — 모두가 같은 결론에 도달했다" loading="lazy" decoding="async">
+            <span class="tn-no">1컷</span>
           </div>
-          <figcaption class="mp-note">
-            <div class="mp-head">숨기던 시절</div>
-            <p class="mp-en">Before the Internet, companies could <b>hide</b> their flaws.</p>
-            <p class="mp-ko">인터넷 이전, 기업은 자신의 결함을 <b>숨길 수 있었다</b>.</p>
-            <div class="mp-jd"><div class="jd"><span class="en">Before the Internet,</span><span class="ko">인터넷 이전에는</span></div><div class="jd"><span class="en">companies could hide</span><span class="ko">기업들이 숨길 수 있었다</span></div><div class="jd"><span class="en">their flaws.</span><span class="ko">자신의 결함들을</span></div></div>
-            <ul class="mp-voc"><li><b>flaw</b> 결함·흠 <span>= defect, shortcoming</span></li><li><b>hide-hid-hidden</b> 숨기다 <span>불규칙 3단변화 주의</span></li></ul>
-            <div class="mp-pt"><b>출제 포인트</b> <b>could</b>는 과거의 <b>가능</b>. 뒤 컷의 현재시제와 대비돼 '시대가 바뀌었다'를 만든다 — 시제 대비가 이 지문의 뼈대다.</div>
-          </figcaption>
+          <div class="tn-say">
+            <div class="tn-label">문제 — 모두가 같은 결론에 도달했다</div>
+            <div class="tb tb-l">정찰기 300대 전수 조사 끝났습니다.<br><b>총알 자국이 날개와 꼬리에 몰려 있어요.</b></div><div class="tb tb-r">명확하군.<br>그럼 <b>날개와 꼬리에 장갑을 덧대면</b> 되겠어.</div><div class="tb tb-l2">가장 많이 맞은 곳을 보강한다 —<br>데이터가 그렇게 말하고 있습니다.</div>
+          </div>
+          <div class="tn-narr">1943년, 돌아온 폭격기를 조사한 군은 <b>손상이 집중된 부위</b>를 보강하기로 한다. 누구도 이 결론을 의심하지 않았다.</div>
         </figure>
-        <figure class="mp">
-          <div class="mp-art">
-            <img src="../img/cut2.webp" alt="2컷 상자가 터지다" loading="lazy" decoding="async">
-            <div class="mp-bub">팡!<br>suddenly popped out of the box</div>
-            <span class="mp-no">2컷</span>
+        <figure class="tn">
+          <div class="tn-art">
+            <img src="../img/cut2.webp" alt="2컷 반전 — 한 사람이 제동을 걸었다" loading="lazy" decoding="async">
+            <span class="tn-no">2컷</span>
           </div>
-          <figcaption class="mp-note">
-            <div class="mp-head">상자가 터지다</div>
-            <p class="mp-en">Then the Internet came, and everything <b>popped out of the box</b>.</p>
-            <p class="mp-ko">그때 인터넷이 등장했고, 모든 것이 <b>상자 밖으로 터져 나왔다</b>.</p>
-            <div class="mp-jd"><div class="jd"><span class="en">Then the Internet came,</span><span class="ko">그때 인터넷이 등장했다</span></div><div class="jd"><span class="en">and everything popped out</span><span class="ko">그리고 모든 것이 튀어나왔다</span></div><div class="jd"><span class="en">of the box.</span><span class="ko">그 상자 밖으로</span></div></div>
-            <ul class="mp-voc"><li><b>pop out</b> 튀어나오다 <span>구동사 — 분리 가능</span></li><li><b>suddenly</b> 갑자기 <span>= all at once, abruptly</span></li></ul>
-            <div class="mp-pt"><b>출제 포인트</b> <b>pop out of the box</b>는 비유 표현. 직역(상자에서 튀어나오다)이 아니라 <b>'숨겨둔 것이 드러나다'</b>로 읽어야 빈칸·함축의미 문제가 풀린다.</div>
-          </figcaption>
+          <div class="tn-say">
+            <div class="tn-label">반전 — 한 사람이 제동을 걸었다</div>
+            <div class="tb tb-c">잠깐만요.<br><b>지금 보고 계신 건 전부 ‘돌아온’ 비행기입니다.</b></div><div class="tb tb-r">…그게 무슨 상관인가?<br>피해 자료는 피해 자료 아닌가.</div><div class="tb tb-c2">구멍이 난 채로 <b>날아서 돌아왔다는 뜻</b>이잖아요.<br>날개는 맞아도 버틸 수 있는 자리라는 겁니다.</div>
+          </div>
+          <div class="tn-narr">통계학자 <b>에이브러햄 왈드</b>는 자료 자체가 아니라 <b>자료가 만들어진 방식</b>을 문제 삼았다.</div>
         </figure>
-        <figure class="mp">
-          <div class="mp-art">
-            <img src="../img/cut3.webp" alt="3컷 소비자가 알게 되다" loading="lazy" decoding="async">
-            <div class="mp-bub">가격도 후기도 다 비교되네.<br><i>진정성(truthfulness)</i>까지 보여!</div>
-            <span class="mp-no">3컷</span>
+        <figure class="tn">
+          <div class="tn-art">
+            <img src="../img/cut3.webp" alt="3컷 핵심 — 보이지 않는 쪽에 답이 있었다" loading="lazy" decoding="async">
+            <span class="tn-no">3컷</span>
           </div>
-          <figcaption class="mp-note">
-            <div class="mp-head">소비자가 알게 되다</div>
-            <p class="mp-en">Now consumers can compare prices, reviews, and even a company's <b>truthfulness</b>.</p>
-            <p class="mp-ko">이제 소비자는 가격, 후기, 심지어 기업의 <b>진정성</b>까지 비교할 수 있다.</p>
-            <div class="mp-jd"><div class="jd"><span class="en">Now consumers can compare</span><span class="ko">이제 소비자들은 비교할 수 있다</span></div><div class="jd"><span class="en">prices, reviews,</span><span class="ko">가격과 후기를</span></div><div class="jd"><span class="en">and even a company's truthfulness.</span><span class="ko">심지어 기업의 진정성까지도</span></div></div>
-            <ul class="mp-voc"><li><b>truthfulness</b> 진정성·정직함 <span>truth + ful + ness</span></li><li><b>compare A with B</b> A를 B와 비교하다 <span>전치사 with 주의</span></li><li><b>even</b> 심지어 <span>강조 부사 — 뒤 단어를 부각</span></li></ul>
-            <div class="mp-pt"><b>출제 포인트</b> <b>even</b>이 붙은 자리가 곧 <b>필자가 강조하는 지점</b>. 가격·후기는 예상 가능하지만 '진정성까지'가 핵심이라 여기가 정답 근거가 된다.</div>
-          </figcaption>
+          <div class="tn-say">
+            <div class="tn-label">핵심 — 보이지 않는 쪽에 답이 있었다</div>
+            <div class="tb tb-t">그럼 <b>엔진과 조종석에 맞은 비행기들</b>은<br>지금 어디 있습니까.</div><div class="tb tb-b">…돌아오지 못했지.</div><div class="tb tb-t2">그 비행기들의 자료는 <b>이 표에 한 줄도 없습니다.</b><br>없는 게 아니라 — <b>없는 척 사라진 겁니다.</b></div>
+          </div>
+          <div class="tn-narr">사라진 표본은 단순히 <b>적게 잡힌 것이 아니라, 구조적으로 빠져 있었다.</b> 그리고 그 빈자리가 마치 “안전하다”는 증거처럼 보였다.</div>
         </figure>
-        <figure class="mp">
-          <div class="mp-art">
-            <img src="../img/cut4.webp" alt="4컷 힘이 뒤집히다" loading="lazy" decoding="async">
-            <div class="mp-bub">이제 말대꾸(<i>talk back</i>)는<br><b>우리가 한다!</b></div>
-            <span class="mp-no">4컷</span>
+        <figure class="tn">
+          <div class="tn-art">
+            <img src="../img/cut4.webp" alt="4컷 결론 — 구멍이 없는 곳에 장갑을 붙였다" loading="lazy" decoding="async">
+            <span class="tn-no">4컷</span>
           </div>
-          <figcaption class="mp-note">
-            <div class="mp-head">힘이 뒤집히다</div>
-            <p class="mp-en">The power has shifted — now customers can <b>talk back</b>.</p>
-            <p class="mp-ko">힘이 이동했다 — 이제 고객이 <b>맞받아 말할</b> 수 있다.</p>
-            <div class="mp-jd"><div class="jd"><span class="en">The power has shifted</span><span class="ko">힘이 이동해 버렸다</span></div><div class="jd"><span class="en">— now customers</span><span class="ko">이제 고객들이</span></div><div class="jd"><span class="en">can talk back.</span><span class="ko">맞받아 말할 수 있다</span></div></div>
-            <ul class="mp-voc"><li><b>talk back</b> 맞받아치다·반박하다 <span>구동사</span></li><li><b>shift</b> 이동하다·바뀌다 <span>= move, change</span></li><li><b>has shifted</b> 현재완료 <span>과거에 일어나 지금 영향</span></li></ul>
-            <div class="mp-pt"><b>출제 포인트</b> 정답 ①의 근거가 <b>바로 이 문장</b>. 1컷의 <i>could hide</i>(과거) → 4컷의 <i>has shifted</i>(현재완료)로 <b>힘의 역전</b>이 완성된다.</div>
-          </figcaption>
+          <div class="tn-say">
+            <div class="tn-label">결론 — 구멍이 없는 곳에 장갑을 붙였다</div>
+            <div class="tb tb-l">구멍이 <b>하나도 없는 곳</b>에 장갑을 대라니…</div><div class="tb tb-r">거기 맞은 기체는 <b>돌아오지 못했으니까요.</b><br>흔적이 없다는 게 곧 치명적이라는 증거입니다.</div><div class="tb tb-l2">…우리는 살아남은 것만 보고<br><b>있지도 않은 답을 읽고 있었군.</b></div>
+          </div>
+          <div class="tn-narr">이것이 <b>생존 편향(survivorship bias)</b>이다. 살아남은 것만 관찰하면, <b>사라진 것의 부재가 증거인 척한다.</b></div>
         </figure>
       </div>
-      <span class="tag">4컷 만화 + 문장별 해설 · 전 지문 수록 · 애니메이션 버전 제공</span>
+      <div class="toon-end">그림이 머릿속에 남으면, <b>같은 개념이 다른 지문으로 나와도 흔들리지 않습니다.</b> 전 지문에 이 4컷이 붙고, <b>움직이는 애니메이션 버전</b>으로도 제공됩니다.</div>
+      <span class="tag">4컷 만화 — 「생존 편향」 지문 · 전 지문 수록</span>
     </div>
 
     <div class="cu rv">
@@ -709,19 +742,32 @@ footer b{color:#c6c9d2}
         </div>
 
         <div class="exq-item">
-          <div class="exq-q"><span class="exq-no">2</span>밑줄 친 <u>contain</u>과 의미가 <b>가장 가까운 것은?</b></div>
-          <div class="exq-src">The box could no longer <u>contain</u> what was inside.</div>
+          <div class="exq-q"><span class="exq-no">2</span>밑줄 친 <u>arrest</u>와 의미가 <b>가장 가까운 것은?</b></div>
+          <div class="exq-src">The new policy failed to <u>arrest</u> the decline in enrollment.</div>
           <ol class="exq-c row">
-            <li><span class="cn">①</span>release</li>
-            <li class="ans"><span class="cn">②</span>hold<span class="ansmark">정답</span></li>
-            <li><span class="cn">③</span>expose</li>
-            <li><span class="cn">④</span>reveal</li>
-            <li><span class="cn">⑤</span>scatter</li>
+            <li><span class="cn">①</span>apprehend</li>
+            <li class="ans"><span class="cn">②</span>halt<span class="ansmark">정답</span></li>
+            <li><span class="cn">③</span>captivate</li>
+            <li><span class="cn">④</span>accelerate</li>
+            <li><span class="cn">⑤</span>indict</li>
           </ol>
-          <div class="exq-sol"><b>해설</b> 여기서는 <b>안에 담아 두다</b>. ①③④⑤는 전부 <b>밖으로 내보내다</b> 쪽이라 반대 방향입니다. 핵심 어감(안에 가두어 두다)을 잡아두면 한 번에 걸러집니다.</div>
+          <div class="exq-sol"><b>해설</b> <u>arrest</u>는 <b>체포하다</b>가 아니라 <b>진행을 멈추다</b>. ①apprehend(체포)·⑤indict(기소)는 법률 뜻에 끌린 함정, ③captivate(마음을 사로잡다)는 <i>arresting</i>(시선을 끄는)에서 온 함정입니다. <b>선지 다섯 개가 전부 GRE·토플 어휘</b>라, 뜻 하나만 아는 학생은 여기서 무너집니다.</div>
         </div>
 
-        <div class="exq-foot">이런 유형이 나올 만한 다의어는 <b>범위 안에서 전부 뽑아</b> 뜻별 예문과 함께 정리해 드립니다.</div>
+        <div class="exq-item">
+          <div class="exq-q"><span class="exq-no">3</span>밑줄 친 <u>qualify</u>와 <b>같은 의미로 사용된 문장은?</b></div>
+          <div class="exq-src">The author later <u>qualified</u> his claim, admitting it held only under narrow conditions.</div>
+          <ol class="exq-c">
+            <li><span class="cn">①</span>She <u>qualified</u> as a physician last spring.</li>
+            <li><span class="cn">②</span>Only two teams <u>qualified</u> for the final round.</li>
+            <li class="ans"><span class="cn">③</span>He <u>qualified</u> his praise with a note of caution.<span class="ansmark">정답</span></li>
+            <li><span class="cn">④</span>Does this expense <u>qualify</u> for a tax deduction?</li>
+            <li><span class="cn">⑤</span>Her degree <u>qualifies</u> her to teach abroad.</li>
+          </ol>
+          <div class="exq-sol"><b>해설</b> 여기서는 <b>단서를 달아 주장을 약화시키다</b> — 학술 지문에서 반복되는 용법입니다. ①②④⑤는 전부 <b>자격을 갖추다·통과하다</b> 계열. <b>고3 상위권이 가장 많이 틀리는 다의어</b>이며, 수능 빈칸·요지에서 논지 전환 신호로 쓰입니다.</div>
+        </div>
+
+        <div class="exq-foot"><b>GRE·토플급 어휘가 선지에 그대로 깔립니다.</b> 하남고는 이 난도로 출제해 왔고, 저희는 범위 안 다의어를 <b>전부 뽑아</b> 뜻별 예문·함정 선지와 함께 정리해 드립니다.</div>
       </div>
       <span class="tag">다의어 · 유의어 패러프레이징 (실물 구성)</span>
     </div>
