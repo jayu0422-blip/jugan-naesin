@@ -404,6 +404,47 @@ footer b{color:#c6c9d2}
 .joinnote b{color:#12203A}
 @media(max-width:800px){.tracks{grid-template-columns:1fr}.tk-week{grid-template-columns:repeat(4,1fr)}}
 
+
+/* 하남고 기출 예시 문항 */
+.exq{margin-top:16px;background:#fff;border:1px solid var(--paper-line);border-radius:16px;
+  padding:22px 24px;box-shadow:0 8px 22px rgba(25,31,40,.06)}
+.exq-badge{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.08em;
+  padding:5px 12px;border-radius:999px;background:#12203A;color:#E3C766}
+.exq-h b{display:block;font-size:19px;font-weight:900;color:#12203A;margin:11px 0 6px;letter-spacing:-.02em}
+.exq-h p{margin:0 0 4px;font-size:13.5px;color:var(--muted);line-height:1.6}
+.exq-h p b{display:inline;font-size:inherit;color:#12203A;margin:0}
+.exq-item{margin-top:20px;padding-top:18px;border-top:1px dashed var(--paper-line)}
+.exq-q{display:flex;gap:9px;align-items:baseline;font-size:15px;font-weight:700;color:#12203A;line-height:1.55}
+.exq-q u{text-decoration:none;font-weight:900;color:#b4472e;border-bottom:2px solid #f0d9a0}
+.exq-no{flex:0 0 auto;width:24px;height:24px;border-radius:7px;background:#12203A;color:#fff;
+  font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.exq-src{margin:11px 0 13px 33px;padding:11px 14px;background:#f7f6f3;border-radius:10px;
+  font-size:14.5px;color:#22303f;line-height:1.6}
+.exq-src u{text-decoration:none;font-weight:800;color:#b4472e;border-bottom:2px solid #f0d9a0}
+.exq-c{list-style:none;margin:0 0 0 33px;padding:0;display:flex;flex-direction:column;gap:7px}
+.exq-c.row{flex-direction:row;flex-wrap:wrap;gap:8px}
+.exq-c li{display:flex;gap:8px;align-items:center;font-size:14px;color:#2c3646;
+  padding:7px 12px;border:1px solid var(--paper-line);border-radius:9px;background:#fff}
+.exq-c.row li{flex:0 0 auto}
+.exq-c li u{text-decoration:none;font-weight:800;color:#12203A}
+.exq-c .cn{font-weight:800;color:#9aa3ae}
+.exq-c li.ans{border-color:#b08a16;background:#fffaf0}
+.exq-c li.ans .cn{color:#b08a16}
+.ansmark{margin-left:auto;font-size:11px;font-weight:800;color:#b08a16;
+  background:#fbf0d6;border-radius:6px;padding:2px 7px}
+.exq-c.row li.ans .ansmark{margin-left:6px}
+.exq-sol{margin:12px 0 0 33px;font-size:13px;line-height:1.65;color:var(--muted);
+  background:#f2f6fb;border-radius:10px;padding:10px 13px}
+.exq-sol b{color:#2a4a7a;margin-right:5px}
+.exq-sol u{text-decoration:none;font-weight:800;color:#12203A}
+.exq-foot{margin-top:18px;padding-top:14px;border-top:1px dashed var(--paper-line);
+  font-size:13px;color:var(--muted)}
+.exq-foot b{color:#12203A}
+@media(max-width:640px){
+  .exq-src,.exq-c,.exq-sol{margin-left:0}
+  .exq-c.row{flex-direction:column}
+}
+
 </style>
 </head>
 <body>
@@ -647,6 +688,41 @@ footer b{color:#c6c9d2}
           <div class="pw-syn"><b>패러프레이징</b> capital ↔ funds · assets · principal city</div>
         </div>
       </div>
+      
+      <div class="exq">
+        <div class="exq-h"><span class="exq-badge">하남고 기출 예시</span>
+          <b>이 학교는 다의어를 이렇게 묻습니다</b>
+          <p>단어 뜻을 아는 것으로는 안 됩니다. <b>문맥 속 의미가 같은지</b>를 물어보기 때문에, 뜻마다 예문을 붙여 정리해야 풀립니다.</p>
+        </div>
+
+        <div class="exq-item">
+          <div class="exq-q"><span class="exq-no">1</span>밑줄 친 <u>capital</u>과 <b>같은 의미로 사용된 문장은?</b></div>
+          <div class="exq-src">The startup needed more <u>capital</u> to expand overseas.</div>
+          <ol class="exq-c">
+            <li><span class="cn">①</span>Seoul is the <u>capital</u> of Korea.</li>
+            <li><span class="cn">②</span>Write your name in <u>capital</u> letters.</li>
+            <li class="ans"><span class="cn">③</span>They raised enough <u>capital</u> for the new project.<span class="ansmark">정답</span></li>
+            <li><span class="cn">④</span>Milan is the fashion <u>capital</u> of the world.</li>
+            <li><span class="cn">⑤</span>The country abolished <u>capital</u> punishment.</li>
+          </ol>
+          <div class="exq-sol"><b>해설</b> 지문의 <u>capital</u>은 <b>자본·자금</b>. ①④는 수도·중심지, ②는 대문자, ⑤는 사형의(capital punishment). 뜻 나열만 외운 학생은 ①에 끌립니다.</div>
+        </div>
+
+        <div class="exq-item">
+          <div class="exq-q"><span class="exq-no">2</span>밑줄 친 <u>contain</u>과 의미가 <b>가장 가까운 것은?</b></div>
+          <div class="exq-src">The box could no longer <u>contain</u> what was inside.</div>
+          <ol class="exq-c row">
+            <li><span class="cn">①</span>release</li>
+            <li class="ans"><span class="cn">②</span>hold<span class="ansmark">정답</span></li>
+            <li><span class="cn">③</span>expose</li>
+            <li><span class="cn">④</span>reveal</li>
+            <li><span class="cn">⑤</span>scatter</li>
+          </ol>
+          <div class="exq-sol"><b>해설</b> 여기서는 <b>안에 담아 두다</b>. ①③④⑤는 전부 <b>밖으로 내보내다</b> 쪽이라 반대 방향입니다. 핵심 어감(안에 가두어 두다)을 잡아두면 한 번에 걸러집니다.</div>
+        </div>
+
+        <div class="exq-foot">이런 유형이 나올 만한 다의어는 <b>범위 안에서 전부 뽑아</b> 뜻별 예문과 함께 정리해 드립니다.</div>
+      </div>
       <span class="tag">다의어 · 유의어 패러프레이징 (실물 구성)</span>
     </div>
 
@@ -700,7 +776,7 @@ footer b{color:#c6c9d2}
       <div class="fstep"><div class="ic">✏️</div><div><h4>아이는 풀고, 해설서로 스스로 정리</h4><p>동형을 풀고 41쪽 해설서로 오답을 봅니다. 헷갈렸던 선지는 풀 때 미리 체크 — 오답 정리의 시작점입니다.</p></div></div>
       <div class="fstep"><div class="ic">🔢</div><div><h4>리포트를 원하면 — <span class="b">틀린 개수만 적어 보내면 끝</span></h4><p>제출은 <b>선택</b>입니다. 틀린 개수만 보내면 자동 집계되어 <b>현재 예상 점수·등급 인포그래픽</b>이 일요일에 갑니다.</p></div></div>
       <div class="fstep"><div class="ic">🔔</div><div><h4>리포트 신청 가정은 — 미제출 시 학생·학부모 동시 알림</h4><p>마감이 지나면 다음 날 자동 알림. 잔소리 없이 경각심만.</p></div></div>
-      <div class="fstep"><div class="ic">🎯</div><div><h4>관리+ 전용 — 시험지 사진을 올리면, 자동 스캔 분석</h4><p>틀린 유형을 자동 집계해 <b>그 유형의 보충 문제</b>를 발송합니다. 유형별 문제는 전부 만들어져 있어, 원하면 “전 유형 일괄 받기”도 됩니다.</p></div></div>
+      <div class="fstep"><div class="ic">🎯</div><div><h4>관리+ 전용 — 답만 입력하면 자동 채점·유형 집계</h4><p>틀린 유형을 자동 집계해 <b>그 유형의 보충 문제</b>를 발송합니다. 유형별 문제는 전부 만들어져 있어, 원하면 “전 유형 일괄 받기”도 됩니다.</p></div></div>
       <div class="fstep"><div class="ic">📊</div><div><h4>일요일 저녁, 리포트 도착</h4><p>학생과 학부모 모두에게. 이번 주 한 것, 점수 추이, 다음 주 플랜까지.</p></div></div>
     </div>
 
@@ -744,26 +820,25 @@ footer b{color:#c6c9d2}
       </div>
 
       <div class="tk tk-b">
-        <div class="tk-h"><span class="tk-badge gold">관리+ 시즌패스</span><b>업로드 관리 트랙</b>
-          <p>푼 걸 올리면, 다음 주가 아이에 맞춰 다시 짜입니다.</p></div>
+        <div class="tk-h"><span class="tk-badge gold">관리+ 시즌패스</span><b>자동 채점 관리 트랙</b>
+          <p>정답표는 이미 있습니다. 맞았는지 틀렸는지만 체크해 올리면, 나머지는 시스템이 합니다.</p></div>
         <div class="tk-tl">
-          <div class="tl-row"><span class="tl-w">1주</span><div class="tl-b"><b>분석서 전량 + 개인 플랜</b><span>남은 주수에 맞춘 첫 설계</span></div></div>
-          <div class="tl-row"><span class="tl-w">2~5주</span><div class="tl-b"><b>업로드 → 스캔 분석 → 보충</b><span>취약 유형을 찾아 그 유형만 보충 발송</span></div></div>
-          <div class="tl-row"><span class="tl-w">6주</span><div class="tl-b"><b>누적 오답 기반 마무리</b><span>끝까지 안 잡힌 유형만 집중</span></div></div>
-          <div class="tl-row opt"><span class="tl-w">+7~8주</span><div class="tl-b"><b>선택 구간</b><span>전 유형 일괄 수령 가능</span></div></div>
+          <div class="tl-row"><span class="tl-w">제출</span><div class="tl-b"><b>답만 입력 — 30초</b><span>객관식 번호 + 서술형 O/X만. 사진도, 파일도 필요 없습니다</span></div></div>
+          <div class="tl-row"><span class="tl-w">즉시</span><div class="tl-b"><b>자동 채점 · 유형 집계</b><span>문항마다 유형표(어법·빈칸·어휘·서술형)가 붙어 있어 틀린 유형이 바로 나옵니다</span></div></div>
+          <div class="tl-row"><span class="tl-w">즉시</span><div class="tl-b"><b>취약 유형 보충 자동 발송</b><span>유형별 문제는 전부 만들어져 있어, 해당 유형만 골라 바로 나갑니다</span></div></div>
+          <div class="tl-row"><span class="tl-w">일요일</span><div class="tl-b"><b>주간 리포트 자동 생성</b><span>점수 추이·예상 등급·다음 주 플랜 — 발송 전 원장이 확인만 합니다</span></div></div>
+          <div class="tl-row opt"><span class="tl-w">미제출</span><div class="tl-b"><b>알림도 자동</b><span>마감 다음 날 학생·학부모 동시 발송</span></div></div>
         </div>
         <div class="tk-week">
           <div class="wd on"><i>월</i><b>세트 + 플랜</b></div><div class="wd"><i>화</i><b>학습</b></div>
-          <div class="wd act"><i>수</i><b>업로드<small>사진</small></b></div>
-          <div class="wd act"><i>목</i><b>보충 발송</b></div>
+          <div class="wd act"><i>수</i><b>답 입력<small>30초</small></b></div>
+          <div class="wd act"><i>목</i><b>보충 자동<small>즉시</small></b></div>
           <div class="wd"><i>금</i><b>학습</b></div><div class="wd"><i>토</i><b>학습</b></div>
           <div class="wd hot"><i>일</i><b>리포트<small>학생·학부모</small></b></div>
         </div>
-        <div class="tk-note">수요일까지 미업로드면 목요일 아침 학생·학부모에게 동시 알림이 갑니다. 잔소리는 시스템이 합니다.</div>
+        <div class="tk-note"><b>사람이 채점하지 않습니다.</b> 정답과 유형표가 문항에 이미 붙어 있어, 답만 들어오면 채점·집계·보충 발송이 한 번에 돌아갑니다. 원장은 일요일 리포트를 <b>확인 후 보내기</b>만 누릅니다.</div>
       </div>
-    </div>
-
-    <div class="joinnote rv"><b>중간에 합류해도 됩니다.</b> 오늘 신청하면 내일 시험 범위를 확인해 드리고, 확인 즉시 <b>분석서 전량</b>이 지급됩니다. 이전 주차에 나간 동형·워크북은 <b>한꺼번에 받을지, 이번 주차부터 받을지</b> 고르실 수 있습니다.</div>
+          <div class="joinnote rv"><b>중간에 합류해도 됩니다.</b> 오늘 신청하면 내일 시험 범위를 확인해 드리고, 확인 즉시 <b>분석서 전량</b>이 지급됩니다. 이전 주차에 나간 동형·워크북은 <b>한꺼번에 받을지, 이번 주차부터 받을지</b> 고르실 수 있습니다.</div>
 
   </div>
 </section>
@@ -800,7 +875,7 @@ footer b{color:#c6c9d2}
         <div class="cap">정원 24명 — 학교·학년당 2명. 품질을 지키는 상한입니다.</div>
         <ul>
           <li>자료 시즌패스 전체 포함</li>
-          <li><b>시험지 사진 업로드 → 취약 유형 자동 스캔 분석</b></li>
+          <li><b>답만 입력하면 자동 채점 → 취약 유형 집계</b></li>
           <li><b>취약 유형 보충 문제 발송</b> — 원하면 전 유형 일괄 수령도 가능</li>
           <li><b>개인별 주간 플랜</b> — 남은 주수에 맞춰 매주 재설계</li>
           <li>미제출 시 <b>학생·학부모 동시 알림</b> + 원장 확인 관리</li>
