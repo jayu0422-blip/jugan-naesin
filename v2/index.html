@@ -322,6 +322,88 @@ footer b{color:#c6c9d2}
   .mp-bub{font-size:13.5px;padding:10px 12px}
 }
 
+
+/* 자리 현황판 */
+.seat .left.ok{color:#3f7f5c!important;background:#e9f5ee!important}
+.seat.urgent{border-color:#d4553f!important;background:#fff6f3!important}
+.seat.urgent .left{color:#c4472e!important;background:#ffe6df!important;font-weight:800}
+
+/* 다의어 */
+.poly{display:grid;gap:14px;margin:6px 0 4px}
+.pw{background:#fff;border:1px solid var(--paper-line);border-radius:16px;padding:20px 22px;
+  box-shadow:0 8px 22px rgba(25,31,40,.06)}
+.pw-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.pw-h b{font-size:26px;font-weight:900;letter-spacing:-.02em;color:#12203A}
+.pw-h span{font-size:15px;font-weight:700;color:#8a7a52}
+.pw-core{margin:10px 0 14px;font-size:14px;color:var(--muted);background:#faf7f0;
+  border-radius:9px;padding:9px 13px}
+.pw-core b{color:#12203A}
+.pw ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.pw li{font-size:14.5px;line-height:1.6;color:#2c3646;display:flex;gap:9px;align-items:flex-start;
+  padding-bottom:9px;border-bottom:1px dashed var(--paper-line)}
+.pw li:last-child{border-bottom:0;padding-bottom:0}
+.pw li .s{flex:0 0 auto;color:#b08a16;font-weight:900}
+.pw li b{margin-right:6px;color:#12203A}
+.pw li u{text-decoration:none;font-weight:800;color:#b4472e;border-bottom:2px solid #f0d9a0}
+.pw li i{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:2px}
+.pw-syn{margin-top:14px;font-size:13px;color:var(--muted);background:#f2f6fb;
+  border-radius:9px;padding:9px 13px}
+.pw-syn b{color:#2a4a7a;margin-right:6px}
+
+/* 워크북 */
+.wb{background:#fff;border:1px solid var(--paper-line);border-radius:16px;padding:22px 24px;
+  box-shadow:0 8px 22px rgba(25,31,40,.06)}
+.wb-top{display:flex;align-items:center;gap:11px;padding-bottom:12px;border-bottom:2px solid #12203A}
+.wb-no{width:28px;height:28px;border-radius:8px;background:#12203A;color:#fff;font-weight:900;
+  font-size:15px;display:flex;align-items:center;justify-content:center}
+.wb-top b{font-size:17px;font-weight:800;color:#12203A}
+.wb-pt{margin-left:auto;font-size:13px;font-weight:800;color:#b08a16}
+.wb-q{margin:16px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:14px}
+.wb-q li{font-size:15px;line-height:1.85;color:#22303f}
+.wb-q .ch{display:inline-block;border:1.5px solid #b08a16;border-radius:8px;padding:2px 10px;
+  background:#fffaf0;margin:0 2px}
+.wb-q .ch em{font-style:normal;font-weight:800;color:#12203A}
+.wb-q .bl{display:inline-block;width:130px;border-bottom:2px solid #12203A;margin:0 4px}
+.wb-q .hint{font-size:12.5px;color:#a08a5e;letter-spacing:.06em;margin-left:6px}
+.wb-foot{margin-top:18px;padding-top:14px;border-top:1px dashed var(--paper-line);
+  font-size:13px;color:var(--muted)}
+
+/* 2트랙 */
+.tracks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:10px 0 16px}
+.tk{background:#fff;border:1px solid var(--paper-line);border-radius:20px;padding:24px 24px 22px;
+  box-shadow:0 12px 30px rgba(25,31,40,.08);display:flex;flex-direction:column}
+.tk-a{border-top:5px solid #3a6ea8}
+.tk-b{border-top:5px solid #b08a16}
+.tk-badge{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.09em;
+  padding:5px 11px;border-radius:999px;background:#eaf1f9;color:#2a4a7a}
+.tk-badge.gold{background:#fbf3e0;color:#8a6a10}
+.tk-h b{display:block;font-size:23px;font-weight:900;letter-spacing:-.02em;margin:11px 0 6px;color:#12203A}
+.tk-h p{margin:0;font-size:14px;color:var(--muted)}
+.tk-tl{margin:18px 0 16px;display:flex;flex-direction:column}
+.tl-row{display:flex;gap:14px;padding:11px 0;border-bottom:1px dashed var(--paper-line);position:relative}
+.tl-row:last-child{border-bottom:0}
+.tl-w{flex:0 0 62px;font-size:13px;font-weight:900;color:#3a6ea8;padding-top:2px}
+.tk-b .tl-w{color:#b08a16}
+.tl-row.opt .tl-w{color:#9aa3ae}
+.tl-b b{display:block;font-size:14.5px;font-weight:800;color:#12203A}
+.tl-b span{display:block;font-size:13px;color:var(--muted);margin-top:2px;line-height:1.5}
+.tk-week{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:auto}
+.wd{background:#f6f7f9;border-radius:10px;padding:9px 4px;text-align:center}
+.wd i{display:block;font-style:normal;font-size:12px;font-weight:800;color:#9aa3ae;margin-bottom:5px}
+.wd b{display:block;font-size:11px;font-weight:700;color:#5c6b7f;line-height:1.35}
+.wd small{display:block;font-size:9.5px;font-weight:600;color:#9aa3ae;margin-top:2px}
+.wd.on{background:#e8f0fa}.wd.on i{color:#2a4a7a}.wd.on b{color:#1d3557}
+.tk-b .wd.on{background:#fbf3e0}.tk-b .wd.on i{color:#8a6a10}.tk-b .wd.on b{color:#6b520c}
+.wd.act{background:#eaf6f0}.wd.act i{color:#2f7a54}.wd.act b{color:#245c3f}
+.wd.hot{background:#fdeee9}.wd.hot i{color:#b4472e}.wd.hot b{color:#8f3722}
+.wd.soft{background:#f2f2f4}.wd.soft b{color:#7c8494}
+.tk-note{margin-top:14px;font-size:12.5px;line-height:1.6;color:var(--muted);
+  background:#f7f7f5;border-radius:10px;padding:10px 13px}
+.joinnote{background:#eef4fb;border:1px solid #d5e3f2;border-radius:14px;padding:16px 20px;
+  font-size:14.5px;line-height:1.65;color:#2f4463}
+.joinnote b{color:#12203A}
+@media(max-width:800px){.tracks{grid-template-columns:1fr}.tk-week{grid-template-columns:repeat(4,1fr)}}
+
 </style>
 </head>
 <body>
@@ -533,17 +615,63 @@ footer b{color:#c6c9d2}
       <div class="num">07</div>
       <h3>단어장이 아니라, 어감까지 잡는 다의어 정리</h3>
       <p>다의어는 뜻 나열이 아니라 <b>핵심 어감</b>부터 잡고 갈래를 폅니다. 유의어는 시험이 좋아하는 <b>패러프레이징 짝</b>으로 묶습니다.</p>
-      <img src="../img/cu_polysemy.jpg" alt="진짜 다의어 — 어감과 핵심 의미" loading="lazy" style="margin-bottom:12px">
-      <img src="../img/cu_synonym.jpg" alt="유의어 패러프레이징 정리" loading="lazy">
-      <span class="tag">다의어 · 유의어 패러프레이징 (실물 확대)</span>
+      <div class="poly">
+        <div class="pw">
+          <div class="pw-h"><b>contain</b><span>담다 · 억누르다</span></div>
+          <div class="pw-core">핵심 어감 — <b>안에 가두어 두다</b></div>
+          <ul>
+            <li><span class="s">①</span><b>담고 있다</b> The box <u>contains</u> old files. <i>상자가 오래된 서류를 담고 있다</i></li>
+            <li><span class="s">②</span><b>억누르다</b> He couldn't <u>contain</u> his anger. <i>그는 분노를 억누를 수 없었다</i></li>
+            <li><span class="s">③</span><b>차단·봉쇄하다</b> to <u>contain</u> the spread <i>확산을 막다</i></li>
+          </ul>
+          <div class="pw-syn"><b>패러프레이징</b> contain ↔ hold · include · suppress · curb</div>
+        </div>
+        <div class="pw">
+          <div class="pw-h"><b>concentration</b><span>집중 · 농도</span></div>
+          <div class="pw-core">핵심 어감 — <b>한곳으로 모임</b></div>
+          <ul>
+            <li><span class="s">①</span><b>집중력</b> It requires deep <u>concentration</u>. <i>깊은 집중을 요한다</i></li>
+            <li><span class="s">②</span><b>농도</b> a high <u>concentration</u> of salt <i>높은 소금 농도</i></li>
+            <li><span class="s">③</span><b>밀집</b> a <u>concentration</u> of shops <i>상점의 밀집</i></li>
+          </ul>
+          <div class="pw-syn"><b>패러프레이징</b> concentration ↔ focus · density · cluster</div>
+        </div>
+        <div class="pw">
+          <div class="pw-h"><b>capital</b><span>수도 · 자본 · 대문자</span></div>
+          <div class="pw-core">핵심 어감 — <b>으뜸가는 것 · 머리가 되는 것</b></div>
+          <ul>
+            <li><span class="s">①</span><b>수도</b> Seoul is the <u>capital</u> of Korea. <i>서울은 한국의 수도다</i></li>
+            <li><span class="s">②</span><b>자본</b> raise <u>capital</u> for a startup <i>창업 자본을 모으다</i></li>
+            <li><span class="s">③</span><b>대문자</b> Write it in <u>capital</u> letters. <i>대문자로 쓰시오</i></li>
+          </ul>
+          <div class="pw-syn"><b>패러프레이징</b> capital ↔ funds · assets · principal city</div>
+        </div>
+      </div>
+      <span class="tag">다의어 · 유의어 패러프레이징 (실물 구성)</span>
     </div>
 
     <div class="cu rv">
       <div class="num">08</div>
       <h3>워크북 — 출제 포인트만 뚫어 놓은 시험지</h3>
       <p>분석서를 봤으면 확인해야 합니다. 어법 선택형 · 서술형 · <b>서술형 영작</b> · 빈칸 — 출제 가능성이 높은 지점만 박스로 뚫어 놓은 복습 워크북이 분석서와 별개로 나갑니다.</p>
-      <img src="../img/cu_workbook.jpg" alt="빈칸 워크북 실물" loading="lazy">
-      <span class="tag">복습 워크북 · 직독직해 빈칸 파트 (실물)</span>
+      <div class="wb">
+        <div class="wb-top"><span class="wb-no">1</span><b>어법 — 둘 중 하나 고르기</b><span class="wb-pt">각 2점</span></div>
+        <ol class="wb-q">
+          <li>Before the Internet, companies could <span class="ch"><em>hide</em> / <em>hiding</em></span> their flaws.</li>
+          <li>Everything <span class="ch"><em>popped</em> / <em>was popped</em></span> out of the box.</li>
+          <li>Now consumers can compare prices, reviews, and even a <span class="ch"><em>company's</em> / <em>companies</em></span> truthfulness.</li>
+          <li>The power <span class="ch"><em>has shifted</em> / <em>has been shifted</em></span> to the customer.</li>
+        </ol>
+        <div class="wb-top" style="margin-top:22px"><span class="wb-no">2</span><b>빈칸 — 알맞은 어휘 채우기</b><span class="wb-pt">각 3점</span></div>
+        <ol class="wb-q blank">
+          <li>The box could no longer <span class="bl"></span> what was inside. <span class="hint">c______</span></li>
+          <li>Customers now check a company's <span class="bl"></span> before buying. <span class="hint">t____________</span></li>
+          <li>Everything <span class="bl"></span> out of the box at once. <span class="hint">p_____</span></li>
+          <li>Now customers can talk <span class="bl"></span>. <span class="hint">b___</span></li>
+        </ol>
+        <div class="wb-foot">서술형 영작 · 직독직해 빈칸 파트는 실물 워크북에 이어집니다</div>
+      </div>
+      <span class="tag">적중 워크북 · 어법 택1 + 빈칸 어휘 (실물 구성)</span>
     </div>
 
     <div class="cu rv" style="margin-bottom:0">
@@ -596,27 +724,47 @@ footer b{color:#c6c9d2}
     </div>
     <p class="sample-tag">※ 리포트 양식 예시. 실제 리포트는 자녀의 제출 데이터로 작성되며, 발송 전 원장이 직접 확인합니다.</p>
 
-    <div class="mplan rv" aria-label="기본 설계">
-      <h4>📅 기본 설계 <span>— 4~6주 완성 (최대 8주)</span></h4>
-      <div class="mrow"><span class="wk">1주</span><span class="mtxt">분석서 전량 수령·정독 + 동형 1회 — <b>동형은 첫 주부터</b></span><span class="mtag">개념+실전</span></div>
-      <div class="mrow"><span class="wk">2~5주</span><span class="mtxt">매주 동형 1회 + 워크북(어법·서술형·영작·빈칸) 순환 + 지문별 드릴</span><span class="mtag">문제 5주</span></div>
-      <div class="mrow"><span class="wk">6주</span><span class="mtxt">오답 총정리 + 마무리 점검 — 여기까지가 완성</span><span class="mtag">6주 완성</span></div>
-      <div class="mrow"><span class="wk">+7~8주</span><span class="mtxt">원하는 경우만 — 보충·유형별 문제 신청 구간</span><span class="mtag">선택</span></div>
-    </div>
-    <div class="join-late rv"><b>중간에 합류해도 됩니다.</b> 언제 신청하든 — 오늘 신청하면 내일 시험 범위를 확인해 드리고, 확인 즉시 <b>분석서 전량</b>이 지급됩니다. 이전 주차에 나간 동형·워크북까지 <b>한꺼번에 일괄 수령</b>하고, 남은 주수에 맞춘 플랜을 다시 받습니다.</div>
+    <div class="tracks rv">
+      <div class="tk tk-a">
+        <div class="tk-h"><span class="tk-badge">자료 시즌패스</span><b>자기주도 트랙</b>
+          <p>자료가 전부 옵니다. 속도는 아이가 정합니다.</p></div>
+        <div class="tk-tl">
+          <div class="tl-row"><span class="tl-w">1주</span><div class="tl-b"><b>분석서 전량 수령</b><span>범위 전체 + 동형 1회 — 동형은 첫 주부터</span></div></div>
+          <div class="tl-row"><span class="tl-w">2~5주</span><div class="tl-b"><b>매주 동형 1회 + 워크북</b><span>어법·서술형·영작·빈칸 순환 + 지문별 드릴</span></div></div>
+          <div class="tl-row"><span class="tl-w">6주</span><div class="tl-b"><b>오답 총정리</b><span>마무리 점검 — 여기까지가 완성</span></div></div>
+          <div class="tl-row opt"><span class="tl-w">+7~8주</span><div class="tl-b"><b>선택 구간</b><span>보충·유형별 문제 신청</span></div></div>
+        </div>
+        <div class="tk-week">
+          <div class="wd on"><i>월</i><b>세트 발송</b></div><div class="wd"><i>화</i><b>학습</b></div>
+          <div class="wd"><i>수</i><b>학습</b></div><div class="wd"><i>목</i><b>학습</b></div>
+          <div class="wd"><i>금</i><b>학습</b></div><div class="wd"><i>토</i><b>학습</b></div>
+          <div class="wd soft"><i>일</i><b>리포트<small>무료 선택</small></b></div>
+        </div>
+        <div class="tk-note">틀린 개수만 보내면 일요일 리포트가 무료로 갑니다. 안 보내도 자료는 그대로 다 나갑니다.</div>
+      </div>
 
-    <div class="weekboard rv" aria-label="주간 사이클">
-      <div class="wb-title">일주일은 이렇게 돕니다 <span>왼쪽에서 오른쪽으로, 월→일</span></div>
-      <div class="wb-row">
-        <div class="wb-day a1"><b>월</b><i>📗</i><span>주간 세트<br>발송</span></div>
-        <div class="wb-day"><b>화</b><i>·</i><span>학습</span></div>
-        <div class="wb-day a2"><b>수</b><i>🔢</i><span>기록 제출<br><em>(선택)</em></span></div>
-        <div class="wb-day a3"><b>목</b><i>🎯</i><span>보충 발송<br><em>관리+</em></span></div>
-        <div class="wb-day"><b>금</b><i>·</i><span>학습</span></div>
-        <div class="wb-day"><b>토</b><i>·</i><span>학습</span></div>
-        <div class="wb-day a4"><b>일</b><i>📊</i><span>주간<br>리포트</span></div>
+      <div class="tk tk-b">
+        <div class="tk-h"><span class="tk-badge gold">관리+ 시즌패스</span><b>업로드 관리 트랙</b>
+          <p>푼 걸 올리면, 다음 주가 아이에 맞춰 다시 짜입니다.</p></div>
+        <div class="tk-tl">
+          <div class="tl-row"><span class="tl-w">1주</span><div class="tl-b"><b>분석서 전량 + 개인 플랜</b><span>남은 주수에 맞춘 첫 설계</span></div></div>
+          <div class="tl-row"><span class="tl-w">2~5주</span><div class="tl-b"><b>업로드 → 스캔 분석 → 보충</b><span>취약 유형을 찾아 그 유형만 보충 발송</span></div></div>
+          <div class="tl-row"><span class="tl-w">6주</span><div class="tl-b"><b>누적 오답 기반 마무리</b><span>끝까지 안 잡힌 유형만 집중</span></div></div>
+          <div class="tl-row opt"><span class="tl-w">+7~8주</span><div class="tl-b"><b>선택 구간</b><span>전 유형 일괄 수령 가능</span></div></div>
+        </div>
+        <div class="tk-week">
+          <div class="wd on"><i>월</i><b>세트 + 플랜</b></div><div class="wd"><i>화</i><b>학습</b></div>
+          <div class="wd act"><i>수</i><b>업로드<small>사진</small></b></div>
+          <div class="wd act"><i>목</i><b>보충 발송</b></div>
+          <div class="wd"><i>금</i><b>학습</b></div><div class="wd"><i>토</i><b>학습</b></div>
+          <div class="wd hot"><i>일</i><b>리포트<small>학생·학부모</small></b></div>
+        </div>
+        <div class="tk-note">수요일까지 미업로드면 목요일 아침 학생·학부모에게 동시 알림이 갑니다. 잔소리는 시스템이 합니다.</div>
       </div>
     </div>
+
+    <div class="joinnote rv"><b>중간에 합류해도 됩니다.</b> 오늘 신청하면 내일 시험 범위를 확인해 드리고, 확인 즉시 <b>분석서 전량</b>이 지급됩니다. 이전 주차에 나간 동형·워크북은 <b>한꺼번에 받을지, 이번 주차부터 받을지</b> 고르실 수 있습니다.</div>
+
   </div>
 </section>
 
@@ -665,18 +813,18 @@ footer b{color:#c6c9d2}
     </div>
 
     <div class="seats rv" aria-label="관리+ 정원 현황">
-      <div class="seat"><span class="left">2석</span><b>미사고 1</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>미사고 2</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>미사강변고 1</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>미사강변고 2</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>하남고 1</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>하남고 2</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>풍산고 1</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>풍산고 2</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>남한고 1</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>남한고 2</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>신장고 1</b><span>영어</span></div>
-      <div class="seat"><span class="left">2석</span><b>신장고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left ok">신청 가능</span><b>미사고 1</b><span>영어</span></div>
+      <div class="seat urgent"><span class="left">마감임박</span><b>미사고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left ok">신청 가능</span><b>미사강변고 1</b><span>영어</span></div>
+      <div class="seat urgent"><span class="left">마감임박</span><b>미사강변고 2</b><span>영어</span></div>
+      <div class="seat urgent"><span class="left">마감임박</span><b>하남고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left ok">신청 가능</span><b>하남고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left ok">신청 가능</span><b>풍산고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left ok">신청 가능</span><b>풍산고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left ok">신청 가능</span><b>남한고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left ok">신청 가능</span><b>남한고 2</b><span>영어</span></div>
+      <div class="seat"><span class="left ok">신청 가능</span><b>신장고 1</b><span>영어</span></div>
+      <div class="seat"><span class="left ok">신청 가능</span><b>신장고 2</b><span>영어</span></div>
     </div>
   </div>
 </section>
