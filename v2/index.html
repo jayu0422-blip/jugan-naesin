@@ -492,6 +492,29 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
 .exq-sol i{font-style:italic;color:#12203A}
 @media(max-width:800px){.toon{grid-template-columns:1fr;gap:14px}}
 
+
+/* 오픈 예고 티어 */
+.tier.soon{opacity:.96;border-style:dashed;border-color:var(--line);background:#fbfaf8}
+.badge-soon{background:#eceff3!important;color:#5c6b7f!important}
+.soon-price{color:#8b94a3!important;font-size:34px!important}
+.soon-price small{color:#a2aab6!important}
+.soon-note{margin-top:14px;background:#f4f6f9;border-radius:12px;padding:13px 15px;
+  font-size:13px;line-height:1.65;color:#5c6b7f}
+.soon-note b{color:#12203A}
+.btn-ghost{display:inline-block;text-align:center;padding:14px 20px;border-radius:12px;
+  border:1.5px solid var(--line);background:#fff;color:#5c6b7f;font-weight:800;font-size:15px}
+.seats-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:26px 0 12px}
+.seats-h b{font-size:17px;font-weight:800;color:#12203A}
+.seats-h span{font-size:13px;color:var(--muted)}
+/* 단일 트랙 레이아웃 */
+.tracks.single{grid-template-columns:1.15fr .85fr}
+.tk-soon{border-top:5px solid #c3cad4;background:#fbfaf8}
+.tk-badge.ghost{background:#eceff3;color:#5c6b7f}
+.tk-tl.dim{opacity:.62}
+.tk-note.soon{background:#eef1f5;color:#5c6b7f}
+.tk-note.soon b{color:#12203A}
+@media(max-width:800px){.tracks.single{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -822,7 +845,7 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
       <div class="fstep"><div class="ic">✏️</div><div><h4>아이는 풀고, 해설서로 스스로 정리</h4><p>동형을 풀고 41쪽 해설서로 오답을 봅니다. 헷갈렸던 선지는 풀 때 미리 체크 — 오답 정리의 시작점입니다.</p></div></div>
       <div class="fstep"><div class="ic">🔢</div><div><h4>리포트를 원하면 — <span class="b">틀린 개수만 적어 보내면 끝</span></h4><p>제출은 <b>선택</b>입니다. 틀린 개수만 보내면 자동 집계되어 <b>현재 예상 점수·등급 인포그래픽</b>이 일요일에 갑니다.</p></div></div>
       <div class="fstep"><div class="ic">🔔</div><div><h4>리포트 신청 가정은 — 미제출 시 학생·학부모 동시 알림</h4><p>마감이 지나면 다음 날 자동 알림. 잔소리 없이 경각심만.</p></div></div>
-      <div class="fstep"><div class="ic">🎯</div><div><h4>관리+ 전용 — 답만 입력하면 자동 채점·유형 집계</h4><p>틀린 유형을 자동 집계해 <b>그 유형의 보충 문제</b>를 발송합니다. 유형별 문제는 전부 만들어져 있어, 원하면 “전 유형 일괄 받기”도 됩니다.</p></div></div>
+      <div class="fstep"><div class="ic">🎯</div><div><h4>관리+ 전용 [기말 시즌 예정] — 답만 입력하면 자동 채점·유형 집계</h4><p>틀린 유형을 자동 집계해 <b>그 유형의 보충 문제</b>를 발송합니다. 유형별 문제는 전부 만들어져 있어, 원하면 “전 유형 일괄 받기”도 됩니다.</p></div></div>
       <div class="fstep"><div class="ic">📊</div><div><h4>일요일 저녁, 리포트 도착</h4><p>학생과 학부모 모두에게. 이번 주 한 것, 점수 추이, 다음 주 플랜까지.</p></div></div>
     </div>
 
@@ -846,9 +869,9 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
     </div>
     <p class="sample-tag">※ 리포트 양식 예시. 실제 리포트는 자녀의 제출 데이터로 작성되며, 발송 전 원장이 직접 확인합니다.</p>
 
-    <div class="tracks rv">
+    <div class="tracks single rv">
       <div class="tk tk-a">
-        <div class="tk-h"><span class="tk-badge">자료 시즌패스</span><b>자기주도 트랙</b>
+        <div class="tk-h"><span class="tk-badge">이번 시즌 · 자료 시즌패스</span><b>자기주도 트랙</b>
           <p>자료가 전부 옵니다. 속도는 아이가 정합니다.</p></div>
         <div class="tk-tl">
           <div class="tl-row"><span class="tl-w">1주</span><div class="tl-b"><b>분석서 전량 수령</b><span>범위 전체 + 동형 1회 — 동형은 첫 주부터</span></div></div>
@@ -862,29 +885,25 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
           <div class="wd"><i>금</i><b>학습</b></div><div class="wd"><i>토</i><b>학습</b></div>
           <div class="wd soft"><i>일</i><b>리포트<small>무료 선택</small></b></div>
         </div>
-        <div class="tk-note">틀린 개수만 보내면 일요일 리포트가 무료로 갑니다. 안 보내도 자료는 그대로 다 나갑니다.</div>
+        <div class="tk-note">틀린 개수만 보내면 일요일 리포트가 <b>무료로</b> 갑니다. 안 보내도 자료는 그대로 다 나갑니다.</div>
       </div>
 
-      <div class="tk tk-b">
-        <div class="tk-h"><span class="tk-badge gold">관리+ 시즌패스</span><b>자동 채점 관리 트랙</b>
-          <p>정답표는 이미 있습니다. 맞았는지 틀렸는지만 체크해 올리면, 나머지는 시스템이 합니다.</p></div>
-        <div class="tk-tl">
-          <div class="tl-row"><span class="tl-w">제출</span><div class="tl-b"><b>답만 입력 — 30초</b><span>객관식 번호 + 서술형 O/X만. 사진도, 파일도 필요 없습니다</span></div></div>
-          <div class="tl-row"><span class="tl-w">즉시</span><div class="tl-b"><b>자동 채점 · 유형 집계</b><span>문항마다 유형표(어법·빈칸·어휘·서술형)가 붙어 있어 틀린 유형이 바로 나옵니다</span></div></div>
-          <div class="tl-row"><span class="tl-w">즉시</span><div class="tl-b"><b>취약 유형 보충 자동 발송</b><span>유형별 문제는 전부 만들어져 있어, 해당 유형만 골라 바로 나갑니다</span></div></div>
-          <div class="tl-row"><span class="tl-w">일요일</span><div class="tl-b"><b>주간 리포트 자동 생성</b><span>점수 추이·예상 등급·다음 주 플랜 — 발송 전 원장이 확인만 합니다</span></div></div>
-          <div class="tl-row opt"><span class="tl-w">미제출</span><div class="tl-b"><b>알림도 자동</b><span>마감 다음 날 학생·학부모 동시 발송</span></div></div>
+      <div class="tk tk-soon">
+        <div class="tk-h"><span class="tk-badge ghost">기말 시즌 예정</span><b>관리 트랙</b>
+          <p>지금은 준비 중입니다. 이번 시즌에는 열지 않습니다.</p></div>
+        <div class="tk-tl dim">
+          <div class="tl-row"><span class="tl-w">제출</span><div class="tl-b"><b>주 1회 답 입력</b><span>객관식 번호 + 답안지 사진 1장</span></div></div>
+          <div class="tl-row"><span class="tl-w">자동</span><div class="tl-b"><b>채점 · 유형 집계</b><span>문항마다 유형표가 붙어 있어 즉시 분류</span></div></div>
+          <div class="tl-row"><span class="tl-w">3주차~</span><div class="tl-b"><b>약점 유형 훈련 세트</b><span>3주 누적으로 판정 — 어법·구문 중심</span></div></div>
+          <div class="tl-row"><span class="tl-w">일요일</span><div class="tl-b"><b>리포트 + 학습법 코멘트</b><span>나아졌는지 앵커 문항으로 재측정</span></div></div>
         </div>
-        <div class="tk-week">
-          <div class="wd on"><i>월</i><b>세트 + 플랜</b></div><div class="wd"><i>화</i><b>학습</b></div>
-          <div class="wd act"><i>수</i><b>답 입력<small>30초</small></b></div>
-          <div class="wd act"><i>목</i><b>보충 자동<small>즉시</small></b></div>
-          <div class="wd"><i>금</i><b>학습</b></div><div class="wd"><i>토</i><b>학습</b></div>
-          <div class="wd hot"><i>일</i><b>리포트<small>학생·학부모</small></b></div>
-        </div>
-        <div class="tk-note"><b>사람이 채점하지 않습니다.</b> 정답과 유형표가 문항에 이미 붙어 있어, 답만 들어오면 채점·집계·보충 발송이 한 번에 돌아갑니다. 원장은 일요일 리포트를 <b>확인 후 보내기</b>만 누릅니다.</div>
+        <div class="tk-note soon"><b>정직하게 말씀드립니다.</b> 이 구조를 제대로 굴리려면 매주 채점하고 판단하고
+        되돌리는 체계가 필요합니다. 지금 열면 자료 품질까지 같이 떨어집니다.
+        <b>이번 시즌은 자료에 집중하고, 기말 시즌에 엽니다.</b></div>
       </div>
-          <div class="joinnote rv"><b>중간에 합류해도 됩니다.</b> 오늘 신청하면 내일 시험 범위를 확인해 드리고, 확인 즉시 <b>분석서 전량</b>이 지급됩니다. 이전 주차에 나간 동형·워크북은 <b>한꺼번에 받을지, 이번 주차부터 받을지</b> 고르실 수 있습니다.</div>
+    </div>
+
+    <div class="joinnote rv"><b>중간에 합류해도 됩니다.</b> 오늘 신청하면 내일 시험 범위를 확인해 드리고, 확인 즉시 <b>분석서 전량</b>이 지급됩니다. 이전 주차에 나간 동형·워크북은 <b>한꺼번에 받을지, 이번 주차부터 받을지</b> 고르실 수 있습니다.</div>
 
   </div>
 </section>
@@ -894,12 +913,13 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
   <div class="wrap">
     <div class="rv">
       <div class="kicker">2학기 중간고사 시즌 · 8/31(월) 개강</div>
-      <h2>가격은 두 가지.<br>둘 다 10만원 아래입니다.</h2>
-      <p class="lead"><b>4~6주 완성(최대 8주) 선불 시즌제</b>입니다. 월 구독이 아니라 자동 결제도, 해지 걱정도 없습니다.</p>
+      <h2>이번 시즌은<br>하나만 엽니다.</h2>
+      <p class="lead"><b>4~6주 완성(최대 8주) 선불 시즌제</b>입니다. 월 구독이 아니라 자동 결제도, 해지 걱정도 없습니다. 관리까지 붙는 <b>관리+ 시즌패스는 기말고사 시즌부터</b> 엽니다 — 자료 품질을 먼저 증명하고 열겠습니다.</p>
     </div>
 
     <div class="tiers">
-      <div class="tier rv">
+      <div class="tier hot rv">
+        <span class="badge">이번 시즌 모집 중</span>
         <h3>자료 시즌패스</h3>
         <div class="sub">스스로 굴러가는 아이에게, 최고 밀도의 연료만</div>
         <div class="price">69,000<small>원 / 시즌 전체</small></div>
@@ -910,30 +930,35 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
           <li>적중 워크북(어법·서술형·영작·빈칸) + <b>지문별 연습 드릴</b></li>
           <li>월간 계획표 — 동형은 첫 주부터, 6주 완성 설계</li>
           <li><b>[무료 선택]</b> 틀린 개수만 보내면 → 예상 점수·등급 리포트 + 체크인 알림</li>
-        </ul>
-      </div>
-      <div class="tier hot rv">
-        <span class="badge">관리 포함 · 학교·학년당 2명</span>
-        <h3>관리+ 시즌패스</h3>
-        <div class="sub">플랜·확인·보충까지 맡기고 싶은 가정에</div>
-        <div class="price">99,000<small>원 / 시즌 전체</small></div>
-        <div class="early">조기등록(~8/23) 89,000원</div>
-        <div class="cap">정원 24명 — 학교·학년당 2명. 품질을 지키는 상한입니다.</div>
-        <ul>
-          <li>자료 시즌패스 전체 포함</li>
-          <li><b>답만 입력하면 자동 채점 → 취약 유형 집계</b></li>
-          <li><b>취약 유형 보충 문제 발송</b> — 원하면 전 유형 일괄 수령도 가능</li>
-          <li><b>개인별 주간 플랜</b> — 남은 주수에 맞춰 매주 재설계</li>
-          <li>미제출 시 <b>학생·학부모 동시 알림</b> + 원장 확인 관리</li>
+          <li><b>기말 시즌 관리+ 우선 안내</b> — 이번 시즌 수강생에게 먼저 열립니다</li>
         </ul>
         <a class="btn btn-blue" href="#apply" style="width:100%;margin-top:16px">이번 시즌 신청하기</a>
+      </div>
+      <div class="tier soon rv">
+        <span class="badge badge-soon">기말고사 시즌 오픈 예정</span>
+        <h3>관리+ 시즌패스</h3>
+        <div class="sub">풀었는지 확인하고, 약한 곳을 짚고, 나아졌는지 다시 재는 — 관리 루프</div>
+        <div class="price soon-price">준비 중<small>기말 시즌 공개</small></div>
+        <div class="cap">이번 2학기 중간 시즌에는 <b>열지 않습니다.</b></div>
+        <ul>
+          <li>주간 제출 확인 + <b>자동 채점</b></li>
+          <li><b>누적 유형 리포트</b> — 어느 유형이 약한지 3주 누적으로</li>
+          <li><b>학습법 교정 코멘트</b> — 그 유형을 어떻게 볼 것인지</li>
+          <li><b>약점 유형 훈련 세트</b> — 어법·구문 중심</li>
+          <li>일요일 학부모 리포트 + 미제출 알림</li>
+        </ul>
+        <div class="soon-note"><b>왜 지금 안 여는가</b><br>관리는 자료보다 어렵습니다. 매주 채점하고, 판단하고,
+        틀리면 되돌리는 구조를 먼저 갖춰야 합니다. 준비 안 된 관리는 <b>안 하느니만 못합니다.</b>
+        이번 시즌은 <b>자료 하나에 집중</b>하고, 그 결과를 보고 기말 시즌에 엽니다.</div>
+        <a class="btn btn-ghost" href="#apply" style="width:100%;margin-top:14px">기말 오픈 알림 받기</a>
       </div>
     </div>
     <div class="anchor rv">
       <b>가격의 기준</b> — 이 동네 고등 영어 학원비는 <b>월 36만~40만원을 넘습니다.</b> 주간내신 시즌 전체가 학원 한 달의 1/5~1/4 값입니다. 최소한의 자기주도만 있다면, 말로 하는 수업보다 이 분석서가 더 자세합니다.
     </div>
 
-    <div class="seats rv" aria-label="관리+ 정원 현황">
+    <div class="seats-h rv"><b>학교별 개설 현황</b><span>범위가 확정된 학교부터 자료가 나갑니다</span></div>
+    <div class="seats rv" aria-label="학교별 개설 현황">
       <div class="seat"><span class="left ok">신청 가능</span><b>미사고 1</b><span>영어</span></div>
       <div class="seat urgent"><span class="left">마감임박</span><b>미사고 2</b><span>영어</span></div>
       <div class="seat"><span class="left ok">신청 가능</span><b>미사강변고 1</b><span>영어</span></div>
@@ -1066,7 +1091,7 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
 <section class="final">
   <div class="wrap rv">
     <h2>이번 중간고사,<br><span class="hl">우리 학교 시험지로 준비시키세요.</span></h2>
-    <p>8/31(월) 개강 · 조기등록 8/23(일)까지 · 4~6주 완성 · 관리+ 학교·학년당 2명 · 중간 합류 가능</p>
+    <p>8/31(월) 개강 · 조기등록 8/23(일)까지 · 4~6주 완성 · 이번 시즌 자료 시즌패스 단일 · 중간 합류 가능</p>
     <div class="cta-row">
       <a class="btn btn-blue" href="#apply">신청서 작성하기</a>
       <a class="btn btn-soft" style="background:#26262e;color:#fff" href="sms:010-7789-5094?body=%5B%EC%A3%BC%EA%B0%84%EB%82%B4%EC%8B%A0%5D%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4">문자로 물어보기</a>
