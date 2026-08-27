@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>주간내신 — 시험 범위 전체 분석서 + 동형 5세트, 학교별 맞춤</title>
-<meta name="description" content="前 대형 인강 변형문제 출제자. 시험 범위 전체 상세 분석서 + 적중 워크북 + 학교별 동형 모의고사 5세트 + 개인별 주간 플랜. 하남·미사 6개교, 8주 시즌제.">
+<meta name="description" content="前 대형 인강 변형문제 출제자. 시험 범위 전체 상세 분석서 + 적중 워크북 + 학교별 동형 모의고사 5세트 + 개인별 주간 플랜. 하남·미사 4개교, 8주 시즌제.">
 <meta property="og:title" content="주간내신 — 인강 퀄리티를 우리 학교 시험지로">
-<meta property="og:description" content="시험 범위 전체 분석서 + 워크북 + 동형 5세트. 언제 신청해도 다음 날 전량 지급. 미사고·미사강변고·하남고·풍산고·남한고·신장고.">
+<meta property="og:description" content="시험 범위 전체 분석서 + 워크북 + 동형 5세트. 언제 신청해도 다음 날 전량 지급. 미사고·미사강변고·하남고·풍산고.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://jayu0422-blip.github.io/jugan-naesin/img/expl.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📗</text></svg>">
@@ -300,6 +300,21 @@ footer b{color:var(--gray)}
   .week{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:400px){ .seats{grid-template-columns:repeat(2,1fr)} .hero h1{font-size:34px} }
+
+.seat.closed{opacity:.5;background:#f4f4f2;border-style:dashed}
+.seat .left.off{color:#8b94a3!important;background:#eceff3!important}
+.refund{background:var(--bg2,#f7f6f3);padding:64px 0}
+.rf{display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--paper-line,#e3e2de);
+  border-radius:16px;overflow:hidden;margin-top:8px}
+.rf-row{display:flex;gap:18px;padding:16px 20px;border-bottom:1px solid var(--paper-line,#e3e2de)}
+.rf-row:last-child{border-bottom:0}
+.rf-row>b{flex:0 0 130px;font-size:14px;font-weight:800;color:#12203A}
+.rf-row>span{flex:1;font-size:14px;line-height:1.7;color:#4e555e}
+.rf-row>span b{color:#b4472e}
+.rf-note{margin-top:14px;font-size:13px;line-height:1.7;color:#7a8398;
+  background:#fff;border:1px dashed var(--paper-line,#e3e2de);border-radius:12px;padding:14px 18px}
+@media(max-width:640px){.rf-row{flex-direction:column;gap:6px}.rf-row>b{flex:none}}
+
 </style>
 </head>
 <body>
@@ -312,14 +327,14 @@ footer b{color:var(--gray)}
   <div class="wrap">
     <div class="kicker">前 메가스터디 온라인 강사 · 변형문제 출제자 — 이름은 밝히지 않습니다</div>
     <h1>「우리 학교 변형문제,<br>어디 없나요?」<br><span class="neon-text">그 검색, 끝내드립니다.</span></h1>
-    <p class="sub">시험 범위 <b>전체 상세 분석서</b> + 우리 학교 <b>동형 모의고사 최대 20세트</b>.<br>신청 다음 날, 한 번에 전부 드립니다.</p>
+    <p class="sub">시험 범위 <b>전체 상세 분석서</b> + 우리 학교 <b>학교별 동형 모의고사 8세트 이상</b>.<br>신청 다음 날, 한 번에 전부 드립니다.</p>
     <div class="stack" aria-hidden="true">
       <img src="img/book.jpg" alt="" class="st st1" loading="eager">
       <img src="img/exam.jpg" alt="" class="st st2" loading="eager">
       <img src="img/expl.jpg" alt="" class="st st3" loading="eager">
     </div>
     <div class="schools">
-      <span>미사고</span><span>미사강변고</span><span>하남고</span><span>풍산고</span><span>남한고</span><span>신장고</span>
+      <span>미사고</span><span>미사강변고</span><span>하남고</span><span>풍산고</span>
     </div>
     <div class="cta-row">
       <a class="btn btn-neon" href="#apply">우리 학교 남은 자리 확인</a>
@@ -333,13 +348,13 @@ footer b{color:var(--gray)}
 <section class="light">
   <div class="wrap prose">
     <div class="kicker center">이 사람은 누구인가</div>
-    <h2 class="center" style="font-family:'Noto Serif KR',serif">수만 명이 푸는 인강 교재를<br>만들던 사람이, 왜 동네<br>여섯 학교에 숨어들었나</h2>
+    <h2 class="center" style="font-family:'Noto Serif KR',serif">수만 명이 푸는 인강 교재를<br>만들던 사람이, 왜 동네<br>네 학교에 숨어들었나</h2>
     <hr style="width:44px;height:3px;background:var(--gold);border:0;margin:26px auto 34px">
     <p>저는 오랫동안 인터넷 강의 시장에서 교재와 변형문제를 만들었습니다. 그 시장의 기준은 가혹합니다. 수만 명이 동시에 푸는 교재는 <strong>페이지 하나, 선지 하나에도 검수가 몇 번씩</strong> 들어갑니다. 해설이 불친절하면 그날로 게시판이 뒤집힙니다.</p>
     <p>그러다 미사에서 학원을 개원하고 가르치기 시작했습니다. 많이 다닌다는 유명한 학원 자료들을 보니 — 낱장 프린트. 정답만 적힌 해설. 어디서 복사됐는지 모를 기출 모음.</p>
     <p class="pull">인강 시장이라면 하루도 못 버틸 퀄리티가,<br>내신 시장에서는 "원래 그런 것"이 되어 있었습니다.</p>
     <p>이유는 간단합니다. <strong>학교마다 시험이 다르기 때문입니다.</strong> 대형 출판사는 전국 공통 교재만 만들 수 있습니다. 미사강변고의 시험지, 하남고의 서술형 배점에 맞춘 교재는 시장이 작아서 아무도 만들지 않습니다. 그 빈자리를 낱장 프린트가 채우고 있었던 겁니다.</p>
-    <p>그래서 제가 만들기로 했습니다. 전국이 아니라 <strong>여섯 학교만.</strong> 시험 범위 전체를 분석서로 만들고, 그 학교 시험지의 문항 수와 배점까지 그대로 따른 동형을 다섯 세트씩 만들기로요. 인강 시장에서 하던 그대로.</p>
+    <p>그래서 제가 만들기로 했습니다. 전국이 아니라 <strong>네 학교만.</strong> 시험 범위 전체를 분석서로 만들고, 그 학교 시험지의 문항 수와 배점까지 그대로 따른 동형을 다섯 세트씩 만들기로요. 인강 시장에서 하던 그대로.</p>
     <p>이름을 밝히지 않는 이유도 같습니다. 이 시장에서 강사 이름은 중요하지 않습니다. <strong>아이 손에 들리는 자료가 전부입니다.</strong> 아래에서 한 장 한 장 뜯어 보여드리겠습니다.</p>
     <div class="sig">— 주간내신 만드는 사람</div>
   </div>
@@ -383,7 +398,7 @@ footer b{color:var(--gray)}
     <div class="gets">
       <div class="get"><div class="no">1</div><div><h4>시험 범위 <em>전체</em> 상세 분석서</h4><p>범위에 들어가는 모든 지문·본문. 일부가 아니라 전부입니다. 신청 다음 날 범위 확정 후 전량 지급.</p></div></div>
       <div class="get"><div class="no">2</div><div><h4>적중 워크북</h4><p>어법 선택형 · 서술형 · 서술형 영작 · 빈칸 — 출제 가능성이 높은 포인트만 뚫어 놓은 복습 테스트.</p></div></div>
-      <div class="get"><div class="no">3</div><div><h4>동형 모의고사 — 범위 구성별 <em>5세트씩, 최대 20세트</em></h4><p>단원이 2개, 외부지문이 모의고사+올림포스라면 — 각각 5세트씩, 총 20세트. 전부 학교 시험지와 문항 수·배점 동일 버전이고, <b style="color:#fff">첫째 주부터</b> 나갑니다.</p></div></div>
+      <div class="get"><div class="no">3</div><div><h4>동형 모의고사 — 범위 구성별 <em>4세트씩, 8세트 이상</em></h4><p>범위 구성이 2개면 각각 4세트씩, 최소 8세트. 전부 학교 시험지와 문항 수·배점 동일 버전이고, <b style="color:#fff">첫째 주부터</b> 나갑니다.</p></div></div>
       <div class="get"><div class="no">4</div><div><h4>월간 계획 + 주간 플랜</h4><p>남은 주수에 맞춰 무엇을 언제 볼지 다 짜서 드립니다. 아이는 따라가기만 하면 됩니다.</p></div></div>
       <div class="get"><div class="no">5</div><div><h4>지문별 연습 드릴 + 유형별 문제 뱅크</h4><p>모의고사·외부지문은 한 지문을 입체적으로 파는 <b style="color:#fff">지문별 드릴</b>이 따로 붙습니다. 유형별 문제는 전부 만들어져 있어 원하면 언제든 신청해 받습니다.</p></div></div>
     </div>
@@ -400,7 +415,7 @@ footer b{color:var(--gray)}
     <div class="cu">
       <div class="num">01</div>
       <h3>우리 학교 시험지를, 번호·배점까지 그대로</h3>
-      <p>하남고 유형 동형 모의고사 실물입니다. 선택형 27 + 서술형 5, 합계 100점 — 문항 순서와 배점 체계가 실제 시험지와 동일합니다. 이런 세트가 <b>범위 구성별로 5개씩 — 최대 20세트</b> 나가고, 첫째 주부터 시작됩니다.</p>
+      <p>하남고 유형 동형 모의고사 실물입니다. 선택형 27 + 서술형 5, 합계 100점 — 문항 순서와 배점 체계가 실제 시험지와 동일합니다. 이런 세트가 <b>범위 구성별로 4개씩 — 8세트 이상</b> 나가고, 첫째 주부터 시작됩니다.</p>
       <img src="img/exam.jpg" alt="하남고 유형 동형 모의고사 실물 1페이지" loading="lazy">
       <span class="tag">하남고 동형 제1회 · 실물</span>
     </div>
@@ -571,8 +586,9 @@ footer b{color:var(--gray)}
         <div class="sub">스스로 굴러가는 아이에게, 최고 밀도의 연료만</div>
         <div class="price">69,000<small>원 / 시즌 전체</small></div>
         <ul>
-          <li>시험 범위 <b>전체 상세 분석서</b> (신청 다음 날 전량 지급)</li>
-          <li>동형 모의고사 <b>범위 구성별 5세트 — 최대 20세트</b> + 전 문항 해설</li>
+          <li><b>1주차</b> — 범위 무관 공통 세트(학평·EBS 기반 동형 + 상세해설) 즉시 지급</li>
+          <li><b>2주차부터</b> — 학교 시험범위 확정 후 <b>범위 전체 상세 분석서</b> 전량 지급</li>
+          <li>동형 모의고사 <b>범위 구성별 4세트 — 8세트 이상</b> + 전 문항 해설</li>
           <li>적중 워크북(어법·서술형·영작·빈칸) + <b>지문별 연습 드릴</b></li>
           <li>월간 계획표 — 동형은 첫 주부터, 6주 완성 설계</li>
           <li><b>[무료 선택]</b> 틀린 개수만 보내면 → 예상 점수·등급 리포트 + 체크인 알림</li>
@@ -632,9 +648,7 @@ footer b{color:var(--gray)}
             <button type="button" class="chip-btn" data-v="미사강변고">미사강변고</button>
             <button type="button" class="chip-btn" data-v="하남고">하남고</button>
             <button type="button" class="chip-btn" data-v="풍산고">풍산고</button>
-            <button type="button" class="chip-btn" data-v="남한고">남한고</button>
-            <button type="button" class="chip-btn" data-v="신장고">신장고</button>
-          </div>
+                                  </div>
           <label class="f-label">학년</label>
           <div class="chip-grid g2" id="gradePick">
             <button type="button" class="chip-btn" data-v="고1">고1</button>
@@ -712,7 +726,7 @@ footer b{color:var(--gray)}
       <details><summary>학원을 다니면서 해야 하나요, 이것만 해도 되나요?</summary><p class="dp">아이마다 다릅니다. 다니는 학원이 잘 맞으면 그대로 두고 <b>자료의 수준만 올리는 용도</b>로 쓰세요. 그리고 최소한의 자기주도성이 있는 아이라면 — 이 분석서는 불친절한 강의보다 자세해서, <b>이것만으로도 충분히 설계</b>되어 있습니다. 노베이스용 쉬운 해석부터 상위권용 선지 해부까지 다 들어 있으니까요.</p></details>
       <details><summary>시즌 중간에 신청해도 되나요?</summary><p class="dp">됩니다. 언제 신청하든 다음 날 범위를 확인해 드리고, 확정 즉시 <b>분석서 전량</b>이 지급됩니다. 월간 계획은 남은 주수에 맞춰 다시 짜서 드립니다. 가격은 동일합니다 — 늦을수록 같은 값에 더 압축된 관리를 받는 셈입니다.</p></details>
       <details><summary>기간이 어떻게 되나요? 기말고사까지 되나요?</summary><p class="dp"><b>4~6주 완성 설계(최대 8주)</b>입니다 — 개념(분석서) 1주 + 문제 5주가 기본이고, 남는 기간은 원하는 경우 보충·유형별 문제 구간입니다. 이번 시즌은 <b>2학기 중간고사 전용</b>이며 중간고사와 함께 종료됩니다. 기말은 별도 시즌입니다.</p></details>
-      <details><summary>동형 모의고사는 언제부터 나오나요?</summary><p class="dp"><b>첫째 주부터</b>입니다. 제공되는 모든 문제가 동형 체제라, 시험 직전이 아니라 처음부터 실전 지형에서 연습합니다. 범위 구성별 5세트씩, 최대 20세트가 시즌에 걸쳐 나갑니다.</p></details>
+      <details><summary>동형 모의고사는 언제부터 나오나요?</summary><p class="dp"><b>첫째 주부터</b>입니다. 제공되는 모든 문제가 동형 체제라, 시험 직전이 아니라 처음부터 실전 지형에서 연습합니다. 범위 구성별 4세트씩, 8세트 이상이 시즌에 걸쳐 나갑니다.</p></details>
       <details><summary>리포트를 받으려면 뭘 해야 하나요?</summary><p class="dp">간단합니다 — <b>틀린 개수만 보내면</b> 자동 집계되어 예상 점수·등급 인포그래픽 리포트가 일요일에 갑니다. 관리+ 패스는 시험지 사진을 올리면 취약 유형까지 자동 스캔 분석해 보충 문제를 보냅니다. 제출은 언제나 선택입니다.</p></details>
       <details><summary>월 구독인가요? 해지는요?</summary><p class="dp">월 구독이 아니라 <b>시즌 선불제</b>입니다. 자동 결제·자동 연장이 없습니다. 중도 환불은 학원법 기준(1/3 경과 전 2/3, 1/2 경과 전 1/2)을 따르며 이미 지급된 자료 분은 차감됩니다.</p></details>
       <details><summary>우리 학교 시험 범위와 다르면 어떡하죠?</summary><p class="dp">신청서의 교과서·진도·외부지문 기준으로 제작하고, 시즌 중 범위가 바뀌면 <b>변경분을 반영해 다시 보냅니다.</b> 학교가 진도를 줄이는 일이 흔해서 과별 상세 칸을 둔 이유입니다.</p></details>
@@ -734,11 +748,34 @@ footer b{color:var(--gray)}
   </div>
 </section>
 
+
+<section class="refund" id="refund">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">결제 전에 읽어주세요</div>
+      <h2>환불 규정</h2>
+      <p class="lead">디지털 자료라 규정을 명확히 적어둡니다. 애매하게 두지 않겠습니다.</p>
+    </div>
+    <div class="rf rv">
+      <div class="rf-row"><b>첫 자료 수령 전</b><span><b>100% 환불.</b> 이유를 묻지 않습니다.</span></div>
+      <div class="rf-row"><b>자료 수령 후</b><span>이미 지급된 주차분을 차감하고 환불합니다.<br>
+        6주 시즌 69,000원 기준 — 2주차 수령 후 환불 시 <b>46,000원</b>, 3주차 수령 후 <b>34,500원</b> 반환.</span></div>
+      <div class="rf-row"><b>개설 미달 시</b><span>학교·학년당 <b>3명 미만</b>이면 개설하지 않고 <b>전액 환불</b>합니다.
+        인접 학교 편입을 원하시면 그대로 진행할 수 있습니다.</span></div>
+      <div class="rf-row"><b>시험 일정 변경</b><span>학교 사정으로 시험이 연기·변경되면 자료를 재발송하며, 환불 사유에 해당하지 않습니다.</span></div>
+      <div class="rf-row"><b>청약철회 제한</b><span>「전자상거래법」 제17조제2항에 따라, <b>다운로드가 시작된 디지털 콘텐츠</b>는
+        청약철회가 제한됩니다. 그래서 <b>첫 자료를 받기 전까지는 언제든 100% 환불</b>해 드립니다.</span></div>
+      <div class="rf-row"><b>환불 신청</b><span>문의 <b>010-7789-5094</b> · 신청일로부터 3영업일 이내 처리</span></div>
+    </div>
+    <div class="rf-note rv">저작권 안내 — 제공 자료는 구매자 본인의 학습 목적으로만 사용할 수 있으며,
+      복제·배포·재판매·공유를 금합니다. 자료에는 구매자 식별 워터마크가 포함됩니다.</div>
+  </div>
+</section>
 <footer>
   <div class="wrap">
     <b>주간내신</b> · 문의 010-7789-5094<br>
-    상호·대표자·사업자등록번호·통신판매업신고번호: 등록 절차 진행 중 (결제 전 안내 문자에 기재됩니다)<br>
-    환불 규정: 학원의 설립·운영 및 과외교습에 관한 법률 시행령 준용 · 지급된 자료분 차감<br>
+    상호 다올105 · 대표 윤재영 · 사업자등록번호 269-99-01747<br>경기도 하남시 미사강변대로226번안길 35 청담프라자 401~405호 · 문의 010-7789-5094<br>개인정보 보호책임자 윤재영 · 통신판매업 신고번호는 신고 완료 즉시 게시합니다<br>
+    환불·청약철회 규정은 아래 별도 안내를 따릅니다<br>
     본 페이지의 모든 자료 이미지는 실제 제작물이며 무단 복제·전재를 금합니다.
   </div>
 </footer>
