@@ -133,10 +133,10 @@ function set(id,st){
     .catch(function(e){alert(e.message)});
 }
 function billSms(r){
-  var t="["+"주간내신] "+(r.name||"")+" 학생 신청 확인했습니다.\n"
+  var t="["+"주간내신] "+(r.student_name||"")+" 학생 신청 확인했습니다.\n"
     +(r.school||"")+" "+(r.grade||"")+" · 자료 시즌패스 69,000원\n"
     +"결제 링크를 문자로 보내드립니다. 결제 확인되면 1주차 자료가 바로 나갑니다.\n\n다올105 010-7789-5094";
-  return "sms:"+tel(r.pphone||r.phone)+"?body="+encodeURIComponent(t);
+  return "sms:"+tel(r.parent_phone||r.student_phone)+"?body="+encodeURIComponent(t);
 }
 function render(){
   var cnt={}; ORDER.forEach(function(s){cnt[s]=0});
@@ -162,7 +162,7 @@ function render(){
     var a='';
     if(r.status==="신규"){
       a='<a class="a p" href="'+billSms(r)+'" onclick="setTimeout(function(){set('+r.id+',\'청구발송\')},600)">청구 문자</a>'
-       +'<a class="a" href="tel:'+tel(r.phone)+'">전화</a>'
+       +'<a class="a" href="tel:'+tel(r.student_phone)+'">전화</a>'
        +'<a class="a g" href="#" onclick="set('+r.id+',\'결제완료\');return false">결제됨</a>'
        +'<a class="a x" href="#" onclick="set('+r.id+',\'취소\');return false">✕</a>';
     } else if(r.status==="청구발송"){
@@ -171,21 +171,24 @@ function render(){
        +'<a class="a x" href="#" onclick="set('+r.id+',\'취소\');return false">✕</a>';
     } else if(r.status==="결제완료"){
       a='<a class="a p" href="#" onclick="set('+r.id+',\'발송중\');return false">1주차 발송함</a>'
-       +'<a class="a" href="sms:'+tel(r.pphone||r.phone)+'">문자</a>';
+       +'<a class="a" href="sms:'+tel(r.parent_phone||r.student_phone)+'">문자</a>';
     } else if(r.status==="발송중"){
       a='<a class="a" href="#" onclick="set('+r.id+',\'완료\');return false">시즌 종료 처리</a>'
-       +'<a class="a" href="sms:'+tel(r.pphone||r.phone)+'">문자</a>';
+       +'<a class="a" href="sms:'+tel(r.parent_phone||r.student_phone)+'">문자</a>';
     } else {
       a='<a class="a" href="#" onclick="set('+r.id+',\'신규\');return false">되돌리기</a>';
     }
     return '<div class="card s'+esc(r.status)+'">'
-      +'<div class="ch"><div class="who">'+esc(r.name||"이름 없음")
+      +'<div class="ch"><div class="who">'+esc(r.student_name||"이름 없음")
       +'<i>'+esc(r.school||"")+' '+esc(r.grade||"")+'</i></div>'
       +'<span class="st '+esc(r.status)+'">'+esc(r.status)+'</span></div>'
-      +'<div class="meta">'+ago(r.created_at)+' 접수 · 학생 <b>'+esc(r.phone||"-")+'</b>'
-      +(r.pphone?' · 학부모 <b>'+esc(r.pphone)+'</b>':'')+'</div>'
-      +(r.scope||r.note||r.memo ? '<div class="scope">'
+      +'<div class="meta">'+ago(r.created_at)+' 접수 · 학생 <b>'+esc(r.student_phone||"-")+'</b>'
+      +(r.parent_phone?' · 학부모 <b>'+esc(r.parent_phone)+'</b>':'')+'</div>'
+      +(r.scope||r.textbook||r.scope_detail||r.external_texts||r.note||r.memo ? '<div class="scope">'
+        +(r.textbook?'<b>교재</b> '+esc(r.textbook)+'<br>':'')
         +(r.scope?'<b>범위</b> '+esc(r.scope)+'<br>':'')
+        +(r.scope_detail?'<b>상세</b> '+esc(r.scope_detail)+'<br>':'')
+        +(r.external_texts?'<b>외부지문</b> '+esc(r.external_texts)+'<br>':'')
         +(r.note?'<b>메모</b> '+esc(r.note)+'<br>':'')
         +(r.memo?'<b>처리</b> '+esc(r.memo):'')+'</div>' : '')
       +'<div class="acts">'+a+'</div></div>';
