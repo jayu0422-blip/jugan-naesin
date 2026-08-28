@@ -334,6 +334,28 @@ footer b{color:var(--gray)}
 .price.free{color:#b4472e}
 .price.free small{color:#6b7280}
 .was{margin-top:6px;font-size:14px;color:#8a8f98;text-decoration:line-through}
+
+.ps-cta{display:inline-block;margin-top:2px;color:#b4472e}
+.tn-art{position:relative}
+.tn-over{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;
+  padding:14px 14px 16px;pointer-events:none;gap:8px}
+.tn-over .tb{position:relative;max-width:74%;background:rgba(255,255,255,.955);color:#16181d;
+  border:2px solid #16181d;border-radius:16px;padding:10px 13px;font-size:14px;line-height:1.5;
+  font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.28);word-break:keep-all;backdrop-filter:blur(2px)}
+.tn-over .tb b{font-weight:900}
+.tn-over .tb::after{content:"";position:absolute;width:0;height:0;border:9px solid transparent}
+.tn-over .tb-l,.tn-over .tb-l2,.tn-over .tb-c,.tn-over .tb-t,.tn-over .tb-t2{align-self:flex-start}
+.tn-over .tb-r,.tn-over .tb-b,.tn-over .tb-c2{align-self:flex-end}
+.tn-over .tb-l::after,.tn-over .tb-l2::after,.tn-over .tb-c::after,.tn-over .tb-t::after,.tn-over .tb-t2::after{
+  left:26px;bottom:-18px;border-top-color:#16181d}
+.tn-over .tb-r::after,.tn-over .tb-b::after,.tn-over .tb-c2::after{
+  right:26px;bottom:-18px;border-top-color:#16181d}
+@media(max-width:560px){
+  .tn-over{padding:9px 9px 11px;gap:6px}
+  .tn-over .tb{max-width:86%;font-size:12.5px;padding:8px 10px;border-width:1.6px;border-radius:13px}
+  .tn-over .tb::after{border-width:7px;bottom:-14px}
+}
+.tn-over .tb b{font-weight:900}
 </style>
 </head>
 <body>
@@ -373,7 +395,7 @@ footer b{color:var(--gray)}
     <p>그러다 미사에서 학원을 개원하고 가르치기 시작했습니다. 많이 다닌다는 유명한 학원 자료들을 보니 — 낱장 프린트. 정답만 적힌 해설. 어디서 복사됐는지 모를 기출 모음.</p>
     <p class="pull">인강 시장이라면 하루도 못 버틸 퀄리티가,<br>내신 시장에서는 "원래 그런 것"이 되어 있었습니다.</p>
     <p>이유는 간단합니다. <strong>학교마다 시험이 다르기 때문입니다.</strong> 대형 출판사는 전국 공통 교재만 만들 수 있습니다. 미사강변고의 시험지, 하남고의 서술형 배점에 맞춘 교재는 시장이 작아서 아무도 만들지 않습니다. 그 빈자리를 낱장 프린트가 채우고 있었던 겁니다.</p>
-    <p>그래서 제가 만들기로 했습니다. 전국이 아니라 <strong>네 학교만.</strong> 시험 범위 전체를 분석서로 만들고, 그 학교 시험지의 문항 수와 배점까지 그대로 따른 동형을 다섯 세트씩 만들기로요. 인강 시장에서 하던 그대로.</p>
+    <p>그래서 제가 만들기로 했습니다. 전국이 아니라 <strong>네 학교만.</strong> 시험 범위 중 <strong>변별이 갈리는 부교재 지문 전체</strong>를 분석서로 만들고, 그 학교 시험지의 문항 수와 배점까지 그대로 따른 동형을 다섯 세트씩 만들기로요. 인강 시장에서 하던 그대로.</p>
     <p>이름을 밝히지 않는 이유도 같습니다. 이 시장에서 강사 이름은 중요하지 않습니다. <strong>아이 손에 들리는 자료가 전부입니다.</strong> 아래에서 한 장 한 장 뜯어 보여드리겠습니다.</p>
     <div class="sig">— 주간내신 만드는 사람</div>
   </div>
@@ -522,10 +544,10 @@ footer b{color:var(--gray)}
 
     <div class="cu" style="margin-bottom:0">
       <div class="num">09</div>
-      <h3>이 밀도가 표준입니다</h3>
+      <h3>한 번만 직접 읽어보세요.<br>읽어만 봐도 바로 이해됩니다. 수업보다 쉽습니다.</h3>
       <img src="img/expl.jpg" alt="상세 분석서 본문 한 페이지 전체" loading="lazy">
       <div class="stats">
-        <div class="stat"><b>전량</b><span>시험 범위 전체<br>분석서 제공</span></div>
+        <div class="stat"><b>전량</b><span>범위 내 부교재<br>전 지문 분석</span></div>
         <div class="stat"><b>5세트</b><span>학교별 동형<br>모의고사</span></div>
         <div class="stat"><b>41쪽</b><span>모의고사 1회분<br>해설 분량 기준</span></div>
       </div>
@@ -551,6 +573,7 @@ footer b{color:var(--gray)}
     <div class="fstep rv"><div class="ic">4</div><div><h4>정답·해설 동봉</h4>
       <p>모든 문제에 전 문항 해설이 함께 나갑니다. 스스로 채점하고 정리할 수 있게 구성했습니다.</p></div></div>
     <div class="notice rv" style="border-left-color:#c4472e"><b>다올105·대치더올 재원생은 신청하실 수 없습니다.</b> 재원생에게는 수업의 일부로 자료가 <b>무상 제공</b>됩니다. 담당 선생님께 문의해 주세요.</div>
+    <div class="notice rv" style="border-left-color:#b4472e"><b>교과서 본문은 다루지 않습니다.</b> 출판사 저작물이라 재구성·배포가 제한되기 때문입니다. 대신 <b>등급이 실제로 갈리는 부교재</b>(수능특강·올림포스·학평·외부지문)를 전 지문 다룹니다.<br>분석해 보면 이 동네 학교들은 <b>부교재에서 100점 중 66~68점</b>을 냈습니다. 변별은 거기서 납니다.</div>
     <div class="notice rv"><b>학습자료 제공 상품입니다.</b> 강의·첨삭·질의응답·학습관리는 포함되지 않으며,
       제공되는 것은 <b>자료 파일</b>입니다. 자료를 어떻게 쓸지는 학생과 가정에서 정하시면 됩니다.</div>
   </div>
@@ -570,7 +593,7 @@ footer b{color:var(--gray)}
         <div class="price free">무료<small>한시적 무료 신청 · 시즌 전체</small></div><div class="was">원래 69,000원 / 시즌 전체</div>
         <ul>
           <li><b>1주차</b> — 범위 무관 공통 세트(학평·EBS 기반 동형 + 상세해설) 즉시 지급</li>
-          <li><b>2주차부터</b> — 학교 시험범위 확정 후 <b>범위 전체 상세 분석서</b> 전량 지급</li>
+          <li><b>2주차부터</b> — 범위 확정 후 <b>부교재(수능특강·올림포스·학평) 전 지문 상세 분석서</b> 전량 지급</li>
           <li>동형 모의고사 <b>범위 구성별 4세트 — 8세트 이상</b> + 전 문항 해설</li>
           <li>적중 워크북(어법·서술형·영작·빈칸) + <b>지문별 연습 드릴</b></li>
           <li>월간 계획표 — 동형은 첫 주부터, 6주 완성 설계</li>
@@ -643,7 +666,7 @@ footer b{color:var(--gray)}
 
         <div class="f-sec">
           <h4>② 시험 범위 <small style="font-weight:400">(아는 만큼만)</small></h4>
-          <label class="f-label">교과서 · 출판사 <small>— 같은 출판사도 여러 종이라 저자명까지 적어주시면 정확합니다</small></label>
+          <label class="f-label">교과서 · 출판사 <small>— 참고용입니다. 제작은 부교재 지문으로 합니다</small></label>
           <input type="text" id="textbook" list="pubList" placeholder="예: 공통영어1 · 능률(김성곤)" autocomplete="off">
           <datalist id="pubList">
             <option value="공통영어1 · 능률(김성곤)"><option value="공통영어1 · 능률(양현권)">
@@ -655,7 +678,7 @@ footer b{color:var(--gray)}
           <input type="text" id="scope" placeholder="예: 3과 ~ 5과" autocomplete="off">
           <label class="f-label">과별 상세 <small>— 다 안 나가는 단원이 있으면</small></label>
           <textarea id="scopeDetail" placeholder="예: 5과는 본문 앞 2문단까지만 / 4과 듣기 대본 제외"></textarea>
-          <label class="f-label">외부 지문 <small>— 교과서 밖에서 내는 것</small></label>
+          <label class="f-label">부교재 · 외부 지문 <b style="color:#b4472e">(가장 중요)</b> <small>— 여기가 제작 대상입니다</small></label>
           <textarea id="external" placeholder="예: 6월 학평 18~28번 / EBS 올림포스 3·4강 / 수능특강 라이트 …"></textarea>
         </div>
 
@@ -707,7 +730,7 @@ footer b{color:var(--gray)}
       <details><summary>동형 모의고사는 언제부터 나오나요?</summary><p class="dp"><b>첫째 주부터</b>입니다. 제공되는 모든 문제가 동형 체제라, 시험 직전이 아니라 처음부터 실전 지형에서 연습합니다. 범위 구성별 4세트씩, 8세트 이상이 시즌에 걸쳐 나갑니다.</p></details>
       
       <details><summary>강의나 첨삭도 해주시나요?</summary><p class="dp">아닙니다. <b>학습자료만 제공합니다.</b> 강의·첨삭·질의응답·학습관리는 포함되지 않습니다. 자료 자체를 최대한 자세히 만들어, 읽는 것만으로 수업이 되도록 구성했습니다.</p></details>
-      <details><summary>우리 학교 시험 범위와 다르면 어떡하죠?</summary><p class="dp">신청서의 교과서·진도·외부지문 기준으로 제작하고, 시즌 중 범위가 바뀌면 <b>변경분을 반영해 다시 보냅니다.</b> 학교가 진도를 줄이는 일이 흔해서 과별 상세 칸을 둔 이유입니다.</p></details>
+      <details><summary>우리 학교 시험 범위와 다르면 어떡하죠?</summary><p class="dp">신청서의 진도·부교재 범위 기준으로 제작하고, 시즌 중 범위가 바뀌면 <b>변경분을 반영해 다시 보냅니다.</b> 학교가 진도를 줄이는 일이 흔해서 과별 상세 칸을 둔 이유입니다.</p></details>
       <details><summary>영어만 하나요?</summary><p class="dp">네. 첫 시즌은 품질을 지키기 위해 <b>영어, 6개교, 고1·고2만</b> 합니다. 잘하는 것 하나를 완벽하게 하는 게 이 서비스의 방식입니다.</p></details>
       <details><summary>자료를 친구와 공유해도 되나요?</summary><p class="dp">모든 PDF에는 구매자 성함 워터마크가 들어가며 1가정 1계정입니다. 학원·강사의 구매와 재배포는 금지되어 있고 적발 시 해지됩니다.</p></details>
     </div>
