@@ -1,0 +1,338 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>다올105 관리형 자습관 · 숫자로 증명하는 자습</title>
+<style>
+  :root{
+    --ink:#0c1a36; --navy:#15294f; --navy-2:#1b3160; --navy-soft:#213c6c;
+    --gold:#c6a04a; --gold-bright:#e7c56d; --gold-soft:#f1e4bf;
+    --cream:#faf6ee; --cream-2:#f4ecdb; --paper:#ffffff;
+    --text:#1b2440; --muted:#5a6480; --faint:#8b93a8; --line:#e8dfc9; --danger:#c0392b; --ok:#2f7d4f;
+    --sh:0 18px 50px -22px rgba(12,26,54,.35); --sh-sm:0 8px 24px -14px rgba(12,26,54,.28);
+    --serif:"Nanum Myeongjo","Noto Serif KR",serif;
+    --sans:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--sans);color:var(--text);background:var(--cream);line-height:1.72;
+    -webkit-font-smoothing:antialiased;letter-spacing:-.01em;word-break:keep-all;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  svg{display:block}
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px}
+  section{padding:70px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.13em;color:var(--gold);text-transform:uppercase;margin-bottom:15px}
+  .eyebrow::before{content:"";width:24px;height:2px;background:var(--gold)}
+  h2.sec{font-size:clamp(24px,4.8vw,36px);font-weight:800;line-height:1.32;color:var(--ink);letter-spacing:-.02em;margin-bottom:13px}
+  .lead{font-size:clamp(15.5px,2.3vw,18px);color:var(--muted);line-height:1.8}
+  .hl{background:linear-gradient(180deg,transparent 58%,var(--gold-soft) 58%);padding:0 .08em;font-weight:800;color:var(--ink)}
+
+  .ticker{background:var(--ink);color:#fff;font-size:13px;font-weight:700;text-align:center;padding:9px 16px;border-bottom:1px solid rgba(231,197,109,.28)}
+  .ticker b{color:var(--gold-bright)}
+  .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#e64b3c;margin-right:7px;vertical-align:middle;animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(230,75,60,.55)}70%{box-shadow:0 0 0 9px rgba(230,75,60,0)}100%{box-shadow:0 0 0 0 rgba(230,75,60,0)}}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;color:#eaf0fb;
+    background:radial-gradient(900px 460px at 80% -10%,rgba(231,197,109,.18),transparent 60%),radial-gradient(700px 500px at 6% 110%,rgba(33,60,108,.5),transparent 55%),linear-gradient(160deg,#0c1a36,#15294f 58%,#1b3160);padding:58px 0 60px}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5}
+  .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;padding:7px 13px;border-radius:999px;border:1px solid rgba(231,197,109,.4);color:var(--gold-bright);background:rgba(231,197,109,.08)}
+  .badge.solid{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+  .hero h1{font-size:clamp(28px,6vw,48px);font-weight:800;line-height:1.28;letter-spacing:-.025em;color:#fff;margin-bottom:18px}
+  .hero h1 .q{color:var(--gold-bright)}
+  .hero .sub{font-size:clamp(15px,2.4vw,18px);color:#c3cee2;line-height:1.78;max-width:600px;margin-bottom:26px}
+  .hero .sub b{color:#fff}
+  .cta-row{display:flex;flex-wrap:wrap;gap:11px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:15px;font-weight:800;padding:15px 24px;border-radius:13px;transition:transform .15s;cursor:pointer;border:none}
+  .btn-gold{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:var(--ink);box-shadow:0 14px 30px -12px rgba(231,197,109,.6)}
+  .btn-gold:hover{transform:translateY(-2px)}
+  .btn-ghost{background:rgba(255,255,255,.06);color:#eaf0fb;border:1px solid rgba(255,255,255,.28)}
+  .btn-ghost:hover{background:rgba(255,255,255,.13)}
+
+  /* proof strip in hero */
+  .proofstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:38px;border:1px solid rgba(231,197,109,.22);border-radius:14px;overflow:hidden;background:rgba(231,197,109,.14)}
+  .ps{background:linear-gradient(160deg,rgba(12,26,54,.5),rgba(21,41,79,.5));padding:16px 14px;text-align:center}
+  .ps .v{font-size:clamp(19px,3vw,24px);font-weight:800;color:var(--gold-bright);font-variant-numeric:tabular-nums}
+  .ps .l{font-size:11px;color:#a9b7d4;margin-top:4px;font-weight:600}
+
+  /* spec cards */
+  .specband{background:var(--paper);border-bottom:1px solid var(--line);padding:26px 0}
+  .specgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+  .speccard{display:flex;gap:13px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(180deg,#fff,#fbf7ee);box-shadow:var(--sh-sm)}
+  .spec-ic{flex:none;width:42px;height:42px;border-radius:11px;background:linear-gradient(160deg,var(--gold-bright),var(--gold));display:grid;place-items:center;color:var(--ink)}
+  .spec-ic svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .spec-k{font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--gold);text-transform:uppercase;margin-bottom:2px}
+  .spec-v{font-size:14.5px;font-weight:800;color:var(--ink);line-height:1.35}
+
+  .paper{background:var(--paper)}
+  .cream2{background:var(--cream-2)}
+  .navy-sec{background:linear-gradient(160deg,#0c1a36,#17305c);color:#e8eefb}
+  .navy-sec h2.sec{color:#fff} .navy-sec .lead{color:#b9c6df}
+
+  /* worry */
+  .story{background:var(--paper);border-radius:18px;padding:30px 28px;box-shadow:var(--sh);border:1px solid var(--line);position:relative;margin-top:26px}
+  .story .qm{font-family:var(--serif);font-size:56px;color:var(--gold-soft);line-height:.5;position:absolute;top:22px;left:22px}
+  .story .worries{display:grid;gap:12px;margin-top:8px}
+  .worry{font-family:var(--serif);font-size:16px;color:var(--ink);padding:11px 16px;background:var(--cream);border-left:3px solid var(--gold);border-radius:0 9px 9px 0;line-height:1.5}
+  .story .close{margin-top:20px;font-size:15.5px;color:#3a445f}
+  .story .close b{color:var(--ink)}
+
+  /* proof section */
+  .proofcard{background:linear-gradient(160deg,#0c1a36,#1b3160);border-radius:20px;overflow:hidden;box-shadow:var(--sh);margin-top:30px;border:1px solid rgba(231,197,109,.25)}
+  .pc-head{padding:22px 26px 16px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:13px}
+  .pc-ava{width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--ink);font-family:var(--serif);font-weight:800;display:grid;place-items:center;font-size:15px}
+  .pc-name{font-weight:800;color:#fff;font-size:14.5px}
+  .pc-sub{font-size:12px;color:#9fb0cf;margin-top:2px}
+  .pc-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07)}
+  .pcm{background:#111f3d;padding:18px 20px}
+  .pcm .l{font-size:11px;color:#9fb0cf;font-weight:600}
+  .pcm .v{font-size:24px;font-weight:800;color:#fff;margin-top:7px;font-variant-numeric:tabular-nums}
+  .pcm .v small{font-size:12px;color:#7f8db0}
+  .pcm .bar{height:5px;border-radius:3px;background:rgba(255,255,255,.12);margin-top:10px;overflow:hidden}
+  .pcm .bar i{display:block;height:100%;background:var(--gold-bright)}
+  .pc-ai{padding:18px 26px;font-size:13.5px;color:#dfe7f4;line-height:1.7}
+  .pc-ai b{color:var(--gold-bright);font-family:var(--serif)}
+  .pull{font-family:var(--serif);font-size:clamp(19px,3vw,26px);line-height:1.55;color:var(--ink);text-align:center;margin:34px auto 0;max-width:640px;font-weight:700}
+  .pull .em{color:var(--gold);border-bottom:2px solid var(--gold-soft)}
+  .navy-sec .pull{color:#fff} .navy-sec .pull .em{color:var(--gold-bright);border-color:rgba(231,197,109,.4)}
+
+  /* VS */
+  .vs-wrap{max-width:860px;margin:28px auto 0}
+  .vs-head{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .vs-team{padding:18px 14px;text-align:center;border-radius:15px}
+  .vs-team.other{background:linear-gradient(160deg,#3a4157,#2c3244);color:#e7e9ef}
+  .vs-team.daol{background:linear-gradient(160deg,#15294f,#213c6c);color:#fff;box-shadow:0 12px 30px -16px rgba(21,41,79,.7);border:1px solid rgba(231,197,109,.4)}
+  .vt-cap{font-size:clamp(14px,3.2vw,17px);font-weight:800;line-height:1.3}
+  .vs-team.daol .vt-cap{color:var(--gold-bright)}
+  .vt-sub{font-size:11.5px;opacity:.82;margin-top:4px}
+  .vs-badge{position:absolute;left:50%;top:36px;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:linear-gradient(160deg,var(--gold-bright),var(--gold));color:var(--ink);font-weight:900;font-size:14px;display:grid;place-items:center;border:3px solid #faf6ee;box-shadow:0 6px 16px rgba(0,0,0,.28);z-index:3}
+  .vs-crit{text-align:center;font-size:11.5px;font-weight:800;color:var(--navy-soft);letter-spacing:.05em;margin:16px 0 8px;text-transform:uppercase}
+  .vs-cells{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .vc{border-radius:11px;padding:13px 15px;font-size:14px;line-height:1.5}
+  .vc.other{background:#f2f1f4;color:#6d7488;border:1px solid #e6e5ea}
+  .vc.other .x{color:var(--danger);font-weight:900;margin-right:6px}
+  .vc.daol{background:linear-gradient(180deg,#fbf6e7,#f6edd6);border:1px solid var(--gold-soft);color:#2b2f42}
+  .vc.daol .v{color:var(--ok);font-weight:900;margin-right:6px}
+  .vc.daol b{color:var(--ink);font-weight:800}
+
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+  .pillar{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px 22px;box-shadow:var(--sh-sm);position:relative;overflow:hidden}
+  .pillar .pn{font-family:var(--serif);font-size:13px;color:var(--gold);font-weight:800}
+  .pillar .pic{width:40px;height:40px;border-radius:11px;background:var(--cream-2);display:grid;place-items:center;color:var(--navy-soft);margin:8px 0 12px}
+  .pillar .pic svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .pillar h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:8px}
+  .pillar p{font-size:14px;color:var(--muted)}
+
+  /* tracks */
+  .tracks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+  .track{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--sh-sm)}
+  .track.semi{border-color:rgba(231,197,109,.5)}
+  .track-top{padding:22px 24px 18px;position:relative}
+  .track.hi .track-top{background:linear-gradient(160deg,#15294f,#0c1a36);color:#fff}
+  .track.semi .track-top{background:linear-gradient(160deg,#fff6e6,#f6edd6)}
+  .track-badge{position:absolute;top:18px;right:18px;font-size:11px;font-weight:800;padding:5px 11px;border-radius:999px}
+  .track.hi .track-badge{background:var(--gold);color:var(--ink)}
+  .track.semi .track-badge{background:var(--navy);color:#fff}
+  .track h3{font-size:20px;font-weight:800;letter-spacing:-.02em}
+  .track .tf{display:block;font-size:12.5px;font-weight:700;margin-top:4px;opacity:.85}
+  .track.hi .tf{color:var(--gold-bright)} .track.semi .tf{color:var(--navy-soft)}
+  .track ul{list-style:none;padding:18px 24px 8px}
+  .track li{padding:9px 0;border-top:1px solid var(--line);display:flex;gap:9px;font-size:13.5px;align-items:baseline}
+  .track li:first-child{border-top:none}
+  .track li .k{flex:none;width:44px;font-size:11px;font-weight:800;color:var(--gold);text-transform:uppercase}
+  .track li b{color:var(--ink);font-weight:800}
+  .track .price{padding:14px 24px 22px}
+  .track .price .pv{font-size:15px;font-weight:800;color:var(--ink)}
+  .track .price .was{color:var(--faint);text-decoration:line-through;font-weight:600;margin-right:6px;font-size:13px}
+  .track .price .note{font-size:11.5px;color:var(--muted);margin-top:4px}
+
+  /* ops steps */
+  .ops{display:grid;gap:11px;margin-top:30px;max-width:680px}
+  .op{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:16px 18px;box-shadow:var(--sh-sm)}
+  .op .on{flex:none;width:30px;height:30px;border-radius:9px;background:var(--ink);color:var(--gold-bright);font-family:var(--serif);font-weight:800;display:grid;place-items:center;font-size:14px}
+  .op div b{color:var(--ink);font-weight:800}
+  .op div{font-size:14px;color:var(--muted)}
+
+  /* final */
+  .final{text-align:center}
+  .final .btn-gold{background:linear-gradient(180deg,var(--gold-bright),var(--gold))}
+  .contact{display:inline-flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;margin-top:22px;font-size:14px;color:#c3cee2;font-weight:600}
+  .contact b{color:#fff}
+  footer{background:var(--ink);color:#8ea0c4;text-align:center;padding:26px 0;font-size:12px}
+
+  @media(max-width:720px){
+    .proofstrip,.specgrid,.pillars,.tracks,.pc-metrics{grid-template-columns:1fr 1fr}
+    .specgrid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:480px){.proofstrip{grid-template-columns:1fr 1fr}.pc-metrics{grid-template-columns:1fr}.vc{font-size:12.5px;padding:11px 12px}.vt-cap{font-size:13.5px}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="ticker"><span class="dot"></span>2026 여름 · 고등 관리형 자습관 <b>개인석 잔여 소수</b> · 중등 세미반 <b>정원 10명 선착순</b></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="badge-row">
+      <span class="badge solid">하남 미사 · 다올105</span>
+      <span class="badge">국·수·영·과 다과목 학원 부설</span>
+      <span class="badge">AI 학습분석 리포트</span>
+    </div>
+    <h1>"공부하고 왔다"는 말 말고,<br><span class="q">숫자로 증명</span>하는 자습관</h1>
+    <p class="sub">대형 종합학원은 보통 <b>주 1회</b> 플래너를 점검합니다. 다올105는 <b>매일</b> 순공시간·플래너 이행률·과목 밸런스를 기록해 <b>주간 리포트로 학부모께 보내드립니다.</b> 앉아있던 시간이 아니라, 집중한 시간을 봅니다.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="tel:031-699-8111">상담 예약 031-699-8111</a>
+      <a class="btn btn-ghost" href="#report">AI 리포트 미리보기 ↓</a>
+    </div>
+    <div class="proofstrip">
+      <div class="ps"><div class="v">매일</div><div class="l">담임 플래너 점검</div></div>
+      <div class="ps"><div class="v">주 1회</div><div class="l">학부모 리포트 발송</div></div>
+      <div class="ps"><div class="v">10~22시</div><div class="l">지정 개인석 운영</div></div>
+      <div class="ps"><div class="v">상주</div><div class="l">대치 원서컨설턴트</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="specband">
+  <div class="wrap specgrid">
+    <div class="speccard"><div class="spec-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div><div><div class="spec-k">대상</div><div class="spec-v">고1·고2 / 중등 세미반</div></div></div>
+    <div class="speccard"><div class="spec-ic"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/></svg></div><div><div class="spec-k">방식</div><div class="spec-v">완전 1인 개인석 관리형</div></div></div>
+    <div class="speccard"><div class="spec-ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-4 4"/></svg></div><div><div class="spec-k">차별점</div><div class="spec-v">매일·숫자로 AI 리포트</div></div></div>
+    <div class="speccard"><div class="spec-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 12 0v1"/><path d="M18 8h4M20 6v4"/></svg></div><div><div class="spec-k">연계</div><div class="spec-v">입시컨설팅 시기별 설계</div></div></div>
+  </div>
+</div>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="eyebrow">학부모의 진짜 걱정</div>
+    <h2 class="sec">자습실을 보내놓고도, 늘 같은 것이 궁금합니다</h2>
+    <p class="lead">가장 큰 불안은 "성적이 안 오르는 것"이 아니라, <b style="color:var(--ink)">뭘 하고 왔는지 알 수가 없다</b>는 것입니다.</p>
+    <div class="story">
+      <span class="qm">&#8220;</span>
+      <div class="worries">
+        <div class="worry">독서실 갔다 왔다는데, 몇 시간이나 진짜 앉아있었는지 모르겠어요.</div>
+        <div class="worry">플래너는 쓰는데, 계획대로 하고 있는 건지 확인할 방법이 없어요.</div>
+        <div class="worry">국어만 자꾸 밀리는 것 같은데, 정확히 뭐가 문제인지 감으로만 알아요.</div>
+      </div>
+      <p class="close">다올105는 이 세 가지 질문에 <b>감이 아니라 데이터로</b> 답합니다. 좌석 입퇴실 로그로 순공시간을 자동 집계하고, 매일 플래너 이행을 점검해 <b>매주 리포트로 보내드립니다.</b></p>
+    </div>
+  </div>
+</section>
+
+<section class="navy-sec" id="report">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-bright)">매일 · 숫자로</div>
+    <h2 class="sec">대형학원이 안 보여주는 것을, 우리는 매주 보내드립니다</h2>
+    <p class="lead">아래는 실제 학생 리포트의 축소판입니다 — 등록 즉시 매주 이런 형태로 발송됩니다.</p>
+    <div class="proofcard">
+      <div class="pc-head">
+        <div class="pc-ava">이</div>
+        <div><div class="pc-name">이도윤 · 고1 · 관리형 자습관 A관</div><div class="pc-sub">2026년 7월 3주차 · 담임 박현우</div></div>
+      </div>
+      <div class="pc-metrics">
+        <div class="pcm"><div class="l">주간 순공(집중)시간</div><div class="v">26.4<small> / 28h</small></div><div class="bar"><i style="width:94%"></i></div></div>
+        <div class="pcm"><div class="l">플래너 이행률</div><div class="v">82<small>%</small></div><div class="bar"><i style="width:82%"></i></div></div>
+        <div class="pcm"><div class="l">가장 밀리는 과목</div><div class="v" style="font-family:var(--serif);font-size:21px">국어</div><div class="bar"><i style="width:38%;background:#e07a6a"></i></div></div>
+      </div>
+      <div class="pc-ai"><b>AI 코멘트 · 담임 검수 —</b> 수학·영어는 계획대로 진행됐지만, 국어 학습이 2주 연속 뒤로 밀리고 있어요(시간배분 목표 대비 −10%p). 집중이 가장 잘 되는 입실 직후 시간대에 국어를 먼저 배치하도록 다음 주 플래너에 반영하겠습니다.</div>
+    </div>
+    <div class="pull">앉아있던 시간이 아니라,<br><span class="em">집중한 시간</span>을 봅니다.</div>
+  </div>
+</section>
+
+<section class="cream2">
+  <div class="wrap">
+    <div class="eyebrow">왜 다른가</div>
+    <h2 class="sec">대형 관리형 독서실도, 동네 스터디카페도 아닌</h2>
+    <p class="lead">재수 타깃 대형 관리형은 <b style="color:var(--ink)">주 1회</b> 점검에 고가(월 60만원+)이고, 좌석대여형 스터디카페는 <b style="color:var(--ink)">관리가 없습니다.</b> 다올105는 그 사이의 빈틈을 채웁니다.</p>
+    <div class="vs-wrap">
+      <div class="vs-head">
+        <div class="vs-team other"><div class="vt-cap">대형 관리형 · 좌석형 스터디카페</div><div class="vt-sub">주 1회 점검 or 무관리</div></div>
+        <div class="vs-team daol"><div class="vt-cap">다올105 관리형 자습관</div><div class="vt-sub">매일 점검 + AI 리포트</div></div>
+        <div class="vs-badge">VS</div>
+      </div>
+      <div class="vs-crit">점검 주기</div>
+      <div class="vs-cells"><div class="vc other"><span class="x">✕</span>주 1회 플래너 확인 / 또는 무점검</div><div class="vc daol"><span class="v">✓</span><b>매일</b> 담임 확인 + <b>주간 리포트</b></div></div>
+      <div class="vs-crit">데이터</div>
+      <div class="vs-cells"><div class="vc other"><span class="x">✕</span>출결 도장 수준, 순공시간 불투명</div><div class="vc daol"><span class="v">✓</span>순공시간·이행률·과목갭 <b>숫자로 증명</b></div></div>
+      <div class="vs-crit">내신 · 입시</div>
+      <div class="vs-cells"><div class="vc other"><span class="x">✕</span>재수·독학 위주, 고교 내신과 불일치</div><div class="vc daol"><span class="v">✓</span>하남 학교 정조준 + <b>원서컨설턴트 상주</b></div></div>
+      <div class="vs-crit">비용</div>
+      <div class="vs-cells"><div class="vc other"><span class="x">✕</span>재수·독학 프리미엄 월 60만원+</div><div class="vc daol"><span class="v">✓</span>학기중 <b>39만</b>, 과목수강생 <b>22만</b>부터</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="eyebrow">세 개의 기둥</div>
+    <h2 class="sec">기존 관리는 그대로, 그 위에 한 층을 더 얹었습니다</h2>
+    <div class="pillars">
+      <div class="pillar"><div class="pn">01</div><div class="pic"><svg viewBox="0 0 24 24"><path d="M12 2 2 7v6c0 5 4 8 10 9 6-1 10-4 10-9V7L12 2Z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>몰입 관리</h3><p>입실 시 휴대폰 의무 제출, 지정 개인석, 벌점제(3회 경고→면담, 5회→퇴관). "관리한다"는 말이 아니라 실제로 오래 몰입하게 만드는 구조입니다.</p></div>
+      <div class="pillar"><div class="pn">02</div><div class="pic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-4 4"/></svg></div><h3>AI 학습분석</h3><p>순공시간·플래너 이행률·과목별 갭·집중도를 매일 기록해 패턴을 짚어주는 코멘트를 생성하고, 매주 학부모께 리포트로 보내드립니다.</p></div>
+      <div class="pillar"><div class="pn">03</div><div class="pic"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-1a6 6 0 0 1 12 0v1"/></svg></div><h3>입시컨설팅 연계</h3><p>축적된 학습 데이터(내신 추이·학습 태도)를 근거로, 대치 원서컨설턴트가 시기별(중간고사·모평·수시·정시) 맞춤 설계를 제공합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cream2">
+  <div class="wrap">
+    <div class="eyebrow">두 개의 트랙</div>
+    <h2 class="sec">고등 관리형독서실, 그리고 방학 중등 세미반</h2>
+    <p class="lead">두 프로그램은 <b style="color:var(--ink)">운영 방식이 완전히 같습니다.</b> 방학에 세미반에서 자습관을 미리 경험한 학생이 고등부로 자연스럽게 이어집니다.</p>
+    <div class="tracks">
+      <div class="track hi">
+        <div class="track-top"><span class="track-badge">고1 · 고2</span><h3>고등 관리형 자습관<span class="tf">완전 1인 개인석</span></h3></div>
+        <ul>
+          <li><span class="k">관리</span><div>휴대폰 제출 · 지정석 · 벌점제 · <b>매일 플래너→주간 리포트</b></div></li>
+          <li><span class="k">분석</span><div>AI 학습분석 리포트 + 담임 매일 점검</div></li>
+          <li><span class="k">입시</span><div>대치 원서컨설턴트 상주 · 시기별 컨설팅 연계</div></li>
+          <li><span class="k">운영</span><div>오전 10시(9시 선택)~밤 10시 · 토·일 조율</div></li>
+        </ul>
+        <div class="price"><div class="pv">방학 종일 시즌권 <span class="was">59만</span>최대 39만 · 학기중 39만 <span style="opacity:.72">(과목수강생 22만부터)</span></div><div class="note">인터뷰(30분~1h) 후 2학기 연속 우선 배정</div></div>
+      </div>
+      <div class="track semi">
+        <div class="track-top"><span class="track-badge">중등 · 방학 한정</span><h3>중등 세미반<span class="tf">정원 10명 · 관리형 야자</span></h3></div>
+        <ul>
+          <li><span class="k">동일</span><div>고등 자습관과 <b>같은 플래너·AI 리포트·담임</b></div></li>
+          <li><span class="k">환경</span><div>파티션 + 개인 서랍, 지정좌석</div></li>
+          <li><span class="k">전환</span><div>수료 시 고등 개인석 <b>우선 배정 + 첫 달 할인</b></div></li>
+          <li><span class="k">시기</span><div>여름 · 겨울 방학 (예비고1 대비)</div></li>
+        </ul>
+        <div class="price"><div class="pv">방학 39만 <span style="opacity:.72">(과목수강생 24만부터)</span></div><div class="note">고등 자습관을 미리 겪어보는 예약석</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="eyebrow">하루의 흐름</div>
+    <h2 class="sec">입실부터 리포트까지, 관리되는 하루</h2>
+    <div class="ops">
+      <div class="op"><span class="on">1</span><div><b>입실 · 휴대폰 제출</b> — 지정 개인석에 앉아 휴대폰을 제출하고 몰입 환경을 만듭니다.</div></div>
+      <div class="op"><span class="on">2</span><div><b>플래너 작성 → 담임 확인</b> — 오늘 계획을 쓰고, 담임이 매일 실행을 확인합니다.</div></div>
+      <div class="op"><span class="on">3</span><div><b>순공시간 자동 기록</b> — 좌석 입퇴실 로그로 집중 시간이 조작 없이 자동 집계됩니다.</div></div>
+      <div class="op"><span class="on">4</span><div><b>주간 리포트 → 학부모 발송</b> — 일주일 치를 모아 밸런스·공부법 코멘트와 함께 보내드립니다.</div></div>
+      <div class="op"><span class="on">5</span><div><b>시기별 입시 설계</b> — 축적된 데이터를 근거로 원서컨설턴트가 방향을 잡아드립니다.</div></div>
+    </div>
+    <div class="pull">강제가 아니라, 스스로 방향을 잡게 돕는 <span class="em">'실질' 관리</span>입니다.</div>
+  </div>
+</section>
+
+<section class="navy-sec final">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-bright);justify-content:center">자리는 한정됩니다</div>
+    <h2 class="sec" style="color:#fff">지금 상담을 예약하세요</h2>
+    <p class="lead" style="max-width:560px;margin:0 auto 26px">고등 개인석은 인터뷰 후 우선 배정되고, 중등 세미반은 매 방학 <b style="color:#fff">10명으로 마감</b>됩니다. 대기자 명단으로 운영됩니다.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-gold" href="tel:031-699-8111">전화 상담 031-699-8111</a>
+      <a class="btn btn-ghost" href="sms:01083378158">문자 문의 010-8337-8158</a>
+    </div>
+    <div class="contact"><span>다올105학원 · 하남 미사(망월동)</span><span><b>031-699-8111</b></span></div>
+  </div>
+</section>
+
+<style>.stph{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}.stph img{flex:0 0 auto;width:300px;height:200px;object-fit:cover;border-radius:14px;scroll-snap-align:start}@media(max-width:520px){.stph img{width:230px;height:154px}}</style>
+<section class="reveal"><div class="wrap"><span class="kicker">공간</span><h2 class="sec-h">완전 1인 개인석입니다.</h2><div class="stph" id="stph"><img src="../img/study-1.jpg" alt="관리형 자습관" loading="lazy"><img src="../img/study-2.jpg" alt="관리형 자습관" loading="lazy"><img src="../img/study-3.jpg" alt="관리형 자습관" loading="lazy"><img src="../img/study-4.jpg" alt="관리형 자습관" loading="lazy"><img src="../img/study-5.jpg" alt="관리형 자습관" loading="lazy"><img src="../img/study-6.jpg" alt="관리형 자습관" loading="lazy"><img src="../img/study-7.jpg" alt="관리형 자습관" loading="lazy"><img src="../img/study-8.jpg" alt="관리형 자습관" loading="lazy"><img src="../img/study-9.jpg" alt="관리형 자습관" loading="lazy"></div></div></section>
+<footer>다올105학원 · 학원 등록번호 <b>제 하남 298호</b> (경기도광주하남교육지원청)<br>대표 윤재영 · 사업자등록번호 269-99-01747<br>경기도 하남시 미사강변대로226번안길 35 청담프라자 401~405호<br>대표전화 031-699-8111 · 휴대폰 010-8337-8158<br>교습비등은 관할 교육지원청에 신고한 금액이며 학원 내 게시된 내용과 같습니다.</footer>
+<script>(function(){var b=document.getElementById('stph');if(!b)return;var im=[].slice.call(b.querySelectorAll('img')),n=im.length,ok=0;function d(){if(--n===0&&ok===0)b.parentNode.parentNode.remove();}im.forEach(function(x){if(x.complete){x.naturalWidth>0?ok++:x.remove();d();return;}x.onload=function(){ok++;d()};x.onerror=function(){x.remove();d()};});})();</script>
