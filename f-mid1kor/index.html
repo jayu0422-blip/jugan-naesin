@@ -706,6 +706,36 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
   --of-bg:#241f11;--of-line:#4e4226;--of-tag:#f0d9a4;--of-tagfg:#241f11;--of-h:#e9dcc0;
   --of-hb:#f6ead0;--of-li:#cdc1a6;--of-em:#f0b757;--of-note:#a89a78}
 @media(max-width:420px){.offer{padding:19px 17px 17px}.offer-h{font-size:18px}.offer-btn{font-size:17px}}
+
+/* ── 관리형 자습관 ── */
+.study{margin-top:22px;padding:24px 22px;border-radius:18px;
+  background:var(--st-bg);border:1px solid var(--st-line)}
+.study-k{font-size:12.5px;font-weight:900;letter-spacing:.02em;color:var(--st-k);margin-bottom:8px}
+.study h3{margin:0 0 16px;font-size:21px;line-height:1.45;font-weight:800;
+  letter-spacing:-.5px;color:var(--st-h)}
+.study h3 b{font-weight:900;color:var(--st-hb)}
+.study-ph{display:flex;gap:9px;overflow-x:auto;margin:0 0 18px;padding-bottom:4px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.study-ph img{flex:0 0 auto;width:180px;height:120px;object-fit:cover;border-radius:11px;
+  scroll-snap-align:start;background:var(--st-line)}
+.study ul{margin:0;padding:0;list-style:none}
+.study li{position:relative;padding-left:17px;margin:9px 0;font-size:14.5px;line-height:1.68;
+  color:var(--st-li)}
+.study li:before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;
+  border-radius:50%;background:var(--st-k)}
+.study li b{color:var(--st-hb);font-weight:800}
+.study-n{margin-top:16px;padding-top:14px;border-top:1px dashed var(--st-line);
+  font-size:13.5px;line-height:1.65;color:var(--st-n)}
+.study-n b{color:var(--st-hb);font-weight:800}
+:root{--st-bg:#f4f7fb;--st-line:#dfe6f0;--st-k:#2f5cf6;--st-h:#2b3444;--st-hb:#12203a;
+      --st-li:#4e5968;--st-n:#6b7686}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --st-bg:#151a24;--st-line:#28303d;--st-k:#7d9bff;--st-h:#dfe5ef;--st-hb:#f0f4fa;
+  --st-li:#b3bcca;--st-n:#8e97a6}}
+:root[data-theme=dark]{--st-bg:#151a24;--st-line:#28303d;--st-k:#7d9bff;--st-h:#dfe5ef;
+  --st-hb:#f0f4fa;--st-li:#b3bcca;--st-n:#8e97a6}
+@media(max-width:420px){.study{padding:20px 17px}.study h3{font-size:19px}
+  .study-ph img{width:150px;height:104px}}
 </style>
 
 <header class="hero"><div class="hero-ph hero-ph-1"><img src="../img/hero_김영하.png" alt="" aria-hidden="true"></div><div class="wrap">
@@ -840,10 +870,30 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
     <a class="btn btn-soft" href="sms:01083378158?body=%5B%EC%A4%911%20%EA%B5%AD%EC%96%B4%5D%202%ED%95%99%EA%B8%B0%20%EC%A4%91%EA%B0%84%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4"
        style="width:100%;margin-top:9px;display:block;text-align:center;background:#26262e;color:#fff">문자로 문의하기</a>
   </div>
-  <div class="soft rv" style="margin-top:20px">
-    <b>관리형 독서실도 함께 운영합니다.</b> 수업이 없는 날 갈 곳이 마땅치 않다면,
-    같은 건물에서 정해진 자리·정해진 시간에 앉아 자습하고 갈 수 있습니다.
-    수업만 듣고 집에서 흐지부지되는 걸 막는 장치입니다. 상담 때 같이 물어보셔도 됩니다.
+  <div class="study rv">
+    <div class="study-k">같은 건물, 수업이 없는 날</div>
+    <h3>&ldquo;공부하고 왔다&rdquo;는 말 대신<br><b>숫자를 보내드립니다.</b></h3>
+    <div class="study-ph" id="studyPh">
+      <img src="../img/study-1.jpg" alt="관리형 자습관 개인석" loading="lazy">
+      <img src="../img/study-2.jpg" alt="관리형 자습관 전경" loading="lazy">
+      <img src="../img/study-3.jpg" alt="관리형 자습관 좌석" loading="lazy">
+      <img src="../img/study-4.jpg" alt="관리형 자습관 내부" loading="lazy">
+      <img src="../img/study-5.jpg" alt="관리형 자습관 통로" loading="lazy">
+      <img src="../img/study-6.jpg" alt="관리형 자습관 입구" loading="lazy">
+    </div>
+    <ul>
+      <li><b>입실 시 휴대폰 제출 · 지정 개인석 · 벌점제</b> — 3회 경고면 면담, 5회면 퇴관입니다.
+        관리한다는 말이 아니라 실제로 오래 앉아 있게 만드는 구조입니다.</li>
+      <li><b>매일 담임이 플래너를 확인</b>합니다. 좌석 입퇴실 로그로 순공시간이 자동으로 집계돼
+        앉아 있던 시간이 아니라 집중한 시간이 남습니다.</li>
+      <li><b>주 1회 학부모께 리포트</b>를 보내드립니다. 순공시간, 플래너 이행률,
+        가장 밀리는 과목이 숫자로 적힙니다.</li>
+      <li><b>대치 원서컨설턴트가 상주</b>합니다. 쌓인 학습 데이터를 근거로
+        중간고사·모평·수시·정시 시기별 방향을 잡아드립니다.</li>
+    </ul>
+    <div class="study-n">운영 오전 10시(9시 선택)~밤 10시 · 완전 1인 개인석.
+      <b>다올105 과목 수강생은 자습관 비용이 따로 낮게 책정</b>됩니다.
+      잔여석과 요금은 상담 때 안내드립니다.</div>
   </div>
 </div></section>
 
@@ -884,5 +934,18 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
   document.addEventListener('scroll', up, {passive:true, capture:true});
   addEventListener('resize', up);
   up();
+})();
+</script>
+<script>
+/* 자습관 사진이 아직 없으면 사진 줄을 통째로 지운다 — 깨진 이미지가 보이는 것보다 낫다 */
+(function(){
+  var box=document.getElementById('studyPh'); if(!box) return;
+  var imgs=[].slice.call(box.querySelectorAll('img')), left=imgs.length, ok=0;
+  function done(){ if(--left===0 && ok===0) box.remove(); }
+  imgs.forEach(function(im){
+    if(im.complete){ (im.naturalWidth>0 ? ok++ : im.remove()); done(); return; }
+    im.onload=function(){ ok++; done(); };
+    im.onerror=function(){ im.remove(); done(); };
+  });
 })();
 </script>

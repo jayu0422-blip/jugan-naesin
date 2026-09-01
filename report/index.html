@@ -90,6 +90,12 @@ input:focus{outline:none;border-color:var(--blue)}
 footer{background:#eef0f4;border-top:1px solid var(--line);padding:28px 0 38px;
   font-size:12px;color:var(--dim);line-height:1.8;text-align:center}
 footer b{color:var(--mut)}
+
+.opts .fixed{display:inline-flex;align-items:center;padding:13px 20px;border-radius:13px;
+  font-size:16px;font-weight:800;letter-spacing:-.3px;background:var(--ink);color:#fff}
+.opts .relax{margin-left:12px;padding:0;border:0;background:none;cursor:pointer;font-family:inherit;
+  font-size:13.5px;font-weight:700;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.opts .relax:hover{color:var(--ink)}
 </style>
 
 <header><div class="wrap">
@@ -228,22 +234,37 @@ chips($("sch"),SCHOOLS,false,"sch");
 chips($("grd"),GRADES,false,"grd");
 chips($("sub"),SUBJECTS,true,"sub");
 
-/* 문자·랜딩에서 ?s=학교&g=학년 으로 들어오면 미리 골라준다 (탭 2번 절약) */
-(function prefill(){
-  try{
-    var q=new URLSearchParams(location.search);
-    var s=q.get("s"), g=q.get("g");
-    function tap(box,val){
-      if(!val) return;
-      var t=[].slice.call($(box).children).filter(function(b){return b.textContent.trim()===val.trim()});
-      if(t[0]) t[0].click();
-    }
-    tap("sch",s); tap("grd",g);
-    if(s&&g){
-      var L=$("live");
-      if(L) setTimeout(function(){L.scrollIntoView({behavior:"smooth",block:"center"})},260);
-    }
-  }catch(e){}
+/* 랜딩에서 넘어오면 그 학교·학년·과목으로 고정한다.
+   ?s=학교 &g=학년 &j=과목 — 있는 것만 잠근다.
+   예) 미사강변고 고1 영어 랜딩 → ?s=미사강변고&g=고1&j=영어  (셋 다 고정)
+       국어 랜딩            → ?j=국어                      (과목만 고정) */
+(function(){
+  var q, s, g, j;
+  try{ q=new URLSearchParams(location.search); }catch(e){ return; }
+  s=q.get("s"); g=q.get("g"); j=q.get("j");
+
+  function lock(boxId, val, list, multi){
+    if(!val) return false;
+    var hit=null;
+    for(var k=0;k<list.length;k++){ if(list[k]===val.trim()) hit=list[k]; }
+    if(!hit) return false;
+    var box=$(boxId), keep=box.innerHTML;
+    if(multi){ S.sub=[hit]; } else { S[boxId==="sch"?"sch":"grd"]=hit; }
+    box.innerHTML='<span class="fixed">'+hit+'</span>'
+      + '<button type="button" class="relax">바꾸기</button>';
+    box.querySelector(".relax").onclick=function(){
+      box.innerHTML=keep;
+      chips(box, list, !!multi, boxId==="sch"?"sch":(boxId==="grd"?"grd":null));
+      if(multi){ S.sub=[]; } else { S[boxId==="sch"?"sch":"grd"]=""; $("live").classList.remove("on"); }
+    };
+    return true;
+  }
+
+  var a=lock("sch", s, SCHOOLS, false);
+  var b=lock("grd", g, GRADES, false);
+  lock("sub", j, SUBJECTS, true);
+  if(a&&b){ live(); setTimeout(function(){
+    var L=$("live"); if(L) L.scrollIntoView({behavior:"smooth",block:"center"}); },260); }
 })();
 
 function err(m){var e=$("err");e.textContent=m;e.classList.add("on");
