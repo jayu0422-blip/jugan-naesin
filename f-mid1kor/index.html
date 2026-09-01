@@ -609,9 +609,36 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
 .cross p b{color:#E8A33D}
 .big2{font-size:clamp(30px,7vw,46px);font-weight:900;line-height:1.18;letter-spacing:-.04em;word-break:keep-all}
 
+
+/* ── 히어로 강사 사진 그라데이션 ── */
+.hero{position:relative;overflow:hidden}
+.hero>.wrap{position:relative;z-index:3}
+.hero-ph{position:absolute;right:0;top:0;bottom:0;z-index:1;
+  display:flex;align-items:flex-end;justify-content:flex-end;pointer-events:none;
+  width:min(62%,760px)}
+.hero-ph img{height:100%;width:auto;object-fit:cover;object-position:center 12%;opacity:.92}
+.hero-ph-2 img,.hero-ph-3 img{height:88%;margin-left:-6%}
+.hero::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(100deg,#f7f9fc 0%,#f7f9fc 34%,rgba(247,249,252,.86) 52%,rgba(247,249,252,.36) 74%,rgba(247,249,252,.12) 100%),
+             linear-gradient(0deg,#f7f9fc 0%,rgba(247,249,252,.5) 16%,transparent 42%)}
+@media(max-width:820px){
+  .hero-ph{width:100%;justify-content:center;align-items:flex-start;opacity:.30}
+  .hero-ph img{height:auto;width:118%;max-width:none}
+  .hero::after{background:linear-gradient(180deg,rgba(247,249,252,.62) 0%,rgba(247,249,252,.92) 46%,#f7f9fc 78%)}
+}
+
+/* ── 프로필 사진 ── */
+.pf{position:relative}
+.pf .pic{width:88px;height:88px;border-radius:50%;object-fit:cover;object-position:center 18%;
+  border:3px solid #fff;box-shadow:0 6px 18px rgba(20,25,40,.16);margin-bottom:14px;display:block}
+.pf.has-pic .nm{margin-top:0}
+@media(min-width:520px){
+  .pf.has-pic{padding-left:132px}
+  .pf.has-pic .pic{position:absolute;left:23px;top:24px;margin-bottom:0}
+}
 </style>
 
-<header class="hero"><div class="wrap">
+<header class="hero"><div class="hero-ph hero-ph-1"><img src="../img/hero_김영하.png" alt="" aria-hidden="true"></div><div class="wrap">
   <div class="pill">중1 · 국어 · 2학기 중간</div>
   <h1>국어는 잘한다고<br>넘어가고 있지<br><span class="hl">않으십니까</span></h1>
   <p class="sub">중등 국어 점수는 <b>실력이 아니라 익숙함</b>으로도 나옵니다.<br>중간은 지문 수가 많아 읽는 속도가 점수를 가릅니다.</p>
@@ -657,7 +684,8 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
   <div class="kicker rv">가르치는 사람</div>
   <h2 class="rv">국어만 맡습니다.</h2>
   <div class="prof  rv">
-    <div class="pf">
+    <div class="pf has-pic">
+      <img class="pic" src="../img/t_김영하.jpg" alt="김영하 선생님" loading="lazy">
       <div class="nm">김영하</div>
       <div class="sb">다올105 국어원장 · 밀크T 온라인 국어강사</div>
       <ul>
