@@ -1,3 +1,4 @@
+<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>고등 과목 추가 안내 — 국어·영어·수학 | 다올105</title>
@@ -643,16 +644,65 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
 .cross p b{color:#E8A33D}
 .big2{font-size:clamp(30px,7vw,46px);font-weight:900;line-height:1.18;letter-spacing:-.04em;word-break:keep-all}
 
+
+/* ── 첫 화면 베네핏 CTA ── */
+.bentag{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;
+  margin:0 auto 20px;padding:9px 16px;border-radius:999px;font-size:14.5px;line-height:1.5;
+  background:var(--ben-bg);color:var(--ben-fg);border:1px solid var(--ben-line);font-weight:600}
+.bentag b{font-weight:800;color:var(--ben-b)}
+.bentag s{opacity:.55;font-weight:600}
+.bentag em{font-style:normal;font-weight:900;color:var(--ben-em)}
+.bencard{max-width:560px;margin:18px auto 0;padding:16px 18px;border-radius:15px;text-align:left;
+  background:var(--ben-cbg);border:1px solid var(--ben-line)}
+.bencard li{list-style:none;position:relative;padding-left:19px;margin:7px 0;
+  font-size:14.5px;line-height:1.65;color:var(--ben-cfg)}
+.bencard li:before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;
+  border-radius:50%;background:var(--ben-em)}
+.bencard ul{margin:0;padding:0}
+.bencard b{color:var(--ben-b);font-weight:800}
+:root{--ben-bg:#fff6e2;--ben-fg:#6b5518;--ben-line:#f0dcae;--ben-b:#7a5c10;
+      --ben-em:#b4720e;--ben-cbg:#fffaf0;--ben-cfg:#5f5540}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --ben-bg:#2a2412;--ben-fg:#e9d9ae;--ben-line:#4a3f22;--ben-b:#f2dfae;
+  --ben-em:#f0b757;--ben-cbg:#231e10;--ben-cfg:#d8cdb2}}
+:root[data-theme=dark]{
+  --ben-bg:#2a2412;--ben-fg:#e9d9ae;--ben-line:#4a3f22;--ben-b:#f2dfae;
+  --ben-em:#f0b757;--ben-cbg:#231e10;--ben-cfg:#d8cdb2}
+
+/* 하단 고정 CTA — CSS만 있고 마크업이 없어 여태 안 떴다 */
+.sticky-cta .sc-t{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;
+  font-size:12px;line-height:1.35;color:var(--muted)}
+.sticky-cta .sc-t b{display:block;color:var(--ink);font-size:13.5px;font-weight:800;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky-cta .btn{flex:0 0 auto;min-width:150px}
+@media(max-width:400px){.sticky-cta .sc-t{display:none}.sticky-cta .btn{flex:1}}
+
+/* ── 크로스 카드 안의 작은 CTA ── */
+.pf .xcta{display:inline-flex;align-items:center;gap:6px;margin-top:13px;
+  padding:9px 15px;border-radius:11px;text-decoration:none;
+  font-size:13.5px;font-weight:800;letter-spacing:-.2px;
+  background:var(--xc-bg);color:var(--xc-fg);border:1px solid var(--xc-line);
+  transition:background .15s,transform .15s}
+.pf .xcta:after{content:"\203A";font-size:16px;line-height:1;opacity:.7;font-weight:700}
+.pf .xcta:hover{background:var(--xc-bgh)}
+.pf .xcta:active{transform:scale(.97)}
+:root{--xc-bg:#eef3ff;--xc-fg:#1b4fd0;--xc-line:#d6e2ff;--xc-bgh:#e3ecff}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --xc-bg:#182238;--xc-fg:#9dbcff;--xc-line:#26375c;--xc-bgh:#1e2b46}}
+:root[data-theme=dark]{--xc-bg:#182238;--xc-fg:#9dbcff;--xc-line:#26375c;--xc-bgh:#1e2b46}
 </style>
 
 <header class="hero"><div class="hero-ph hero-ph-3"><img src="../img/hero_민귀홍.png" alt="" aria-hidden="true"><img src="../img/hero_황웅.png" alt="" aria-hidden="true"><img src="../img/hero_임결.png" alt="" aria-hidden="true"></div><div class="wrap">
   <div class="pill">고등 · 재원생 안내</div>
+  <div class="bentag">지금 안 듣는 과목의 <b>1학기 기말 분석 리포트</b> · <em>무료로 드립니다</em></div>
   <h1>한 과목만 맡기고<br><span class="hl">계십니다.</span></h1>
   <p class="sub">지금 맡기신 과목은 저희가 책임지고 있습니다.<br>그런데 고등 등급은 세 과목이 같이 움직입니다.<br><b>국어·영어·수학이 같은 건물에서</b> 돌아갑니다.</p>
   <div class="cta-row">
-    <a class="btn btn-blue" href="#apply">시간표 상담받기</a>
+    <a class="btn btn-blue" href="https://jayu0422-blip.github.io/jugan-naesin/report/">무료로 받아보기</a>
+    <a class="btn btn-soft" href="#apply">시간표 상담받기</a>
     <a class="btn btn-soft" href="#timetable">시간표 먼저 보기</a>
   </div>
+  <div class="bencard"><ul><li>재원생께는 <b>무상으로만</b> 드립니다</li><li>과목을 추가하셔도 <b>시간표가 겹치지 않게</b> 편성합니다</li><li>고3은 원서 지원까지 <b>대치동 입시컨설턴트</b>가 함께 봅니다</li></ul></div>
   <div class="schools"><span>고1·고2</span><span>국어·영어·수학</span><span>재원생 안내</span></div>
   <small>다올105 재원생 대상 · 시간표 겹치지 않게 편성해 드립니다</small>
 </div></header>
@@ -696,18 +746,21 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
       <div class="nm">영어</div><div class="sb">윤재영 · 민귀홍 · 황웅</div>
       <ul><li>학교 기출을 분석해 <b>상세분석서·변형문제·동형모의고사</b>를 자체 제작합니다.</li>
       <li>중등 월 320,000원 · 고등 월 360,000원</li></ul>
+      <a class="xcta" href="https://jayu0422-blip.github.io/jugan-naesin/report/">영어 2학기 중간대비 보기</a>
     </div>
     <div class="pf has-pic">
       <img class="pic" src="../img/t_유용권.jpg" alt="수학 담당" loading="lazy">
       <div class="nm">수학</div><div class="sb">유용권 · 임결</div>
       <ul><li>진도가 아니라 <b>정답률</b>로 관리합니다. 클리닉이 따로 붙습니다.</li>
       <li>중등 월 360,000원 · 고등 월 400,000~420,000원</li></ul>
+      <a class="xcta" href="https://jayu0422-blip.github.io/jugan-naesin/math-high/">수학 2학기 중간대비 보기</a>
     </div>
     <div class="pf has-pic">
       <img class="pic" src="../img/t_김영하.jpg" alt="국어 담당" loading="lazy">
       <div class="nm">국어</div><div class="sb">김영하 · 이정관</div>
       <ul><li>선지를 <b>왜 버렸는지</b>까지 쓰게 합니다. 고등에서 무너지지 않는 독해를 만듭니다.</li>
       <li>중등 월 200,000원 · 고등 월 290,000원</li></ul>
+      <a class="xcta" href="https://jayu0422-blip.github.io/jugan-naesin/kor-high/">국어 2학기 중간대비 보기</a>
     </div>
   </div>
 </div></section>
@@ -788,5 +841,22 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
   els.forEach(function(e){ io.observe(e); });
   setTimeout(function(){ els.forEach(function(e){ e.classList.add('on'); }); }, 3000);
+})();
+</script>
+<div class="sticky-cta"><div class="sc-t"><b>지금 안 듣는 과목의 1학기 기말 분석 리포트 · 무료로 드립니다</b><span>지금 신청하면 무료</span></div><a class="btn btn-blue" href="https://jayu0422-blip.github.io/jugan-naesin/report/">무료로 받아보기</a></div>
+<script>
+(function(){
+  var b=document.querySelector('.sticky-cta'), h=document.querySelector('.hero');
+  if(!b||!h) return;
+  function y(){ return window.pageYOffset || document.documentElement.scrollTop
+                    || document.body.scrollTop || 0; }
+  function up(){
+    var trigger = h.offsetTop + h.offsetHeight - 60;
+    b.classList.toggle('show', y() > trigger);
+  }
+  addEventListener('scroll', up, {passive:true});
+  document.addEventListener('scroll', up, {passive:true, capture:true});
+  addEventListener('resize', up);
+  up();
 })();
 </script>

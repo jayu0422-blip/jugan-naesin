@@ -1,3 +1,4 @@
+<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>하남고 고1 영어 — 2학기 중간 대비 | 다올105</title>
@@ -643,16 +644,51 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
 .cross p b{color:#E8A33D}
 .big2{font-size:clamp(30px,7vw,46px);font-weight:900;line-height:1.18;letter-spacing:-.04em;word-break:keep-all}
 
+
+/* ── 첫 화면 베네핏 CTA ── */
+.bentag{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;
+  margin:0 auto 20px;padding:9px 16px;border-radius:999px;font-size:14.5px;line-height:1.5;
+  background:var(--ben-bg);color:var(--ben-fg);border:1px solid var(--ben-line);font-weight:600}
+.bentag b{font-weight:800;color:var(--ben-b)}
+.bentag s{opacity:.55;font-weight:600}
+.bentag em{font-style:normal;font-weight:900;color:var(--ben-em)}
+.bencard{max-width:560px;margin:18px auto 0;padding:16px 18px;border-radius:15px;text-align:left;
+  background:var(--ben-cbg);border:1px solid var(--ben-line)}
+.bencard li{list-style:none;position:relative;padding-left:19px;margin:7px 0;
+  font-size:14.5px;line-height:1.65;color:var(--ben-cfg)}
+.bencard li:before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;
+  border-radius:50%;background:var(--ben-em)}
+.bencard ul{margin:0;padding:0}
+.bencard b{color:var(--ben-b);font-weight:800}
+:root{--ben-bg:#fff6e2;--ben-fg:#6b5518;--ben-line:#f0dcae;--ben-b:#7a5c10;
+      --ben-em:#b4720e;--ben-cbg:#fffaf0;--ben-cfg:#5f5540}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --ben-bg:#2a2412;--ben-fg:#e9d9ae;--ben-line:#4a3f22;--ben-b:#f2dfae;
+  --ben-em:#f0b757;--ben-cbg:#231e10;--ben-cfg:#d8cdb2}}
+:root[data-theme=dark]{
+  --ben-bg:#2a2412;--ben-fg:#e9d9ae;--ben-line:#4a3f22;--ben-b:#f2dfae;
+  --ben-em:#f0b757;--ben-cbg:#231e10;--ben-cfg:#d8cdb2}
+
+/* 하단 고정 CTA — CSS만 있고 마크업이 없어 여태 안 떴다 */
+.sticky-cta .sc-t{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;
+  font-size:12px;line-height:1.35;color:var(--muted)}
+.sticky-cta .sc-t b{display:block;color:var(--ink);font-size:13.5px;font-weight:800;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky-cta .btn{flex:0 0 auto;min-width:150px}
+@media(max-width:400px){.sticky-cta .sc-t{display:none}.sticky-cta .btn{flex:1}}
 </style>
 
 <header class="hero"><div class="hero-ph hero-ph-1"><img src="../img/hero_윤재영.png" alt="" aria-hidden="true"></div><div class="wrap">
   <div class="pill">하남고 고1 · 2학기 중간 10월 12일~16일</div>
+  <div class="bentag">하남고 <b>상세분석서 + 워크북</b> · <s>5만원 상당</s> <em>무료</em></div>
   <h1>하남고는 다의어를<br><span class="hl">13문항</span>,<br>32.4점 냅니다.</h1>
   <p class="sub">1학기 중간·기말 <b>77문항을 전수 분석</b>한 결과입니다.<br>밑줄 친 단어와 같은 의미로 쓰인 것을 고르는 유형 — <b>수능·학평에는 사실상 없습니다.</b><br>수능 문제집만 돌리면 32점이 무방비입니다.</p>
   <div class="cta-row">
-    <a class="btn btn-blue" href="#apply">남은 자리 확인하기</a>
+    <a class="btn btn-blue" href="https://jayu0422-blip.github.io/jugan-naesin/hanam/#apply">무료로 받아보기</a>
+    <a class="btn btn-soft" href="#apply">남은 자리 확인하기</a>
     <a class="btn btn-soft" href="#timetable">시간표 먼저 보기</a>
   </div>
+  <div class="bencard"><ul><li><b>상세분석서</b> — 다의어 13문항 32.4점이 어디서 나오는지 문항 단위로</li><li><b>워크북(정답 포함)</b> — 어법·빈칸 해석 연습까지</li><li><b>2학기 중간 동형 모의고사</b> — 9월 10일 전후 발송</li></ul></div>
   <div class="schools"><span>하남고 고1</span><span>영어</span><span>중간 10월 12일~16일</span></div>
   <small>윤재영 전담 · 2학기 중간 10월 12일~16일 · 지난 기말 전수 분석 기반 자체 제작 교재</small>
 </div></header>
@@ -791,5 +827,22 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
   els.forEach(function(e){ io.observe(e); });
   setTimeout(function(){ els.forEach(function(e){ e.classList.add('on'); }); }, 3000);
+})();
+</script>
+<div class="sticky-cta"><div class="sc-t"><b>하남고 상세분석서 + 워크북 · 5만원 상당 무료</b><span>지금 신청하면 무료</span></div><a class="btn btn-blue" href="https://jayu0422-blip.github.io/jugan-naesin/hanam/#apply">무료로 받아보기</a></div>
+<script>
+(function(){
+  var b=document.querySelector('.sticky-cta'), h=document.querySelector('.hero');
+  if(!b||!h) return;
+  function y(){ return window.pageYOffset || document.documentElement.scrollTop
+                    || document.body.scrollTop || 0; }
+  function up(){
+    var trigger = h.offsetTop + h.offsetHeight - 60;
+    b.classList.toggle('show', y() > trigger);
+  }
+  addEventListener('scroll', up, {passive:true});
+  document.addEventListener('scroll', up, {passive:true, capture:true});
+  addEventListener('resize', up);
+  up();
 })();
 </script>

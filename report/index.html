@@ -1,3 +1,4 @@
+<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>1학기 기말 분석 리포트 + 동형 모의고사 | 다올105</title>
@@ -226,6 +227,24 @@ function live(){
 chips($("sch"),SCHOOLS,false,"sch");
 chips($("grd"),GRADES,false,"grd");
 chips($("sub"),SUBJECTS,true,"sub");
+
+/* 문자·랜딩에서 ?s=학교&g=학년 으로 들어오면 미리 골라준다 (탭 2번 절약) */
+(function prefill(){
+  try{
+    var q=new URLSearchParams(location.search);
+    var s=q.get("s"), g=q.get("g");
+    function tap(box,val){
+      if(!val) return;
+      var t=[].slice.call($(box).children).filter(function(b){return b.textContent.trim()===val.trim()});
+      if(t[0]) t[0].click();
+    }
+    tap("sch",s); tap("grd",g);
+    if(s&&g){
+      var L=$("live");
+      if(L) setTimeout(function(){L.scrollIntoView({behavior:"smooth",block:"center"})},260);
+    }
+  }catch(e){}
+})();
 
 function err(m){var e=$("err");e.textContent=m;e.classList.add("on");
   e.scrollIntoView({behavior:"smooth",block:"center"})}
