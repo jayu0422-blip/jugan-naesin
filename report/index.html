@@ -1,0 +1,258 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1학기 기말 분석 리포트 + 동형 모의고사 | 다올105</title>
+<meta name="description" content="우리 학교 1학기 기말 시험지를 문항 단위로 분석한 리포트와 동형 모의고사를 드립니다. 하남·미사 중1~고2.">
+<meta property="og:title" content="우리 학교 1학기 기말, 어떻게 나왔는지 보셨습니까">
+<meta property="og:description" content="문항별 출처·배점·변형 방식까지. 2학기 중간 대비 방향과 동형 모의고사를 함께 드립니다.">
+<link rel="canonical" href="https://jayu0422-blip.github.io/jugan-naesin/report/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&display=swap">
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+:root{--bg:#f7f9fc;--ink:#16181d;--mut:#5a6070;--dim:#8a8f98;--line:#e3e2de;
+      --navy:#12203A;--blue:#2f6bff;--blue-d:#1c4fa1;--gold:#B0761A;--red:#b4472e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'Pretendard','Malgun Gothic',-apple-system,sans-serif;
+  font-size:16px;line-height:1.68;-webkit-text-size-adjust:100%}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:600px;margin:0 auto;padding:0 22px}
+b{font-weight:800}
+
+header{padding:56px 0 44px;text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(680px 380px at 50% -120px,#eaf2ff 0%,transparent 70%),var(--bg)}
+.pill{display:inline-block;background:#eef4ff;color:var(--blue-d);font-size:13.5px;font-weight:800;
+  padding:9px 17px;border-radius:999px;margin-bottom:22px}
+h1{font-size:clamp(27px,7vw,40px);font-weight:900;line-height:1.22;letter-spacing:-.04em;word-break:keep-all}
+h1 .hl{color:var(--blue)}
+header .sub{margin-top:18px;font-size:16px;line-height:1.72;color:var(--mut);word-break:keep-all}
+header .sub b{color:var(--ink)}
+.worth{display:inline-flex;align-items:center;gap:9px;margin-top:22px;background:#fff;
+  border:1px solid var(--line);border-radius:13px;padding:12px 18px;
+  box-shadow:0 8px 22px rgba(20,25,40,.07)}
+.worth s{color:var(--dim);font-size:14px}
+.worth b{color:var(--red);font-size:17px;font-weight:900}
+
+section{padding:40px 0}
+section+section{border-top:1px solid var(--line)}
+h2{font-size:clamp(20px,4.8vw,26px);font-weight:900;letter-spacing:-.03em;line-height:1.32;word-break:keep-all}
+.lead{margin-top:12px;font-size:15.5px;color:var(--mut);word-break:keep-all}
+.lead b{color:var(--ink)}
+
+.give{display:grid;gap:11px;margin-top:22px}
+.give div{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start;
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.give i{font-style:normal;width:26px;height:26px;border-radius:8px;background:var(--navy);color:#fff;
+  font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.give h4{font-size:15.5px;font-weight:900;letter-spacing:-.02em}
+.give p{margin-top:4px;font-size:13.5px;line-height:1.62;color:var(--mut);word-break:keep-all}
+
+/* ── 폼 ── */
+.form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 22px;
+  box-shadow:0 12px 34px rgba(20,25,40,.09);margin-top:24px}
+.step{margin-bottom:22px}
+.step:last-of-type{margin-bottom:0}
+.lb{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:10px;display:block}
+.lb small{font-weight:600;color:var(--dim);margin-left:6px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:1.5px solid var(--line);background:#fff;border-radius:11px;padding:11px 15px;
+  font-size:14.5px;font-weight:700;color:var(--mut);cursor:pointer;transition:.13s;font-family:inherit}
+.opt:hover{border-color:#c7d3e8}
+.opt.on{background:var(--navy);border-color:var(--navy);color:#fff}
+input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:14px 15px;
+  font-size:16px;font-family:inherit;color:var(--ink);background:#fff}
+input:focus{outline:none;border-color:var(--blue)}
+.hint{margin-top:8px;font-size:12.5px;color:var(--dim);line-height:1.6}
+
+.ready{display:none;background:#f2f7ff;border:1px solid #cfe0ff;border-radius:14px;
+  padding:16px 18px;margin-bottom:20px;font-size:15px;line-height:1.65;color:#1c4fa1;word-break:keep-all}
+.ready.on{display:block}
+.ready b{color:#12203A}
+
+.go{width:100%;margin-top:6px;background:var(--blue);color:#fff;border:0;border-radius:13px;
+  padding:17px;font-size:16.5px;font-weight:900;font-family:inherit;cursor:pointer}
+.go:disabled{background:#c8d2e2;cursor:not-allowed}
+.agree{margin-top:16px;display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:start;
+  font-size:12.5px;line-height:1.62;color:var(--mut);cursor:pointer}
+.agree input{width:19px;height:19px;margin-top:1px}
+.agree b{color:var(--ink)}
+.agree a{color:var(--blue-d)}
+.err{display:none;margin-top:12px;background:#fdeeea;border:1px solid #f3c4b8;color:#a8331a;
+  border-radius:11px;padding:12px 14px;font-size:13.5px}
+.err.on{display:block}
+
+.done{display:none;text-align:center;padding:16px 4px}
+.done.on{display:block}
+.done .ic{font-size:44px}
+.done h3{margin-top:12px;font-size:22px;font-weight:900;letter-spacing:-.03em}
+.done p{margin-top:12px;font-size:15px;line-height:1.72;color:var(--mut);word-break:keep-all}
+.done p b{color:var(--ink)}
+
+footer{background:#eef0f4;border-top:1px solid var(--line);padding:28px 0 38px;
+  font-size:12px;color:var(--dim);line-height:1.8;text-align:center}
+footer b{color:var(--mut)}
+</style>
+
+<header><div class="wrap">
+  <div class="pill">하남 · 미사 중1~고2 · 학교별 제작</div>
+  <h1>우리 학교 1학기 기말,<br><span class="hl">어떻게 나왔는지</span><br>보신 적 있으신가요?</h1>
+  <p class="sub">시험지를 <b>문항 하나하나</b> 뜯어서 출처·배점·변형 방식까지 정리했습니다.<br>
+     2학기 중간을 어디서부터 잡아야 하는지, <b>그 학교 기준</b>으로 알려드립니다.</p>
+  <div class="worth"><s>5만원 상당</s><b>무료로 드립니다</b></div>
+</div></header>
+
+<section><div class="wrap">
+  <h2>무엇을 받으시나요</h2>
+  <p class="lead">학교·학년에 맞는 것만 골라서 보내드립니다. 없는 학교는 만들어지는 대로 알려드립니다.</p>
+  <div class="give">
+    <div><i>1</i><div><h4>1학기 기말 문항별 분석 리포트</h4>
+      <p>어느 문항이 어디서 나왔는지, 배점이 어디에 몰렸는지, 지문이 얼마나 바뀌었는지까지.</p></div></div>
+    <div><i>2</i><div><h4>2학기 중간 대비 방향</h4>
+      <p>그 학교가 무엇을 물어보는 학교인지에 맞춰, 지금 무엇부터 해야 하는지 정리했습니다.</p></div></div>
+    <div><i>3</i><div><h4>동형 모의고사 1회분 + 해설</h4>
+      <p>실제 시험지의 문항 수·배점 구조를 그대로 따른 모의고사입니다. 전 문항 해설이 함께 나갑니다.</p></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>어느 학교 것을<br>보내드릴까요?</h2>
+  <p class="lead">학교와 학년만 고르시면 <b>바로 확인</b>해 드립니다.</p>
+
+  <div class="form" id="form">
+    <div id="live" class="ready"></div>
+
+    <div class="step">
+      <span class="lb">학교</span>
+      <div class="opts" id="sch"></div>
+    </div>
+    <div class="step">
+      <span class="lb">학년</span>
+      <div class="opts" id="grd"></div>
+    </div>
+    <div class="step">
+      <span class="lb">과목 <small>— 복수 선택 가능</small></span>
+      <div class="opts" id="sub"></div>
+    </div>
+    <div class="step">
+      <span class="lb">학생 이름</span>
+      <input type="text" id="name" placeholder="예: 김다올" autocomplete="name">
+    </div>
+    <div class="step">
+      <span class="lb">받으실 연락처</span>
+      <input type="tel" id="phone" placeholder="010-0000-0000" inputmode="numeric" autocomplete="tel">
+      <div class="hint">이 번호로 자료 링크를 보내드립니다. 학부모님 번호를 적어주셔도 됩니다.</div>
+    </div>
+
+    <button class="go" id="go">자료 받아보기</button>
+
+    <label class="agree">
+      <input type="checkbox" id="ag">
+      <span><b>개인정보 수집·이용 동의 (필수)</b><br>
+        이름·연락처·학교·학년·과목을 <b>자료 발송</b>과 <b>학습 안내</b> 목적으로 수집합니다.
+        더불어 입시 설명회 안내와 학사일정·시험범위·기출분석 같은 정보성 안내를 함께 보내드립니다.
+        수신은 언제든 중단하실 수 있습니다.</span>
+    </label>
+    <div class="err" id="err"></div>
+
+    <div class="done" id="done">
+      <div class="ic">📗</div>
+      <h3>접수됐습니다.</h3>
+      <p id="donemsg"></p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>다올105학원</b> · 학원 등록번호 <b>제 하남 298호</b> (경기도광주하남교육지원청)<br>
+  대표 윤재영 · 사업자등록번호 269-99-01747<br>
+  경기도 하남시 미사강변대로226번안길 35 청담프라자 401~405호<br>
+  대표전화 031-699-8111 · 휴대폰 010-8337-8158<br>
+  본 자료의 분석은 공개된 시험지를 자체 분석한 결과이며 해당 학교와 무관합니다.
+</div></footer>
+
+<script>
+var SUPA="https://sqogiblaagmmkpwwodgf.supabase.co";
+var ANON="sb_publishable_JJMJVY4pC9zL25xHDf91Kg_meLV8iwT";
+var $=function(i){return document.getElementById(i)};
+
+var SCHOOLS=["미사강변고","미사고","하남고","풍산고","미사중","미사강변중","윤슬중","덕풍중","은가람중","그 외"];
+var GRADES=["중1","중2","중3","고1","고2","고3"];
+var SUBJECTS=["영어","수학","국어"];
+/* 실제 분석 보유 조합 — 없는 곳은 정직하게 안내한다 */
+var HAVE={"미사강변고|고1":1,"미사강변고|고2":1,"미사고|고1":1,"미사고|고2":1,
+          "하남고|고1":1,"풍산고|고2":1};
+var S={sch:"",grd:"",sub:[]};
+
+function chips(el,arr,multi,key){
+  el.innerHTML="";
+  arr.forEach(function(v){
+    var b=document.createElement("button");
+    b.type="button"; b.className="opt"; b.textContent=v;
+    b.onclick=function(){
+      if(multi){
+        var i=S.sub.indexOf(v);
+        if(i>=0){S.sub.splice(i,1);b.classList.remove("on")}
+        else{S.sub.push(v);b.classList.add("on")}
+      }else{
+        S[key]=v;
+        [].forEach.call(el.children,function(c){c.classList.remove("on")});
+        b.classList.add("on"); live();
+      }
+    };
+    el.appendChild(b);
+  });
+}
+function live(){
+  if(!S.sch||!S.grd) return;
+  var k=S.sch+"|"+S.grd, box=$("live");
+  if(HAVE[k]){
+    box.innerHTML="<b>"+S.sch+" "+S.grd+"</b> 1학기 기말 분석 리포트가 <b>이미 만들어져 있습니다.</b><br>"+
+      "동형 모의고사와 함께 바로 보내드릴 수 있습니다.";
+  }else{
+    box.innerHTML="<b>"+S.sch+" "+S.grd+"</b>은 지금 제작 중입니다.<br>"+
+      "완성되는 대로 가장 먼저 보내드리고, 그 전까지 <b>학년 공통 자료</b>를 먼저 드립니다.";
+  }
+  box.classList.add("on");
+}
+chips($("sch"),SCHOOLS,false,"sch");
+chips($("grd"),GRADES,false,"grd");
+chips($("sub"),SUBJECTS,true,"sub");
+
+function err(m){var e=$("err");e.textContent=m;e.classList.add("on");
+  e.scrollIntoView({behavior:"smooth",block:"center"})}
+function okPhone(v){return /^01[016789]\d{7,8}$/.test(String(v).replace(/\D/g,""))}
+
+$("go").onclick=function(){
+  $("err").classList.remove("on");
+  if(!S.sch) return err("학교를 선택해 주세요.");
+  if(!S.grd) return err("학년을 선택해 주세요.");
+  if(!S.sub.length) return err("과목을 하나 이상 선택해 주세요.");
+  if(!$("name").value.trim()) return err("학생 이름을 적어주세요.");
+  if(!okPhone($("phone").value)) return err("연락처를 정확히 적어주세요.");
+  if(!$("ag").checked) return err("개인정보 수집·이용에 동의해 주세요.");
+
+  var body={school:S.sch,grade:S.grd,subjects:S.sub.join(","),
+            student_name:$("name").value.trim(),
+            phone:$("phone").value.replace(/\D/g,""),
+            consent:true,source:"report_landing",
+            has_report:!!HAVE[S.sch+"|"+S.grd]};
+  var btn=$("go"); btn.disabled=true; btn.textContent="접수 중…";
+
+  fetch(SUPA+"/rest/v1/report_leads",{method:"POST",
+    headers:{"content-type":"application/json","apikey":ANON,
+             "authorization":"Bearer "+ANON,"Prefer":"return=minimal"},
+    body:JSON.stringify(body)})
+  .then(function(r){ if(!r.ok) return r.json().then(function(j){throw new Error(j.message||"오류")}); })
+  .catch(function(e){ console.warn(e); })   /* 저장 실패해도 문자 경로는 살린다 */
+  .then(function(){
+    var t="[자료신청] "+S.sch+" "+S.grd+" / "+body.student_name+
+          "\n과목: "+S.sub.join("·")+"\n연락처: "+$("phone").value;
+    $("donemsg").innerHTML = HAVE[S.sch+"|"+S.grd]
+      ? "<b>"+S.sch+" "+S.grd+"</b> 자료를 <b>오늘 안에</b> 문자로 보내드립니다.<br>번호를 저장해 두시면 놓치지 않으십니다."
+      : "<b>"+S.sch+" "+S.grd+"</b> 자료가 완성되는 대로 가장 먼저 보내드립니다.<br>그 전에 학년 공통 자료를 먼저 드리겠습니다.";
+    [].forEach.call(document.querySelectorAll(".step,.go,.agree"),function(e){e.style.display="none"});
+    $("live").classList.remove("on");
+    $("done").classList.add("on");
+    $("done").scrollIntoView({behavior:"smooth",block:"center"});
+    location.href="sms:01083378158?body="+encodeURIComponent(t);
+  });
+};
+</script>
