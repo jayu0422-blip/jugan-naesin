@@ -260,9 +260,22 @@ chips($("sub"),SUBJECTS,true,"sub");
     return true;
   }
 
-  var a=lock("sch", s, SCHOOLS, false);
-  var b=lock("grd", g, GRADES, false);
-  lock("sub", j, SUBJECTS, true);
+  /* ?so= / ?go= 로 선택지 자체를 그 랜딩이 실제로 대비하는 것만 남긴다 */
+  function narrow(boxId, csv, all, multi, key){
+    if(!csv) return all;
+    var want=csv.split(",").map(function(x){return x.trim()}).filter(Boolean);
+    var keep=all.filter(function(v){return want.indexOf(v)>=0});
+    if(!keep.length) return all;
+    chips($(boxId), keep, !!multi, key);
+    return keep;
+  }
+  var SC=narrow("sch", q.get("so"), SCHOOLS, false, "sch");
+  var GR=narrow("grd", q.get("go"), GRADES, false, "grd");
+  var SB=narrow("sub", q.get("jo"), SUBJECTS, true,  null);
+
+  var a=lock("sch", s, SC, false);
+  var b=lock("grd", g, GR, false);
+  lock("sub", j, SB, true);
   if(a&&b){ live(); setTimeout(function(){
     var L=$("live"); if(L) L.scrollIntoView({behavior:"smooth",block:"center"}); },260); }
 })();
