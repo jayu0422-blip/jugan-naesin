@@ -1,11 +1,11 @@
 <!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>1학기 기말 분석 리포트 — 다올105 고1·고2 재원생 안내</title>
-<meta name="description" content="늘 맡겨 주셔서 감사합니다. 지금 맡겨 주신 과목은 저희가 책임지고 갑니다. 이번에는 국어·영어·수학 세 과목을 함께 정리했습니다. 필요한 과목을 골라 주시면 그 과목 자료를 보내드립니다. 2학기 중간고사는 미사강변고가 10월 1일부터 8일까지, 미사고가 10월 13일">
-<meta property="og:title" content="1학기 기말 분석 리포트 — 다올105 고1·고2 재원생 안내">
-<meta property="og:description" content="늘 맡겨 주셔서 감사합니다. 지금 맡겨 주신 과목은 저희가 책임지고 갑니다. 이번에는 국어·영어·수학 세 과목을 함께 정리했습니다. 필요한 과목을 골라 주시면 그 과목 자료를 보내드립니다. 2학기 중간고사는 미사강변고가 10월 1일부터 8일까지, 미사고가 10월 13일">
-<link rel="canonical" href="https://jayu0422-blip.github.io/jugan-naesin/cross-high/">
+<title>고3 수능 파이널 — 국어 · 영어 | 다올105</title>
+<meta name="description" content="수능 영어(황웅) · 국어(이정관) 파이널. 매주 실전 모의고사 + 그날 해설. 대치동 입시컨설턴트 상주로 원서 지원까지 지원.">
+<meta property="og:title" content="고3 수능 파이널 — 국어 · 영어 | 다올105">
+<meta property="og:description" content="수능 영어(황웅) · 국어(이정관) 파이널. 매주 실전 모의고사 + 그날 해설. 대치동 입시컨설턴트 상주로 원서 지원까지 지원.">
+<link rel="canonical" href="https://jayu0422-blip.github.io/jugan-naesin/c-suneung/">
 <style>
 
 :root{
@@ -677,20 +677,6 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
 .sticky-cta .btn{flex:0 0 auto;min-width:150px}
 @media(max-width:400px){.sticky-cta .sc-t{display:none}.sticky-cta .btn{flex:1}}
 
-/* ── 크로스 카드 안의 작은 CTA ── */
-.pf .xcta{display:inline-flex;align-items:center;gap:6px;margin-top:13px;
-  padding:9px 15px;border-radius:11px;text-decoration:none;
-  font-size:13.5px;font-weight:800;letter-spacing:-.2px;
-  background:var(--xc-bg);color:var(--xc-fg);border:1px solid var(--xc-line);
-  transition:background .15s,transform .15s}
-.pf .xcta:after{content:"\203A";font-size:16px;line-height:1;opacity:.7;font-weight:700}
-.pf .xcta:hover{background:var(--xc-bgh)}
-.pf .xcta:active{transform:scale(.97)}
-:root{--xc-bg:#eef3ff;--xc-fg:#1b4fd0;--xc-line:#d6e2ff;--xc-bgh:#e3ecff}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
-  --xc-bg:#182238;--xc-fg:#9dbcff;--xc-line:#26375c;--xc-bgh:#1e2b46}}
-:root[data-theme=dark]{--xc-bg:#182238;--xc-fg:#9dbcff;--xc-line:#26375c;--xc-bgh:#1e2b46}
-
 /* ── 히어로 오퍼 박스 ── */
 .offer{max-width:520px;margin:26px auto 0;padding:22px 22px 20px;border-radius:20px;text-align:left;
   background:var(--of-bg);border:2px solid var(--of-line);box-shadow:0 14px 40px rgba(90,64,10,.13)}
@@ -769,62 +755,171 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
 .study-go:after{content:"›";font-size:22px;font-weight:700;opacity:.85;flex:0 0 auto}
 .study-go:hover{opacity:.93}
 .study-go:active{transform:scale(.985)}
+
+/* ── 과목 구분자 ── */
+.chap{position:relative;padding:52px 0 6px;text-align:center}
+.chap:before{content:"";position:absolute;left:50%;top:0;width:1px;height:34px;
+  background:linear-gradient(180deg,transparent,var(--line))}
+.chap-n{display:inline-flex;align-items:center;gap:10px;padding:9px 20px;border-radius:999px;
+  background:var(--ch-bg);border:1px solid var(--ch-line);font-size:13px;font-weight:900;
+  letter-spacing:.02em;color:var(--ch-fg)}
+.chap-n i{font-style:normal;font-variant-numeric:tabular-nums;opacity:.55}
+.chap h2{margin:16px 0 6px;font-size:34px;line-height:1.28;letter-spacing:-.9px;font-weight:900}
+.chap p{margin:0;color:var(--muted);font-size:15px}
+:root{--ch-bg:#eef2f9;--ch-line:#dbe3ef;--ch-fg:#33456b}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --ch-bg:#1a2130;--ch-line:#2b3547;--ch-fg:#a9bcdf}}
+:root[data-theme=dark]{--ch-bg:#1a2130;--ch-line:#2b3547;--ch-fg:#a9bcdf}
+@media(max-width:520px){.chap{padding:40px 0 4px}.chap h2{font-size:27px}}
+
+/* ── 자습관 전경 사진 ── */
+.stview{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:20px 0 0}
+.stview img{width:100%;height:180px;object-fit:cover;border-radius:13px;background:var(--line)}
+@media(max-width:520px){.stview{grid-template-columns:1fr 1fr;gap:8px}.stview img{height:118px}}
 </style>
-<header class="hero"><div class="hero-ph hero-ph-1"><img src="../img/hero_김영하.png" alt="" aria-hidden="true"></div><div class="wrap">
-  <div class="pill">고1·고2 재원생 학부모께</div>
-  <h1>지난 1학기 기말이 어떻게 나왔는지<br>문항별로 정리해 두었습니다.<br><span class="hl">2학기 중간 전에 보내드리겠습니다.</span></h1>
-  <p class="sub">늘 맡겨 주셔서 감사합니다. 지금 맡겨 주신 과목은 저희가 책임지고 갑니다. 이번에는 국어·영어·수학 세 과목을 함께 정리했습니다. 필요한 과목을 골라 주시면 그 과목 자료를 보내드립니다. 2학기 중간고사는 미사강변고가 10월 1일부터 8일까지, 미사고가 10월 13일부터 16일까지입니다.</p>
+<header class="hero"><div class="hero-ph hero-ph-2"><img src="../img/hero_황웅.png" alt="" aria-hidden="true"><img src="../img/hero_이정관.png" alt="" aria-hidden="true"></div><div class="wrap">
+  <div class="pill">고3 · 수능 파이널 · 영어 × 국어</div>
+  
+  <h1>이제 와서<br>뭘 바꾸냐고<br><span class="hl">하시지만</span></h1>
+  <p class="sub">지금 개념서를 새로 펴는 건 늦었습니다. 그런데 <b>아는데 틀리는 문제</b>는 아직 줄일 수 있습니다.<br>강의가 아니라 <b>시험 → 해설 → 재시험</b> 구조입니다.<br>영어는 황웅, 국어는 이정관이 각각 맡습니다.</p>
   <div class="offer">
-    <div class="offer-tag">재원생 무상 제공</div>
-    <div class="offer-h">국어·영어·수학 중 필요한 과목의 1학기 기말 분석 리포트를 보내드립니다</div>
-    <ul><li><b>미사고 고1 국어</b> — 기말 24문항의 배점과 영역을 학교가 붙여 준 정답·배점표와 대조해 정리했습니다. 2학기에 무게가 어디로 옮겨 가는지도 함께 적었습니다. 신청하시면 바로 나갑니다.</li><li><b>미사고 고1·고2 수학</b> — 기말 전 문항의 배점 지도와, 문항마다 학생이 몇 분을 쓸지 매겨 문항 번호에 붙여 두었습니다. 이것도 바로 나갑니다.</li><li><b>영어</b> — 미사강변고·미사고·하남고·풍산고 네 학교 모두 정리가 끝나 있습니다. 미사강변고·하남고·풍산고의 국어·수학은 시험지를 다시 봐야 해서, 신청해 주신 순서대로 만들어 보내드립니다.</li></ul>
-    <a class="offer-btn" href="https://jayu0422-blip.github.io/jugan-naesin/report/">리포트 받아보기</a>
-    <div class="offer-note">재원생께는 무상으로 드립니다. 받으신 다음에 아무것도 안 하셔도 됩니다. 궁금한 게 생기시면 그때 연락 주십시오. 031-699-8111 · 010-8337-8158</div>
-  </div>
-  <div class="schools"><span>고1 · 고2</span><span>국어 · 영어 · 수학</span><span>재원생 안내</span></div>
-  <small>다올105 재원생 대상 · 받으신 다음에 아무것도 안 하셔도 됩니다</small>
+  <div class="offer-tag">고3만 해당됩니다</div>
+  <div class="offer-h">성적표 기반 <b>남은 기간 진단</b></div>
+  
+  <ul><li><b>어느 과목에서 몇 점이 남아 있는지</b>부터 숫자로 정리해 드립니다</li><li>파이널은 강의가 아니라 <b>시험 → 해설 → 재시험</b> 구조 — 국어 토요일, 영어 일요일</li><li>수능이 끝나면 <b>원서 지원까지</b> 대치동 입시컨설턴트가 함께 봅니다</li></ul>
+  <a class="offer-btn" href="#apply">무료로 진단받기</a>
+  <div class="offer-note">성적표만 있으면 됩니다. 상담료는 없습니다.</div>
+</div>
+  <div class="cta-sub"><a href="#apply">남은 자리 확인하기</a><a href="#timetable">시간표 먼저 보기</a></div>
+
+  <div class="schools"><span>수능 영어</span><span>수능 국어</span><span>원서 지원까지</span></div>
+  <small>영어 일 10:00~13:00 · 국어 토 14:00~17:00 · 원서 지원 컨설팅 포함</small>
 </div></header>
 
+<div class="chap rv"><div class="wrap"><span class="chap-n"><i>01</i>국어 · 영어</span><h2>국어 · 영어</h2><p>고3 수능 파이널 · 국어 이정관 · 영어 황웅</p></div></div>
+
 <section class="dark"><div class="wrap prose rv">
-  <div class="kicker">먼저, 자료부터</div>
-  <h2>6월 말 시험지를 모아 <b>배점부터 하나씩 옮겨 적었습니다</b></h2>
-  <p class="lead rv">미사고 고1 국어와 고1·고2 수학은 정리가 끝나 있습니다. 어떤 숫자가 들어 있는지 몇 개만 먼저 적겠습니다.</p>
-  <p>미사고 고1 국어 기말은 6월 30일에 치렀고, 선택형 24문항 100점에 서답형이 없었습니다. 이 회차는 시험지 마지막 장에 학교가 출력한 정답·배점표가 붙어 있어서, 저희가 정리한 배점 24개를 그 표와 하나씩 맞춰볼 수 있었습니다. 문학이 13문항 54.5점, 문법이 7문항 29.9점, 독서가 2문항 7.9점, 화법·작문이 2문항 7.7점입니다.</p><p>저희가 가진 여섯 회차 144문항의 배점을 전부 세어 보면 3.7점에서 4.6점 사이에 다 들어갑니다. 평균이 4.17점이고, 3점대 초반짜리 문항이 한 개도 없습니다. 평균 배점으로 계산하면 두 개를 틀렸을 때 91.7점, 세 개면 87.5점입니다. 수행평가는 빼고 지필 100점 안에서만 따진 숫자입니다.</p><p>수학은 두 학년을 정리했습니다. 고1 공통수학1 기말은 선다형 18문항 88점에 논술형 2문항 12점이었는데, 저희가 받은 시험지 중에는 논술형 2번 답란이 그대로 비어 있는 것이 있었습니다. 6점짜리 문항입니다. 고2 대수 기말은 저희가 19문항을 하나씩 보면서 학생이라면 이 문제에 몇 분을 쓸지 매겨 적었습니다. 그걸 다 더하니 68분이 나왔습니다. 시험 시간은 50분이었습니다. 아이들이 실제로 잰 기록이 아니라, 이 시험이 시간을 얼마나 잡아먹는지 재려고 만든 숫자입니다. 뒤쪽 다섯 문항에 28.6점이 걸려 있는데, 그 앞에서 시간이 끝납니다.</p><p>리포트에는 이 숫자들이 문항 번호와 함께 붙어 있습니다. 시험지를 펴놓고 나란히 보실 수 있게 만들었습니다.</p>
+  <div class="kicker">남은 기간의 진실</div>
+  <h2>점수는 새 지식에서<br>오지 않습니다.</h2>
+  <div style="height:22px"></div>
+  <p>수능이 얼마 남지 않았습니다. 이 시기에 가장 많이 나오는 말은 <strong>"이제 와서 뭘 바꾸냐"</strong>입니다.</p>
+    <p>맞는 말입니다. 지금 개념서를 새로 펴는 건 늦었습니다.
+    그런데 <strong>바꿔야 이득인 것이 딱 하나</strong> 남아 있습니다.</p>
+    <p class="pull">아는데 틀리는 문제를<br>줄이는 일입니다.</p>
+    <p>국어도 영어도, 남은 기간의 점수는 새 지식에서 오지 않습니다.
+    <strong>매주 실전과 같은 조건으로 풀고, 틀린 이유를 그날 안에 닫는 것</strong>에서 옵니다.
+    그래서 저희 파이널은 강의가 아니라 <strong>시험 → 해설 → 재시험</strong> 구조입니다.</p>
 </div></section>
 
+<section><div class="wrap">
+  <div class="kicker rv">혹시 이 중 하나입니까</div>
+  <h2 class="rv">지금 이 상태라면<br>남은 기간이 아깝습니다.</h2>
+  <p class="lead rv">파이널에서 점수가 안 오르는 집은 대부분 아래에 해당합니다.</p>
+  <div class="chk rv">
+      <div><i>✓</i><span><b>실전과 같은 조건</b>으로 시간 재고 푸는 일이 주에 한 번도 없다</span></div>
+      <div><i>✓</i><span>틀린 문제를 <b>그날 안에</b> 닫지 않고 넘어간다</span></div>
+      <div><i>✓</i><span>인강을 듣지만 <b>손으로 푸는 양</b>이 절대적으로 적다</span></div>
+      <div><i>✓</i><span>국어·영어 중 <b>한 과목이 무너져</b> 전체가 흔들린다</span></div>
+      <div><i>✓</i><span>수능이 끝난 뒤 <b>원서를 어떻게 쓸지</b> 아무 계획이 없다</span></div>
+  </div>
+  <div class="hk rv">
+    <h3>둘을 같이 들으면 한 주가 실전 두 번이 됩니다.</h3>
+    <p>토요일 국어, 일요일 영어. <b>주말 이틀이 실전 모의고사 두 번</b>이 됩니다. 따로 듣는 것보다 리듬이 잡히고, 두 과목의 오답 패턴을 같이 보게 됩니다.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker rv">수능 이후</div>
+  <h2 class="rv">시험이 끝나면<br>그다음이 더 어렵습니다.</h2>
+  <p class="lead rv">점수가 나온 뒤에 시작되는 것이 원서입니다. 그런데 대부분의 집이 이 구간을 혼자 통과합니다.</p>
+  <div class="cross rv">
+    <h4>대치동 입시컨설턴트가 상주합니다.</h4>
+    <p>수능이 끝나면 <b>원서 지원까지 함께 봅니다.</b> 가군·나군·다군 배치, 표점 환산,
+       작년 입결과 올해 지원 흐름을 놓고 <b>실제로 넣을 카드</b>를 같이 고릅니다.<br><br>
+       점수를 올리는 것과 그 점수를 제대로 쓰는 것은 다른 일입니다.
+       저희는 <b>둘 다</b>를 끝까지 봅니다.</p>
+  </div>
+</div></section>
+
+<section id="teacher"><div class="wrap">
+  <div class="kicker rv">가르치는 사람</div>
+  <h2 class="rv">영어와 국어를 각각 전담합니다.</h2>
+  <div class="prof two rv">
+    <div class="pf has-pic">
+      <img class="pic" src="../img/t_황웅.jpg" alt="황웅 선생님" loading="lazy">
+      <div class="nm">황웅 <span style="font-size:14px;font-weight:700;color:#6b7280">· 수능 영어</span></div>
+      <div class="sb">유형별 문제 총정리</div>
+      <ul>
+        <li>수능 영어에 나오는 <b>유형별 풀이법을 총정리</b>합니다. 단계별로 올라가서 하위권도 따라옵니다.</li>
+        <li><b>어휘 무한 테스트</b> — 외워질 때까지 봅니다.</li>
+        <li>개별 맞춤 클리닉이 따로 붙습니다.</li>
+      </ul>
+      <div class="fee">정규 4회 · 월 <b>390,000원</b> · 어휘끝 수능 + 마더텅 + 자체 주간지</div>
+    </div>
+    <div class="pf has-pic">
+      <img class="pic" src="../img/t_이정관.jpg" alt="이정관 선생님" loading="lazy">
+      <div class="nm">이정관 <span style="font-size:14px;font-weight:700;color:#6b7280">· 수능 국어</span></div>
+      <div class="sb">정규반 파이널</div>
+      <ul>
+        <li>매주 <b>80분 실전 모의고사</b>를 응시하고, 그 자리에서 실전적 해설을 붙입니다.</li>
+        <li>강의를 듣는 시간이 아니라 <b>푸는 시간</b>입니다.</li>
+        <li>수능까지 성적을 끌어 올리는 것만 봅니다.</li>
+      </ul>
+      <div class="fee">정규 5회 · 월 <b>425,000원</b> · 한수 파이널 + 오일장 주간지</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="timetable"><div class="wrap">
+  <div class="kicker rv">2학기 시험대비 시간표</div>
+  <h2 class="rv">주말 이틀,<br>실전으로 채웁니다.</h2>
+  <p class="lead rv">두 과목 모두 <b>실전 응시 → 해설</b> 구조입니다. 클리닉은 못 따라온 부분을 개별로 잡는 시간입니다.</p>
+  <div class="tt rv">
+    <table>
+      <thead><tr><th>요일 · 시간</th><th>구성</th></tr></thead>
+      <tbody>
+        <tr><td class="d">토 14:00~17:00</td><td>수능 국어 정규 — 한수 파이널 응시 + 해설<span class="k j">국어</span></td></tr>
+        <tr><td class="d">일 10:00~13:00</td><td>수능 영어 정규 — 유형별 총정리<span class="k j">영어</span></td></tr>
+        <tr><td class="d">토 10:00~12:00</td><td>수능 영어 클리닉<span class="k c">클리닉</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="soft rv">국어 <b>월 5회 425,000원</b>(교재 79,000원) · 영어 <b>월 4회 390,000원</b>. 두 과목을 같이 들으시는 경우 시간표가 겹치지 않게 편성돼 있습니다.</div>
+</div></section>
+
+<div class="chap rv"><div class="wrap"><span class="chap-n"><i>02</i>관리형 자습관</span><h2>관리형 자습관</h2><p>같은 건물 · 수업이 없는 날</p></div></div>
 <section><div class="wrap rv">
-  <div class="kicker">그런데 2학기는</div>
-  <h2>10월 중간은 <b>과목부터 바뀝니다</b></h2>
-  <p class="lead rv">미사강변고는 10월 1일부터 8일까지, 미사고는 10월 13일부터 16일까지입니다. 미사강변고가 먼저입니다.</p>
-  <p>국어는 공통국어1이 끝나고 공통국어2가 시작됩니다. 그러면서 문학과 문법의 무게가 자리를 바꿉니다. 1학기 두 번은 문학이 50점대, 문법이 29점대였습니다. 작년 2학기는 중간과 기말 두 번 모두 문학이 63점대까지 올라가고 문법이 21점대로 내려갔습니다. 올해 2학기는 아직 치르지 않았으니 저희가 단정해 드릴 수는 없습니다. 다만 작년에는 두 번 다 그랬습니다. 고전시가와 고전소설이 한꺼번에 들어온 것도 2학기였고, 작년 2학기 중간에는 고전시가 다섯 편이 한 세트로 묶여 6문항 25.8점으로 나왔습니다.</p><p>문법은 학기별로 단원이 거의 고정돼 있었습니다. 1학기 중간은 음운, 1학기 기말은 문법요소가 2025년과 2026년 모두 똑같이 반복됐습니다. 그 규칙이 이어진다면 2학기 중간은 중세국어입니다. 저희가 가진 근거는 1학기 두 차수 관측뿐이고, 학교 담당 선생님이나 교과서가 바뀌면 달라집니다. 확정으로 받아들이지 마시고 미리 열어볼 단원 정도로 봐주십시오.</p><p>수학도 과목이 바뀝니다. 고1은 공통수학2로, 고2는 미적분1로 넘어갑니다. 이번 고1 기말에서 저희가 본 것 하나만 옮기겠습니다. 17번은 부교재에 실린 2025년 6월 고1 학력평가 20번이 원본인데, 계수가 서로 얽힌 식으로 바뀌어 있었습니다. 원본의 답을 외워 둔 학생에게는 처음 보는 문제였습니다.</p>
+  <div class="kicker">공간</div>
+  <h2>완전 1인 개인석입니다.</h2>
+  <div class="stview" id="stview"><img src="../img/study-1.jpg" alt="관리형 자습관 전경" loading="lazy"><img src="../img/study-2.jpg" alt="관리형 자습관 전경" loading="lazy"><img src="../img/study-3.jpg" alt="관리형 자습관 전경" loading="lazy"><img src="../img/study-4.jpg" alt="관리형 자습관 전경" loading="lazy"><img src="../img/study-5.jpg" alt="관리형 자습관 전경" loading="lazy"><img src="../img/study-6.jpg" alt="관리형 자습관 전경" loading="lazy"><img src="../img/study-7.jpg" alt="관리형 자습관 전경" loading="lazy"><img src="../img/study-8.jpg" alt="관리형 자습관 전경" loading="lazy"><img src="../img/study-9.jpg" alt="관리형 자습관 전경" loading="lazy"></div>
 </div></section>
-
 <section><div class="wrap rv">
-  <div class="kicker">집에서 지금 하실 수 있는 것</div>
-  <h2>범위가 나오기 전에도 <b>손댈 자리가 세 군데</b> 있습니다</h2>
-  <p class="lead rv">저희 수업 없이 자료만 있어도 되는 일들입니다.</p>
-  <ul><li><b>올해 학력평가 시험지를 버리지 마십시오.</b> 미사고 국어는 저희가 확인한 여섯 회차 전부에서, 그해 고1 전국연합학력평가의 화법·작문 한 세트와 독서 지문이 내신 시험지에 그대로 들어왔습니다. 회당 4~5문항, 15.4점에서 20.8점입니다. 다만 학교는 지문만 가져오고 문항은 새로 만듭니다. 학평 답을 외우는 건 도움이 안 됩니다. 그 지문을 다시 한 번 읽혀 두시면 됩니다.</li><li><b>학교가 나눠 준 학습지를 한곳에 모아 두십시오.</b> 이 학교 국어는 학습지에 실린 범위가 곧 출제 범위입니다. 작년 1학기 중간 16번 한 문항에는 표준발음법 열두 개 조항의 원문이 &lt;보기&gt;로 들어갔고, 배점이 4.6점이었습니다. 시판 교재에는 이런 형태가 없습니다. 빠진 학습지가 있으면 지금 채워 두셔야 합니다.</li><li><b>수학은 시계를 놓고 풀려 보십시오.</b> 고1 기말은 뒤쪽 네 문항에 23점이 걸려 있었습니다. 앞쪽 계산량이 많아서 순서대로 풀면 그 구간에서 시간이 끝납니다. 순서를 한 번 바꿔서 풀려 보시면 어느 쪽인지 금방 드러납니다.</li></ul><p>여기까지는 리포트만 있으면 되는 일입니다.</p>
+  <div class="kicker">무엇이 다른가</div>
+  <h2>&ldquo;공부하고 왔다&rdquo;는 말 대신<br>숫자를 보내드립니다.</h2>
+  <div class="chk" style="margin-top:22px">
+    <div><i>1</i><span><b>입실 시 휴대폰 제출 · 지정 개인석 · 벌점제</b> — 3회 경고면 면담, 5회면 퇴관입니다. 관리한다는 말이 아니라 실제로 오래 앉아 있게 만드는 구조입니다.</span></div>
+    <div><i>2</i><span><b>매일 담임이 플래너를 확인</b>합니다. 좌석 입퇴실 로그로 순공시간이 자동으로 집계돼 앉아 있던 시간이 아니라 집중한 시간이 남습니다.</span></div>
+    <div><i>3</i><span><b>주 1회 학부모께 리포트</b>를 보내드립니다. 순공시간, 플래너 이행률, 가장 밀리는 과목이 숫자로 적힙니다.</span></div>
+    <div><i>4</i><span><b>대치 원서컨설턴트가 상주</b>합니다. 쌓인 학습 데이터를 근거로 중간고사·모평·수시·정시 시기별 방향을 잡아드립니다.</span></div>
+  </div>
+  <div class="soft rv" style="margin-top:22px">대상 <b>고1 · 고2 · 고3</b> · 운영 오전 10시(9시 선택)~밤 10시 · 완전 1인 개인석. <b>다올105 과목 수강생은 자습관 비용이 따로 낮게 책정</b>됩니다. 잔여석과 요금은 상담 때 안내드립니다.</div>
 </div></section>
 
-<section><div class="wrap rv">
-  <div class="kicker">품이 많이 드는 자리</div>
-  <h2>아이들이 실제로 걸리는 곳은 <b>&lt;보기&gt;와 변형</b>입니다</h2>
-  <p>이 학교 국어는 &lt;보기&gt;에서 갈립니다. 비평문 한 단락을 읽히고 그 틀로 작품을 다시 보게 하는 구조라, 비문학 독해와 문학 감상이 한 문항에 같이 걸립니다. 올해 1학기 기말 21번은 18세기 고전수필에 20세기 프랑스 철학을 &lt;보기&gt;로 붙였습니다. 배점은 4.6점이고, 작품을 다 읽은 아이도 여기서 틀립니다. 저희가 선지 단위로 세어 보면 한 회 시험에서 맞는지 틀리는지 판단해야 하는 횟수가 120번을 넘습니다.</p><p>수학은 변형의 강도가 세 단계였습니다. 숫자만 바꾼 문제, 구조를 다시 짠 문제, 기출 두 개를 붙인 문제입니다. 고1 기말 18번은 원본이 숙소 열 개 객실에 관광객 다섯 명을 배정하는 문제였는데, 시험에서는 영화관 열네 개 좌석에 1학년 두 명과 2학년 세 명을 앉히는 문제로 바뀌었고 조건도 세 개로 늘었습니다.</p><p>이런 자리를 찾으려면 학교별 시험지를 모으고, 학력평가 원문과 한 줄씩 대조하고, 부교재에 실린 원본 문항을 찾아 어디가 바뀌었는지 표시해야 합니다. 품이 많이 드는 일입니다. 그래서 리포트에는 그 자리를 문항 번호로 표시해 두었습니다. 어디까지 집에서 되고 어디부터 사람이 붙어야 하는지, 그 표시를 보시면 판단이 서실 겁니다.</p>
-</div></section>
-
-<section><div class="wrap rv">
-  <div class="kicker">요일 이야기</div>
-  <h2>요일이 어떻게 되는지부터 <b>적어 두겠습니다</b></h2>
-  <p class="lead rv">리포트를 보시다가 한 과목을 더 손봐야겠다 싶으실 때, 그때부터는 요일 문제가 됩니다. 그래서 지금 편성된 반을 그대로 적습니다.</p>
-  <p>국어는 김영하 원장이 맡습니다. 다올105 국어원장이고, 밀크T 온라인 국어강사입니다.</p><ul><li>미사강변고 1학년 — 토요일 15:00~17:30 · 월 290,000원</li><li>미사강변고 2학년 — 토요일 18:30~21:00 · 월 290,000원</li><li>미사고 1학년 — 일요일 15:00~17:30 · 월 290,000원</li></ul><p>미사고 2학년 국어는 아직 편성 중이라 지금 안내드릴 반이 없습니다.</p><p>수학은 두 갈래입니다. 임결 선생님의 고1 공통수학2가 월·수·금 18:00~22:00 월 400,000원, 고2 미적분1이 월·수·금 18:00~22:00 월 420,000원입니다. 유용권 선생님의 고2 정규반은 목·토 17:00~20:00 월 360,000원입니다.</p><p>국어가 주말에 있어서 임결 선생님 반과는 서로 걸리지 않습니다. 고2에서 유용권 선생님 반을 고르시면 토요일 17:00~20:00이 미사강변고 2학년 국어 18:30~21:00과 한 시간 반 겹칩니다. 이런 조합은 상담에서 미리 걸러 드립니다.</p><p>영어 요일은 여기에 적지 않겠습니다. 학교마다 반이 따로 있어서 미사강변고는 민귀홍 선생님, 미사고는 황웅 선생님이 맡습니다. 같은 학년이어도 학교에 맞춰 반이 나뉘기 때문에, 아이 학교와 학년을 알아야 정확한 요일이 나옵니다. 짐작으로 적어 드리면 라이딩 계획이 어긋납니다. 오시면 편성표를 그대로 펴놓고 보여드리겠습니다.</p><p>하나 더 말씀드리면, 학원을 한곳으로 모으면 이동 시간이 얼마나 줄어든다는 이야기는 하지 않겠습니다. 저희가 재 본 적이 없습니다.</p>
-</div></section>
-
-<section id="apply"><div class="wrap rv">
-  <div class="kicker">신청</div>
-  <h2><b>리포트부터 받아보십시오</b></h2>
-  <p class="lead rv">받으신 다음에 아무것도 안 하셔도 됩니다.</p>
-  <p>학교와 학년, 그리고 받고 싶은 과목만 남겨 주시면 됩니다. 지금 저희 수업에 없는 과목이어도 상관없습니다. 미사고 국어와 고1·고2 수학은 정리가 끝나 있어 바로 보내드리고, 영어는 미사강변고·미사고·하남고·풍산고 네 학교가 준비돼 있습니다. 미사강변고·하남고·풍산고의 국어·수학은 신청해 주신 순서대로 만들어 보내드립니다. <a href="https://jayu0422-blip.github.io/jugan-naesin/report/">신청서 열기</a></p><p>읽어보시다가 시간표를 같이 놓고 짜보고 싶어지시면 그때 연락 주십시오. 요일부터 놓고 맞춰 보겠습니다.</p><p>아이 상태를 한 번 재 보고 싶으시면 레벨테스트는 30분이고, 결과는 그 자리에서 설명드립니다.</p>
-
+<section id="apply"><div class="wrap">
+  <div class="kicker rv">신청</div>
+  <h2 class="rv">남은 기간을 어떻게 쓸지<br>같이 정리해 드립니다.</h2>
+  <p class="lead rv">현재 성적표를 가지고 오시면 <b>어느 과목에서 몇 점이 남아 있는지</b>부터 짚어드립니다.</p>
+  <div class="hk rv" style="margin-top:24px">
+    <h3>상담은 전화 한 통이면 됩니다.</h3>
+    <p>학교·학년만 말씀해 주시면 <b>현재 반 편성과 남은 자리</b>를 바로 알려드립니다.
+       레벨테스트는 30분이고, 결과는 그 자리에서 설명드립니다.</p>
+    <a class="btn btn-blue" href="tel:0316998111"
+       style="width:100%;margin-top:20px;display:block;text-align:center">031-699-8111 전화하기</a>
+    <a class="btn btn-blue" href="tel:01083378158"
+       style="width:100%;margin-top:9px;display:block;text-align:center;background:#1f3a63">010-8337-8158 전화하기</a>
+    <a class="btn btn-soft" href="sms:01083378158?body=%5B%EC%88%98%EB%8A%A5%5D%20%EC%98%81%EC%96%B4%C2%B7%EA%B5%AD%EC%96%B4%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4"
+       style="width:100%;margin-top:9px;display:block;text-align:center;background:#26262e;color:#fff">문자로 문의하기</a>
+  </div>
   <div class="study rv">
     <div class="study-k">같은 건물, 수업이 없는 날</div>
     <h3>&ldquo;공부하고 왔다&rdquo;는 말 대신<br><b>숫자를 보내드립니다.</b></h3>
@@ -849,7 +944,6 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
     <div class="study-n">운영 오전 10시(9시 선택)~밤 10시 · 완전 1인 개인석. <b>다올105 과목 수강생은 자습관 비용이 따로 낮게 책정</b>됩니다.</div>
     <div class="study-cta"><a class="study-go" href="https://jayu0422-blip.github.io/jugan-naesin/study/"><span class="sg-t"><b>자습관 사진과 리포트 견본 보기</b><small>공간 사진 · AI 학습분석 리포트 실물 · 요금까지</small></span></a></div>
   </div>
-
 </div></section>
 
 <footer><div class="wrap">
@@ -857,11 +951,10 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
   대표 윤재영 · 사업자등록번호 269-99-01747<br>
   경기도 하남시 미사강변대로226번안길 35 청담프라자 401~405호<br>
   대표전화 031-699-8111 · 휴대폰 010-8337-8158<br>
-  재원생께 드리는 자료는 무상으로만 제공합니다.<br>
+  교습비등은 관할 교육지원청에 신고한 금액이며 학원 내 게시된 내용과 같습니다.<br>
   본 페이지의 분석은 공개된 시험지를 자체 분석한 결과이며 해당 학교와 무관합니다.
-  정리된 배점과 경향은 지난 시험지 기준이고, 다가올 시험을 보장하지 않습니다.
 </div></footer>
-<div class="sticky-cta"><div class="sc-t"><b>국어·영어·수학 중 필요한 과목의 1학기 기말 분석 리포트를 보내</b><span>재원생께는 무상으로 드립니다</span></div><a class="btn btn-blue" href="https://jayu0422-blip.github.io/jugan-naesin/report/">리포트 받아보기</a></div>
+<div class="sticky-cta"><div class="sc-t"><b>수능 고3 · 국어 · 영어</b><span>무료 자료부터 받아보십시오</span></div><a class="btn btn-blue" href="https://jayu0422-blip.github.io/jugan-naesin/suneung/#apply">무료로 받아보기</a></div>
 <script>
 (function(){var els=document.querySelectorAll('.rv');
  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return;}
@@ -877,4 +970,9 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
  addEventListener('scroll',up,{passive:true});
  document.addEventListener('scroll',up,{passive:true,capture:true});
  addEventListener('resize',up);up();})();
+(function(){var b=document.getElementById('stview');if(!b)return;
+ var im=[].slice.call(b.querySelectorAll('img')),n=im.length,ok=0;
+ function d(){if(--n===0&&ok===0)b.parentNode.parentNode.remove()}
+ im.forEach(function(x){if(x.complete){x.naturalWidth>0?ok++:x.remove();d();return}
+  x.onload=function(){ok++;d()};x.onerror=function(){x.remove();d()}})})();
 </script>
