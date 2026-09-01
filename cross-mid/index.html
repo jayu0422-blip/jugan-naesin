@@ -879,3 +879,10 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
  document.addEventListener('scroll',up,{passive:true,capture:true});
  addEventListener('resize',up);up();})();
 </script>
+<script>
+(function(){var b=document.getElementById('studyPh');if(!b)return;
+ var im=[].slice.call(b.querySelectorAll('img')),n=im.length,ok=0;
+ function d(){if(--n===0&&ok===0)b.remove()}
+ im.forEach(function(x){if(x.complete){x.naturalWidth>0?ok++:x.remove();d();return}
+  x.onload=function(){ok++;d()};x.onerror=function(){x.remove();d()}})})();
+</script>
