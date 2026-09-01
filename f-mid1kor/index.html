@@ -669,19 +669,60 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sticky-cta .btn{flex:0 0 auto;min-width:150px}
 @media(max-width:400px){.sticky-cta .sc-t{display:none}.sticky-cta .btn{flex:1}}
+
+/* ── 히어로 오퍼 박스 ── */
+.offer{max-width:520px;margin:26px auto 0;padding:22px 22px 20px;border-radius:20px;text-align:left;
+  background:var(--of-bg);border:2px solid var(--of-line);box-shadow:0 14px 40px rgba(90,64,10,.13)}
+.offer-tag{display:inline-block;padding:5px 12px;border-radius:999px;font-size:12.5px;font-weight:900;
+  letter-spacing:-.2px;background:var(--of-tag);color:var(--of-tagfg);margin-bottom:13px}
+.offer-h{font-size:20px;line-height:1.45;font-weight:800;letter-spacing:-.5px;color:var(--of-h);margin:0 0 4px}
+.offer-h b{font-weight:900;color:var(--of-hb)}
+.offer-price{font-size:14px;font-weight:800;color:var(--of-note);margin:10px 0 14px}
+.offer-price s{opacity:.6;font-weight:700;margin-right:6px}
+.offer-price em{font-style:normal;color:var(--of-em);font-weight:900;font-size:16px}
+.offer ul{list-style:none;margin:0 0 18px;padding:14px 0 0;border-top:1px dashed var(--of-line)}
+.offer li{position:relative;padding-left:18px;margin:7px 0;font-size:14px;line-height:1.6;color:var(--of-li)}
+.offer li:before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;
+  background:var(--of-em)}
+.offer li b{color:var(--of-hb);font-weight:800}
+.offer-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  padding:19px 18px;border-radius:15px;text-decoration:none;font-size:18px;font-weight:900;
+  letter-spacing:-.4px;background:var(--blue);color:#fff;
+  box-shadow:0 10px 26px rgba(49,130,246,.42);transition:transform .15s,box-shadow .15s}
+.offer-btn:after{content:"→";font-size:19px;font-weight:800}
+.offer-btn:hover{box-shadow:0 14px 32px rgba(49,130,246,.5)}
+.offer-btn:active{transform:scale(.98)}
+.offer-note{margin:12px 2px 0;font-size:13px;line-height:1.6;color:var(--of-note);text-align:center}
+.cta-sub{margin:16px auto 0;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.cta-sub a{font-size:14.5px;font-weight:700;color:var(--muted);text-decoration:none;
+  border-bottom:1px solid var(--line);padding-bottom:2px}
+.cta-sub a:hover{color:var(--ink);border-color:var(--ink)}
+:root{--of-bg:#fffaef;--of-line:#f0d9a4;--of-tag:#7a5c10;--of-tagfg:#fff6e2;--of-h:#3d3524;
+      --of-hb:#12203a;--of-li:#5f5540;--of-em:#b4720e;--of-note:#8a7a52}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --of-bg:#241f11;--of-line:#4e4226;--of-tag:#f0d9a4;--of-tagfg:#241f11;--of-h:#e9dcc0;
+  --of-hb:#f6ead0;--of-li:#cdc1a6;--of-em:#f0b757;--of-note:#a89a78}}
+:root[data-theme=dark]{
+  --of-bg:#241f11;--of-line:#4e4226;--of-tag:#f0d9a4;--of-tagfg:#241f11;--of-h:#e9dcc0;
+  --of-hb:#f6ead0;--of-li:#cdc1a6;--of-em:#f0b757;--of-note:#a89a78}
+@media(max-width:420px){.offer{padding:19px 17px 17px}.offer-h{font-size:18px}.offer-btn{font-size:17px}}
 </style>
 
 <header class="hero"><div class="hero-ph hero-ph-1"><img src="../img/hero_김영하.png" alt="" aria-hidden="true"></div><div class="wrap">
   <div class="pill">중1 · 국어 · 2학기 중간</div>
-  <div class="bentag"><b>학년별 레벨테스트 + 상세해설서</b> · <em>무료</em></div>
+  
   <h1>국어는 잘한다고<br>넘어가고 있지<br><span class="hl">않으십니까</span></h1>
   <p class="sub">중등 국어 점수는 <b>실력이 아니라 익숙함</b>으로도 나옵니다.<br>중간은 지문 수가 많아 읽는 속도가 점수를 가릅니다.</p>
-  <div class="cta-row">
-    <a class="btn btn-blue" href="https://jayu0422-blip.github.io/jugan-naesin/f-mid1eng/#apply">무료로 받아보기</a>
-    <a class="btn btn-soft" href="#apply">남은 자리 확인하기</a>
-    <a class="btn btn-soft" href="#timetable">시간표 먼저 보기</a>
-  </div>
-  <div class="bencard"><ul><li><b>영어 레벨테스트</b> — 문제지 + 빠른답지 + <b>상세해설서</b></li><li>어디가 비었는지 <b>문항 단위</b>로 짚어드립니다</li><li>학교·학년 알려주시면 2학기 중간 대비 자료까지 (9월 10일 전후)</li></ul></div>
+  <div class="offer">
+  <div class="offer-tag">중1만 받는 자료</div>
+  <div class="offer-h">영어 <b>레벨테스트</b><br>문제지 + 빠른답지 + <b>상세해설서</b></div>
+  
+  <ul><li><b>영어 레벨테스트</b> — 문제지 + 빠른답지 + <b>상세해설서</b></li><li>어디가 비었는지 <b>문항 단위</b>로 짚어드립니다</li><li>학교·학년 알려주시면 2학기 중간 대비 자료까지 (9월 10일 전후)</li></ul>
+  <a class="offer-btn" href="https://jayu0422-blip.github.io/jugan-naesin/f-mid1eng/#apply">무료로 받아보기</a>
+  <div class="offer-note">문제지부터 해설서까지 전부 자체 제작입니다. 시중에 파는 것이 아닙니다.</div>
+</div>
+  <div class="cta-sub"><a href="#apply">남은 자리 확인하기</a><a href="#timetable">시간표 먼저 보기</a></div>
+
   <div class="schools"><span>중1</span><span>국어</span><span>김영하 전담</span></div>
   <small>김영하 전담 · 2학기 중간 9월 21일~30일 (학교별)</small>
 </div></header>
