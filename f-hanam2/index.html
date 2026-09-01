@@ -744,12 +744,17 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
 @media(max-width:420px){.study{padding:20px 17px}.study h3{font-size:19px}
   .study-ph img{width:150px;height:104px}}
 
-.study-go{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:11px 17px;
-  border-radius:12px;text-decoration:none;font-size:14px;font-weight:800;letter-spacing:-.2px;
-  background:var(--st-k);color:#fff;transition:transform .15s,opacity .15s}
-.study-go:after{content:"A";font-size:16px;font-weight:700;opacity:.8}
-.study-go:hover{opacity:.9}
-.study-go:active{transform:scale(.97)}
+
+.study-cta{margin-top:16px}
+.study-go{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;
+  padding:15px 18px;border-radius:14px;text-decoration:none;background:var(--st-k);color:#fff;
+  transition:transform .15s,opacity .15s}
+.study-go .sg-t{display:flex;flex-direction:column;gap:3px;min-width:0}
+.study-go .sg-t b{font-size:15.5px;font-weight:900;letter-spacing:-.3px}
+.study-go .sg-t small{font-size:12.5px;opacity:.82;font-weight:600}
+.study-go:after{content:"›";font-size:22px;font-weight:700;opacity:.85;flex:0 0 auto}
+.study-go:hover{opacity:.93}
+.study-go:active{transform:scale(.985)}
 </style>
 
 <header class="hero"><div class="hero-ph hero-ph-1"><img src="../img/hero_윤재영.png" alt="" aria-hidden="true"></div><div class="wrap">
@@ -898,7 +903,8 @@ b.hl{color:#c4472e;background:linear-gradient(transparent 58%,#ffe3d8 58%);paddi
       <li><b>대치 원서컨설턴트가 상주</b>합니다. 쌓인 학습 데이터를 근거로
         중간고사·모평·수시·정시 시기별 방향을 잡아드립니다.</li>
     </ul>
-    <div class="study-n">운영 오전 10시(9시 선택)~밤 10시 · 완전 1인 개인석. <b>다올105 과목 수강생은 자습관 비용이 따로 낮게 책정</b>됩니다.<a class="study-go" href="https://jayu0422-blip.github.io/jugan-naesin/study/">자습관 자세히 보기</a></div>
+    <div class="study-n">운영 오전 10시(9시 선택)~밤 10시 · 완전 1인 개인석. <b>다올105 과목 수강생은 자습관 비용이 따로 낮게 책정</b>됩니다.</div>
+    <div class="study-cta"><a class="study-go" href="https://jayu0422-blip.github.io/jugan-naesin/study/"><span class="sg-t"><b>자습관 사진과 리포트 견본 보기</b><small>공간 사진 · AI 학습분석 리포트 실물 · 요금까지</small></span></a></div>
   </div>
 </div></section>
 
