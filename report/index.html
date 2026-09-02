@@ -103,7 +103,7 @@ footer b{color:var(--mut)}
   <h1>우리 학교 1학기 기말,<br><span class="hl">어떻게 나왔는지</span><br>보신 적 있으신가요?</h1>
   <p class="sub">시험지를 <b>문항 하나하나</b> 뜯어서 출처·배점·변형 방식까지 정리했습니다.<br>
      2학기 중간을 어디서부터 잡아야 하는지, <b>그 학교 기준</b>으로 알려드립니다.</p>
-  <div class="worth"><s>5만원 상당</s><b>무료로 드립니다</b></div>
+  <div class="worth"><s>무료</s><b>무료로 드립니다</b></div>
   <p class="sub" style="margin-top:14px;font-size:14px">
      <span id="dlvNote">분석 리포트는 <b>신청 즉시</b> · 동형 모의고사는 <b>9월 10일 전후</b> 발송</span></p>
 </div></header>
@@ -187,10 +187,19 @@ var SCHOOLS=["미사강변고","미사고","하남고","풍산고"];
 var GRADES=["고1","고2"];
 var SUBJECTS=["영어","수학","국어"];
 /* 실제 분석 보유 조합 — 없는 곳은 정직하게 안내한다 */
-/* 지금 바로 보낼 수 있는 조합(PDF 완성분) */
-var HAVE={"미사강변고|고1":1,"미사강변고|고2":1,"미사고|고1":1,"미사고|고2":1};
+/* 지금 바로 보낼 수 있는 조합 — 학교|학년|과목 단위.
+   학교·학년만 보고 판정하면 미사강변고 수학처럼 없는 자료를 "오늘 보내드립니다"라고 말하게 된다. */
+var HAVE={
+  "미사강변고|고1|영어":1,"미사강변고|고2|영어":1,"미사고|고1|영어":1,"미사고|고2|영어":1,
+  "미사강변고|고2|국어":1,"미사고|고1|국어":1,
+  "미사고|고1|수학":1,"미사고|고2|수학":1
+};
 /* 분석은 끝났고 문서로 묶는 중 */
-var SOON={"하남고|고1":1,"풍산고|고2":1};
+var SOON={"하남고|고1|영어":1,"풍산고|고2|영어":1};
+/* 회차 일부만 확보 — 무엇을 줄 수 있는지 그대로 밝힌다 */
+var PARTIAL={
+  "미사강변고|고1|국어":"1학기 기말은 시험지 판독이 아직 안 끝났습니다. 대신 <b>작년 2학기 중간·기말 두 회차</b>를 문항별로 정리해 먼저 보내드립니다."
+};
 var S={sch:"",grd:"",sub:[]};
 
 function chips(el,arr,multi,key){
@@ -203,7 +212,7 @@ function chips(el,arr,multi,key){
         var i=S.sub.indexOf(v);
         if(i>=0){S.sub.splice(i,1);b.classList.remove("on")}
         else{S.sub.push(v);b.classList.add("on")}
-        syncDelivery();
+        syncDelivery(); live();
       }else{
         S[key]=v;
         [].forEach.call(el.children,function(c){c.classList.remove("on")});
@@ -225,22 +234,30 @@ function syncDelivery(){
     : "분석 리포트는 <b>신청 즉시</b> 보내드립니다";
 }
 function live(){
-  if(!S.sch||!S.grd) return;
-  var k=S.sch+"|"+S.grd, box=$("live");
-  if(HAVE[k]){
-    box.innerHTML="<b>"+S.sch+" "+S.grd+"</b> 1학기 기말 분석 리포트가 <b>이미 완성되어 있습니다.</b><br>"+
-      "신청하시면 <b>오늘 안에</b> 보내드립니다.<br>"+
-      "<span style='color:#5a6070'>동형 모의고사는 9월 10일 전후에 따로 보내드립니다.</span>";
-  }else if(SOON[k]){
-    box.innerHTML="<b>"+S.sch+" "+S.grd+"</b>은 <b>분석은 끝났고</b> 지금 문서로 묶고 있습니다.<br>"+
-      "완성되는 대로 가장 먼저 보내드립니다.<br>"+
-      "<span style='color:#5a6070'>동형 모의고사는 9월 10일 전후 발송입니다.</span>";
-  }else{
-    box.innerHTML="<b>"+S.sch+" "+S.grd+"</b>은 지금 분석 중입니다.<br>"+
-      "완성되는 대로 가장 먼저 보내드리고, 그 전까지 <b>학년 공통 자료</b>를 먼저 드립니다.<br>"+
-      "<span style='color:#5a6070'>동형 모의고사는 9월 10일 전후 발송입니다.</span>";
+  var box=$("live"); if(!box) return;
+  if(!S.sch||!S.grd){ box.classList.remove("on"); return; }
+  if(!S.sub||!S.sub.length){
+    box.innerHTML="<b>"+S.sch+" "+S.grd+"</b> 확인했습니다.<br>어느 과목을 받으실지 골라 주시면 그 과목의 준비 상태를 그대로 알려 드립니다.";
+    box.classList.add("on"); return;
   }
-  box.classList.add("on");
+  var ready=[], soon=[], part=[], none=[];
+  S.sub.forEach(function(sub){
+    var k=S.sch+"|"+S.grd+"|"+sub;
+    if(HAVE[k]) ready.push(sub);
+    else if(PARTIAL[k]) part.push({s:sub,m:PARTIAL[k]});
+    else if(SOON[k]) soon.push(sub);
+    else none.push(sub);
+  });
+  var h="<b>"+S.sch+" "+S.grd+"</b>";
+  if(ready.length) h+="<br><b>"+ready.join(" · ")+"</b> — 1학기 기말 분석 리포트가 <b>이미 완성되어 있습니다.</b> 신청하시면 <b>오늘 안에</b> 보내드립니다.";
+  part.forEach(function(x){ h+="<br><b>"+x.s+"</b> — "+x.m; });
+  if(soon.length) h+="<br><b>"+soon.join(" · ")+"</b> — 분석은 끝났고 지금 문서로 묶고 있습니다. 완성되는 대로 가장 먼저 보내드립니다.";
+  if(none.length) h+="<br><b>"+none.join(" · ")+"</b> — 이 학교·학년 것은 아직 없습니다. 아이 시험지 사진을 주시면 같은 방식으로 만들어 보내드립니다.";
+  var dongh=S.sub.some(function(x){return DONGH_SUBJECTS.indexOf(x)>=0});
+  h+="<br><span style='color:#5a6070'>"+(dongh
+      ? "동형 모의고사는 9월 10일 전후에 따로 보내드립니다. (동형은 영어에만 있습니다)"
+      : "고르신 과목은 분석 리포트만 나갑니다. 동형 모의고사는 영어에만 있습니다.")+"</span>";
+  box.innerHTML=h; box.classList.add("on");
 }
 chips($("sch"),SCHOOLS,false,"sch");
 chips($("grd"),GRADES,false,"grd");
